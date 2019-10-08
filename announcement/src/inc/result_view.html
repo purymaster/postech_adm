@@ -1,0 +1,104 @@
+<div data-result>
+	<div class="visual">
+		<div class="txt_wrap">
+			<div class="txt">
+				@@if(context.status === "pass"){
+				<!-- 최종 합격 메시지 -->
+				<p class="pass_msg">
+					<span data-animation="fadeInUp" data-delay="0">축</span>
+					<span data-animation="fadeInUp" data-delay="1">하</span>
+					<span data-animation="fadeInUp" data-delay="2">합</span>
+					<span data-animation="fadeInUp" data-delay="3">니</span>
+					<span data-animation="fadeInUp" data-delay="4">다</span>
+					<span data-animation="fadeInUp" data-delay="5">!</span>
+				</p>
+				<p class="sub_msg">
+					2020학년도 POSTECH 일반전형에 <br>
+					<strong>최종 합격</strong>하셨습니다!
+				</p>
+				<!-- //최종 합격 메시지 -->
+				}
+				@@if(context.status === "fail" || context.status === "candidate"){
+				<!-- 불합격 메시지 -->
+				<p class="msg">
+					2020학년도 POSTECH 일반전형에 <br>
+					지원해주셔서 감사합니다.
+				</p>
+				<!-- //불합격 메시지 -->
+				}
+				@@if(context.status === "cancel"){
+				<!-- 합격 취소 메시지 -->
+				<p class="msg">
+					수시모집 등록 절차를 완료하지 않아 <br>
+					합격이 취소되었습니다.
+				</p>
+				<p class="sub_msg">
+					※ 수시모집 합격자는 수험생의 등록여부와 관계없이, <br>
+					정시모집과 추가모집에 지원이 불가합니다.
+				</p>
+				<!-- //합격 취소 메시지 -->
+				}
+			</div>
+		</div>
+	</div>
+	<div class="result">
+		<div class="table_wrap">
+			<div class="table">
+				<dl>
+					<div>
+						<dt>
+							<span class="wide">성명</span>
+						</dt>
+						<dd>
+							홍길동
+						</dd>
+					</div>
+					<div>
+						<dt>
+							<span>수험번호</span>
+						</dt>
+						<dd>
+							99999999
+						</dd>
+					</div>
+					<div>
+						<dt>
+							<span>지원학과</span>
+						</dt>
+						<dd>
+							단일계열
+						</dd>
+					</div>
+					<div>
+						<dt>
+							<span class="wide">결과</span>
+						</dt>
+						<dd>
+							<span class="status">
+								@@if(context.status === "pass"){
+								합격
+								}
+								@@if(context.status === "fail"){
+								불합격
+								}
+								@@if(context.status === "cancel"){
+								미등록 합격취소
+								}
+								@@if(context.status === "candidate"){
+								후보
+								}
+							</span>
+						</dd>
+					</div>
+				</dl>
+				@@if(context.status === "pass"){
+				<ul>
+					<li><a href="#">합격통지서</a></li>
+					<li><a href="#">예비 신입생 안내문</a></li>
+					<li><a href="#">등록 바로가기</a></li>
+				</ul>
+				}
+			</div>
+		</div>
+	</div>
+</div>

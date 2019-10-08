@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>포항공과대학교 - 창의IT융합교육과</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width">
+	<link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+	<style>
+		a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-spacing:0;border-collapse:collapse}button{outline:0;cursor:pointer}*{box-sizing:border-box;max-height:1000000px;font-family:"Noto Sans",AppleSDGothicNeo,DroidSansFallback,arial,sans-serif;color:#333;letter-spacing:-.025em}body,html{height:100%}.map_wrap{padding:10px}.map_wrap .tit{font-size:16px;font-weight:700;line-height:1.5}.map_wrap .info{overflow:hidden;margin:10px 0 5px 0;font-size:12px}.map_wrap .info .process{overflow:hidden;float:left;line-height:20px}.map_wrap .info .process dd,.map_wrap .info .process dt{float:left;margin-right:5px}.map_wrap .info .process dd{color:red}.map_wrap .info .status{overflow:hidden;float:right}.map_wrap .info .status li{float:left;margin-left:3px}.map_wrap .info .status li em{margin-right:3px}table.list{width:100%;border-top:1px solid #999;border-bottom:1px solid #999;font-size:0;word-break:break-all;table-layout:fixed}table.list td,table.list th{overflow:hidden;padding:5px;border-top:1px solid #eee;border-left:1px solid #ccc;font-size:12px;line-height:20px;text-overflow:ellipsis;white-space:nowrap}table.list th{border-top:1px solid #999;border-left:1px solid #999}table.list td a{color:#666;text-decoration:none}table.list tr.hover td{background:#999;color:#fff}table.list tr.part td{border-top:1px solid #ccc}table.list tr td:first-child,table.list tr th:first-child{border-left:0}table.list tr:first-child td{border-top:1px solid #999}table.list th{background:#ccc;font-weight:700}table.list th.num{width:40px}table.list th.id{width:150px}table.list th.dev{width:50px}table.list th.date,table.list th.stat{width:50px}table.list th.memo{width:20%}table.list th.link{width:80px}table.list td{color:#666}table.list td.center{text-align:center}em.ico{display:inline-block;width:20px;border-radius:5px;font-size:12px;font-style:normal;line-height:20px;color:#fff;text-align:center;text-transform:uppercase}em.ico.standby{background:#666}em.ico.work{background:#1e90ff}em.ico.end{background:#32cd32}em.ico.modify{background:#ff1493}@media (max-width:1024px){header{text-align:center}header h1{position:static}header{height:auto;padding:10px 0;font-size:0}nav{overflow-x:auto;width:100%}nav ul{position:static;margin-top:10px;white-space:nowrap}nav ul li a{font-size:14px;line-height:19px}section{position:static;padding-top:80px;font-size:0}.guide_wrap>ul>li{padding-left:8px;font-size:12px;text-indent:-8px}.slide_wrap{position:static;height:auto;border:0;background:#fff}.map_wrap .info{padding:5px}.map_wrap .tit{text-align:center}table.list th.date,table.list th.dev,table.list th.id,table.list th.memo,table.list th.num,table.list tr td:nth-child(1),table.list tr td:nth-child(10),table.list tr td:nth-child(6),table.list tr td:nth-child(7),table.list tr td:nth-child(9){width:0;padding:0;border:0}table.list th.link{width:40px}table.list td a.mobile{display:none}table.list tbody tr td:nth-child(2),table.list thead tr th:nth-child(2){border-left:0}}@media (max-width:599px){table.list th.stat{width:40px}table.list td,table.list th{font-size:11px}}
+	</style>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script>
+		$(function () { var t, i, h, n = $("table.list"); n.each(function () { $(this).find("tr:gt(0)").hover(function () { $(this).addClass("hover") }, function () { $(this).removeClass("hover") }).each(function (t) { $("td:eq(0)", this).text(t + 1), "" != $("td:eq(1)", this).text() && $(this).addClass("part") }).find("td").each(function () { "" == $(this).text() && $(this).addClass("nodata") }), $(this).find("tr").each(function () { i = $(this).find("td:eq(5)").text(), h = "<a href='" + i + "/dev/html/", $(this).find(".ico").hasClass("end") && $(this).find("td:last-child").html(h) }), t = $(this).data("name"), $(this).find("tr").each(function () { i = $(this).find("td:eq(5)").text(), h = "<a href='" + t + "/dev/html/" + i + ".html' target='_blank' title='새창열림'>보기</a>", $(this).find(".ico").hasClass("end") && $(this).find("td:last-child").html(h) }) }), $(".map_wrap").each(function () { $(this).find(".process dd").text(Math.ceil(($(this).find("em.end").length - 1) / $(this).find("tbody").children("tr").length * 100) + "%") }) });
+	</script>
+</head>
+
+<body>
+	<div class="wrap">
+
+		<!-- 창의IT융합교육과(국문) -->
+		<div class="map_wrap">
+			<p class="tit">창의IT융합교육과(국문)</p>
+			<div class="info">
+				<dl class="process">
+					<dt>작업공정률</dt>
+					<dd></dd>
+				</dl>
+				<ul class="status">
+					<li><em class="ico standby">s</em>대기</li>
+					<li><em class="ico work">w</em>착수</li>
+					<li><em class="ico modify">m</em>수정</li>
+					<li><em class="ico end">e</em>완료</li>
+				</ul>
+			</div>
+			<div class="table_wrap">
+				<table class="list d4" data-name="kor">
+					<caption>코딩 리스트</caption>
+					<thead>
+						<tr>
+							<th class="num">No</th>
+							<th class="depth">1depth</th>
+							<th class="depth">2depth</th>
+							<th class="depth">3depth</th>
+							<th class="depth">4depth</th>
+							<th class="id">ID</th>
+							<th class="dev">Dev</th>
+							<th class="stat">Status</th>
+							<th class="date">Date</th>
+							<th class="memo">Memo</th>
+							<th class="link">Link</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="center"></td>
+							<td>작업 가이드</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="center">guide</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/02</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
+							<td class="center"></td>
+							<td>메인</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="center">index</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">08/27</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
+							<td class="center"></td>
+							<td>소개</td>
+							<td>주임교수인사말</td>
+							<td></td>
+							<td></td>
+							<td class="center">greeting</td>
+							<td class="center">천송경</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/18</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>학과개요</td>
+							<td></td>
+							<td></td>
+							<td class="center">cite_info</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/11</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>연혁</td>
+							<td></td>
+							<td></td>
+							<td class="center">history</td>
+							<td class="center">천송경</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">9/20</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>조직도</td>
+							<td></td>
+							<td></td>
+							<td class="center">organization</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/03</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>협력기관</td>
+							<td></td>
+							<td></td>
+							<td class="center">cooperation</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/10</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>찾아오시는길</td>
+							<td></td>
+							<td></td>
+							<td class="center">map</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/11</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
+							<td class="center"></td>
+							<td>구성원</td>
+							<td>교수</td>
+							<td>전임교수</td>
+							<td></td>
+							<td class="center">member_pro_no</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/02</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>JA교수</td>
+							<td></td>
+							<td class="center">member_pro_ja</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/02</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>대우/산학협력교수</td>
+							<td></td>
+							<td class="center">member_pro_co</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/02</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>연구교수</td>
+							<td></td>
+							<td class="center">member_pro_re</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/02</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>겸임교수</td>
+							<td></td>
+							<td class="center">member_pro_ad</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/02</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>전임연구원</td>
+							<td></td>
+							<td></td>
+							<td class="center">member_researcher</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/02</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>직원</td>
+							<td>창의IT융합공학과 행정팀</td>
+							<td></td>
+							<td class="center">member_worker_admin</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/03</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>미래IT융합연구원 융복합연구부(전략기획 업무)</td>
+							<td></td>
+							<td class="center">member_worker_plan</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/03</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
+							<td class="center"></td>
+							<td>교육</td>
+							<td>교육철학</td>
+							<td></td>
+							<td></td>
+							<td class="center">philosophy</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/03</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>학부</td>
+							<td>개요</td>
+							<td></td>
+							<td class="center">part_info</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/04</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>교과 이수 총괄표</td>
+							<td></td>
+							<td class="center">part_table</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/10</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>창의교육 프로그램</td>
+							<td></td>
+							<td class="center">part_creative</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/03</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>단기유학 프로그램</td>
+							<td></td>
+							<td class="center">part_abroad</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/04</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>학생지원제도</td>
+							<td></td>
+							<td class="center">part_support</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/04</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>대학원</td>
+							<td>개요</td>
+							<td></td>
+							<td class="center">grad_info</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/04</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>교과목 일람표</td>
+							<td></td>
+							<td class="center">grad_table</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/05</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>학위</td>
+							<td></td>
+							<td class="center">grad_degree</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/05</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>Q.E</td>
+							<td></td>
+							<td class="center">grad_qe</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/05</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>학생지원</td>
+							<td></td>
+							<td class="center">grad_support</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/05</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>대학원 프로그램</td>
+							<td></td>
+							<td class="center">grad_program</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/05</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>졸업</td>
+							<td></td>
+							<td class="center">grad_graduate</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/10</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>학사일정</td>
+							<td></td>
+							<td></td>
+							<td class="center">schedule</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/20</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
+							<td class="center"></td>
+							<td>연구</td>
+							<td>연구분야</td>
+							<td></td>
+							<td></td>
+							<td class="center">research_part</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/10</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>연구과제</td>
+							<td></td>
+							<td></td>
+							<td class="center">research_work</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/10</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>연구실 소개</td>
+							<td>list</td>
+							<td></td>
+							<td class="center">research_list</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/27</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>view</td>
+							<td></td>
+							<td class="center">research_view</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/27</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>공용 연구장비</td>
+							<td></td>
+							<td></td>
+							<td class="center">research_device</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/10</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
+							<td class="center"></td>
+							<td>게시판</td>
+							<td>공지사항</td>
+							<td>list</td>
+							<td></td>
+							<td class="center">notice_list</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/02</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>view</td>
+							<td></td>
+							<td class="center">notice_view</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/02</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>세미나 및 행사</td>
+							<td>list</td>
+							<td></td>
+							<td class="center">seminar_list</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/02</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>view</td>
+							<td></td>
+							<td class="center">seminar_view</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/02</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>홍보자료</td>
+							<td>list</td>
+							<td></td>
+							<td class="center">ad_list</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/02</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>view</td>
+							<td></td>
+							<td class="center">ad_view</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/02</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>강의실/세미나실 예약</td>
+							<td></td>
+							<td></td>
+							<td class="center">reservation</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/10</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>자료실</td>
+							<td>list</td>
+							<td></td>
+							<td class="center">data_list</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/02</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>view</td>
+							<td></td>
+							<td class="center">data_view</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/02</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>겔러리</td>
+							<td>list</td>
+							<td></td>
+							<td class="center">gallery_list</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/02</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>view</td>
+							<td></td>
+							<td class="center">gallery_view</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/02</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
+							<td class="center"></td>
+							<td>사이트맵</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="center">sitemap</td>
+							<td class="center">천송경</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/23</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
+							<td class="center"></td>
+							<td>검색결과</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="center">search_result</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/18</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
+							<td class="center"></td>
+							<td>404에러</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="center">404</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/20</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
+							<td class="center"></td>
+							<td>이메일인증 발송용 폼</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="center">email_form</td>
+							<td class="center">구창근</td>
+							<td class="center"><em class="ico end">e</em></td>
+							<td class="center">09/19</td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- //창의IT융합교육과(국문) -->
+
+		<!-- 창의IT융합교육과(영문) -->
+		<div class="map_wrap">
+			<p class="tit">창의IT융합교육과(영문)</p>
+			<div class="info">
+				<dl class="process">
+					<dt>작업공정률</dt>
+					<dd></dd>
+				</dl>
+				<ul class="status">
+					<li><em class="ico standby">s</em>대기</li>
+					<li><em class="ico work">w</em>착수</li>
+					<li><em class="ico modify">m</em>수정</li>
+					<li><em class="ico end">e</em>완료</li>
+				</ul>
+			</div>
+			<div class="table_wrap">
+				<table class="list d4" data-name="eng">
+					<caption>코딩 리스트</caption>
+					<thead>
+						<tr>
+							<th class="num">No</th>
+							<th class="depth">1depth</th>
+							<th class="depth">2depth</th>
+							<th class="depth">3depth</th>
+							<th class="depth">4depth</th>
+							<th class="id">ID</th>
+							<th class="dev">Dev</th>
+							<th class="stat">Status</th>
+							<th class="date">Date</th>
+							<th class="memo">Memo</th>
+							<th class="link">Link</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="center"></td>
+							<td>가이드</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
+							<td class="center"></td>
+							<td>메인</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
+							<td class="center"></td>
+							<td>소개</td>
+							<td>주임교수인사말</td>
+							<td></td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>학과개요</td>
+							<td></td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>연혁</td>
+							<td></td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>조직도</td>
+							<td></td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>협력기관</td>
+							<td></td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>찾아오시는길</td>
+							<td></td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
+							<td class="center"></td>
+							<td>구성원</td>
+							<td>교수</td>
+							<td>전임교수</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>JA교수</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>대우/산학협력교수</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>연구교수</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>겸임교수</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>전임연구원</td>
+							<td></td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>직원</td>
+							<td>창의IT융합공학과 행정팀</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>미래IT융합연구원 융복합연구부(전략기획 업무)</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
+							<td class="center"></td>
+							<td>교육</td>
+							<td>교육철학</td>
+							<td></td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>학부</td>
+							<td>개요</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>교과 이수 총괄표</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>창의교육 프로그램</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>단기유학 프로그램</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>학생지원제도</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>대학원</td>
+							<td>개요</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>교과목 일람표</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>학위</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>Q.E</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>학생지원</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>대학원 프로그램</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>졸업</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>학사일정</td>
+							<td></td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
+							<td class="center"></td>
+							<td>연구</td>
+							<td>연구분야</td>
+							<td></td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>연구과제</td>
+							<td></td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>연구실 소개</td>
+							<td>list</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>view</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>공용 연구장비</td>
+							<td></td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
+							<td class="center"></td>
+							<td>게시판</td>
+							<td>공지사항</td>
+							<td>list</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>view</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>세미나 및 행사</td>
+							<td>list</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>view</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>홍보자료</td>
+							<td>list</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>view</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>강의실/세미나실 예약</td>
+							<td></td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>자료실</td>
+							<td>list</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>view</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>겔러리</td>
+							<td>list</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td></td>
+							<td>view</td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
+							<td class="center"></td>
+							<td>사이트맵</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
+							<td class="center"></td>
+							<td>검색결과</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
+							<td class="center"></td>
+							<td>404에러</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
+							<td class="center"></td>
+							<td>이메일인증 발송용 폼</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="center"></td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- //창의IT융합교육과(영문) -->
+	</div>
+</body>
+
+</html>

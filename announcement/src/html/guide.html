@@ -1,0 +1,165 @@
+@@include('header.html')
+<div class="content">
+	@@include('sub_visual.html')
+	@@include('result_view.html',{
+	"context" : {
+	"status" : "pass"
+	}
+	})
+
+	<!-- 서브 페이지 컨텐츠 -->
+	<div class="" data-sub-content>
+		<div class="container">
+
+			<style>
+				.guide_tit {margin:1em 0; padding-left:1em; background:#ca0464; font-size:14px; font-weight:700; line-height:2em; color:#fff;}
+
+			</style>
+
+			<!-- 컨텐츠 박스, 제목, 들여쓰기 -->
+			<p class="guide_tit">컨텐츠 박스, 제목, 들여쓰기</p>
+			<div data-content-box>
+				<p class="cont_tit">1. 제목</p>
+				<p class="sub_tit">가. 서브항목 제목</p>
+				<div class="indent">들여쓰기</div>
+			</div>
+			<!-- //컨텐츠 박스, 제목, 들여쓰기 -->
+
+			<!-- 데이터 테이블 -->
+			<p class="guide_tit">데이터 테이블</p>
+			<div data-table>
+				<table>
+					<colgroup>
+						<col>
+						<col>
+						<col>
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">항목1</th>
+							<th scope="col">항목2</th>
+							<th scope="col">항목3</th>
+							<th scope="col">항목4</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">항목1</th>
+							<td class="left">내용1</td>
+							<td class="left">내용2</td>
+							<td class="left">내용3</td>
+						</tr>
+						<tr>
+							<th scope="row">항목1</th>
+							<td>내용1</td>
+							<td>내용2</td>
+							<td>내용3</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //데이터 테이블 -->
+
+			<!-- 데이터 입력폼 -->
+			<p class="guide_tit">데이터 입력폼</p>
+			<div data-table data-input>
+				<table>
+					<colgroup>
+						<col>
+						<col>
+						<col>
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">항목1</th>
+							<td>내용1</td>
+							<th scope="row">항목1</th>
+							<td>내용3</td>
+						</tr>
+						<tr>
+							<th scope="row">항목1</th>
+							<td colspan="3">내용1</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //데이터 입력폼 -->
+
+			<!-- 리스트, 강조문구 -->
+			<p class="guide_tit">리스트, 강조문구</p>
+			<ul class="type1" data-list>
+				<li>리스트1</li>
+				<li>리스트1</li>
+				<li>리스트1</li>
+			</ul>
+			<ul class="type2" data-list>
+				<li>1) 리스트2</li>
+				<li>2) 리스트2</li>
+				<li>3) 리스트2
+					<span class="ps">숙소는 POSTECH에서 제공합니다.</span>
+				</li>
+			</ul>
+			<ul class="type3" data-list>
+				<li>※ 리스트3</li>
+				<li>※ 리스트3</li>
+				<li>※ 리스트3</li>
+			</ul>
+			<ul class="footnote" data-list>
+				<li>* 각주</li>
+				<li>** 각주</li>
+			</ul>
+			<!-- //리스트, 강조문구 -->
+
+			<!-- 안내 박스 -->
+			<p class="guide_tit">안내 박스</p>
+			<div data-content-box>
+				<ul data-info-box>
+					<li>
+						<p class="sub_tit">서브항목 제목</p>
+						<ul class="type1" data-list>
+							<li>리스트1</li>
+							<li>리스트1</li>
+							<li>리스트1</li>
+						</ul>
+						<p class="alert">
+							“청소년증 발급신청 확인서” 사용 불가
+						</p>
+					</li>
+				</ul>
+				<ul class="multi" style="margin-top:15px;" data-info-box>
+					<li>
+						<p class="sub_tit">서브항목 제목</p>
+						<ul class="type1" data-list>
+							<li>리스트1</li>
+							<li>리스트1</li>
+							<li>리스트1</li>
+						</ul>
+					</li>
+					<li>
+						<p class="sub_tit">서브항목 제목</p>
+						<ul class="type1" data-list>
+							<li>리스트1</li>
+							<li>리스트1</li>
+							<li>리스트1</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- //안내 박스 -->
+
+			<!-- 하단 버튼 -->
+			<p class="guide_tit">하단 버튼</p>
+			<div data-ctr-btn>
+				<a href="javascript:history.back();">뒤로가기</a>
+				<button type="submit"><span>확인</span></button>
+			</div>
+			<!-- //하단 버튼 -->
+
+		</div>
+	</div>
+	<!-- //서브 페이지 컨텐츠 -->
+
+</div>
+@@include('footer.html')
