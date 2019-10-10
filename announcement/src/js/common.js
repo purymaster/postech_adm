@@ -85,6 +85,22 @@ $(function () {
 			select_form.find('button').removeClass('on');
 	});
 
+	/******************** 탭메뉴 제어 ********************/
+
+	var tab_menu = $('.tab_menu button'),
+		tab_cont = $('.tab_cont'),
+		target;
+
+	tab_menu.on('click', function () {
+		target = $(this).data('val');
+		$(this).parents('li').addClass('on').siblings().removeClass('on');
+		tab_cont.find('input[type="text"]').val('');
+		tab_cont.find('input[type="password"]').val('');
+		tab_cont.find('.select_form button').text('월');
+		tab_cont.hide();
+		$('#' + target).show();
+	});
+
 	/******************** 스크롤 애니메이션 정의 ********************/
 
 	var move_el = $('[data-animation]'), //무빙 요소
@@ -122,7 +138,7 @@ $(function () {
 
 		//TOP 버튼 제어
 		(scroll === 0) ? top_btn.removeClass('on') : top_btn.addClass('on');
-		
+
 		top_btn.find('button').on('click', function () {
 			if (top_btn_flag) return false;
 			top_btn_flag = 1;

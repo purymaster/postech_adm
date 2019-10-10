@@ -139,6 +139,16 @@ html {overflow-y:scroll; -webkit-font-smoothing:antialiased; -moz-osx-font-smoot
 .ie9 .inner a {font-size:16px; font-weight:700; color:#fff;}
 .ie9 button {overflow:hidden; position:absolute; top:20px; right:20px; width:30px; height:30px; background:url(../img/sprite/sprite.png); background-position:-10px -258px; text-indent:-9999px;}
 
+/* 셀렉트박스 */
+.select_form {display:inline-block; position:relative; min-width:70px; background:#fff; font-size:14px; text-align:left;}
+.select_form button {display:block; overflow:hidden; position:relative; width:100%; padding:0 25px 0 8px; border:1px solid #999; background:#fff; line-height:38px; color:#333; text-align:inherit; text-overflow:ellipsis; white-space:nowrap; transition:border 0.3s;}
+.select_form button:after {position:absolute; top:50%; right:14px; width:4px; height:4px; margin-top:-4px; border-right:1px solid #333; border-bottom:1px solid #333; transform:rotate(45deg); transition:all 0.3s; content:"";}
+.select_form button.on:after {margin-top:-2px; transform:rotate(225deg);}
+.select_form ul {visibility:hidden; overflow:hidden; position:absolute; width:100%; height:0; padding:4px 15px; border:1px solid #e8e5e2; border-top:0; transition:opacity 0.3s; opacity:0;}
+.select_form button.on + ul {visibility:visible; overflow-y:auto; z-index:1; height:auto; max-height:200px; background:#fff; opacity:1;}
+.select_form ul li a {display:block; padding:5px 0; line-height:18px; color:#666; transition:all 0.3s;}
+.select_form ul li a:hover {font-weight:700; color:#ca0464;}
+
 /* 컨텐츠 박스, 제목, 들여쓰기 */
 [data-content-box] + [data-content-box] {margin-top:40px;}
 [data-content-box]:last-of-type {margin:0;}
@@ -158,9 +168,9 @@ html {overflow-y:scroll; -webkit-font-smoothing:antialiased; -moz-osx-font-smoot
 
 /* 데이터 테이블 */
 [data-table] {border:1px solid #ccc;}
-[data-table] table {width:100%; max-width:100%; font-size:16px;}
+[data-table] table {width:100%; max-width:100%; font-size:16px; line-height:1.5em;}
 [data-table] table th,
-[data-table] table td {text-align:center; padding:8px 20px; border-right:1px solid #ccc; border-bottom:1px solid #ccc;}
+[data-table] table td {padding:8px 20px; border-right:1px solid #ccc; border-bottom:1px solid #ccc; text-align:center; vertical-align:middle;}
 [data-table] table th {background:#ccc; border-color:#fff; letter-spacing:0.05em;}
 [data-table] table tr:last-child th,
 [data-table] table tr:last-child td {border-bottom:0;}
@@ -182,8 +192,30 @@ html {overflow-y:scroll; -webkit-font-smoothing:antialiased; -moz-osx-font-smoot
 }
 
 /* 데이터 입력폼 */
-[data-table][data-input] {}
+[data-table][data-input]:after {display:block; clear:both; content:"";}
+[data-table][data-input] input[type="text"] {height:2em; padding-left:0; line-height:2em;}
+[data-table][data-input] .cmt {display:inline-block; padding:0.25em 0; font-size:14px; color:#ca0464;}
+[data-table][data-input] .cmt:before {content:"*";}
+[data-table][data-input] .status {display:inline-block; margin-left:20px;}
+[data-table][data-input] .pass .cmt:before {content:"";}
+[data-table][data-input] button {width:70px; margin-left:20px; border:1px solid #ca0464; font-size:14px; line-height:2em; color:#ca0464; transition:all 0.3s;}
 
+@media (max-width:1024px) {
+	[data-table][data-input] .cmt,
+	[data-table][data-input] .status {display:block; margin:0;}
+	[data-table][data-input] button {margin:0;}
+}
+
+@media (max-width:599px) {
+	[data-table][data-input] table,
+	[data-table][data-input] thead,
+	[data-table][data-input] tbody,
+	[data-table][data-input] tr,
+	[data-table][data-input] th,
+	[data-table][data-input] td {display:block; float:left; clear:both; width:100%; border:0; text-align:left;}
+	[data-table][data-input] .cmt,
+	[data-table][data-input] button {font-size:12px;}
+}
 
 /* 리스트 및 강조 */
 [data-list] > li {position:relative; font-size:16px; font-weight:400; line-height:1.5em;}
@@ -232,9 +264,10 @@ html {overflow-y:scroll; -webkit-font-smoothing:antialiased; -moz-osx-font-smoot
 
 /* 하단 버튼 */
 [data-ctr-btn] {margin-top:60px; font-size:0; text-align:center;}
+[data-ctr-btn].single {margin:0;}
 [data-ctr-btn] a,
 [data-ctr-btn] button {display:inline-block; min-width:180px; margin:0 5px; padding:0 10px; border:0; border-radius:0; background:#666; font-size:14px; line-height:40px; color:#fff; transition:all 0.3s;}
-[data-ctr-btn] button[type="submit"] {background:#bba078;}
+[data-ctr-btn] button[type="submit"] {background:#ca0464;}
 
 @media (max-width:1024px) {
 	[data-ctr-btn] {margin-top:30px;}
@@ -266,8 +299,12 @@ header {position:fixed; top:0; left:0; width:100%; height:150px; padding-top:55p
 }
 
 @media (max-width:599px) {
+	.header_wrap h1 .txt {margin-top:8px; font-size:12px;}
+}
+
+@media (max-width:359px) {
 	header {padding-top:15px; height:80px;}
-	.header_wrap h1 .txt {display:block; margin:0; margin-top:3px; font-size:14px;}
+	.header_wrap h1 .txt {display:block; margin:0; margin-top:3px;}
 }
 
 /* 워드프레스 관리자 헤더 커스터마이징 */
@@ -406,7 +443,52 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 [data-sub-content] {padding:50px 0 100px 0;}
 
 @media (max-width:1024px) {
-	[data-sub-content] {padding:30px 0 50px 0;}
+	[data-sub-content] {min-height:750px; padding:30px 0 50px 0;}
+}
+
+@media (max-width:599px) {
+	[data-sub-content] {min-height:400px;}
+}
+
+/* 합격자 발표 조회 입력폼 */
+[data-result-form] {max-width:400px; margin:60px auto 0;}
+[data-result-form] .tit {margin-bottom:20px; font-size:40px; font-weight:500; line-height:1.5em; text-align:center;}
+[data-result-form] .tab_menu {overflow:hidden;}
+[data-result-form] .tab_menu li {float:left; width:50%;}
+[data-result-form] .tab_menu li button {width:100%; border:3px solid #ccc; background:#fff; font-size:18px; font-weight:500; line-height:44px;}
+[data-result-form] .tab_menu li:first-child button {border-right:0;}
+[data-result-form] .tab_menu li:last-child button {border-left:0;}
+[data-result-form] .tab_menu li.on button {background:#bba078; border-color:#bba078; color:#fff;}
+[data-result-form] .tab_cont {padding:30px; padding-bottom:20px; border:3px solid #ccc; border-top:0;}
+[data-result-form] .tab_cont dl > div:after {display:block; clear:both; content:"";}
+[data-result-form] .tab_cont dt {float:left; position:relative; width:100px; padding-left:20px; font-size:18px; font-weight:500; line-height:40px;}
+[data-result-form] .tab_cont dt .wide {letter-spacing:1.75em;}
+[data-result-form] .tab_cont dt:before {position:absolute; top:50%; left:0; width:10px; height:5px; margin-top:-4px; background:#ca0464; content:"";}
+[data-result-form] .tab_cont dd {float:left; position:relative; width:calc(100% - 100px); padding-bottom:30px; font-size:0;}
+[data-result-form] .tab_cont dd .input_wrap {display:inline-block; position:relative; width:100%; padding:5px 0 4px; border-bottom:1px solid #999; font-size:14px;}
+[data-result-form] .tab_cont dd .input_wrap input[type="text"],
+[data-result-form] .tab_cont dd .input_wrap input[type="password"] {width:100%; height:30px; padding:0 3px; line-height:30px;}
+[data-result-form] .tab_cont dd .input_wrap span {position:absolute; top:50%; right:0; font-weight:500; transform:translateY(-50%);}
+[data-result-form] .tab_cont dd .alert {display:none; position:absolute; bottom:0; left:0; margin:5px 0; font-size:12px; line-height:1.5em; color:#ca0464;}
+[data-result-form] .tab_cont dd .birthday {vertical-align:top;}
+[data-result-form] .tab_cont dd .birthday .select_form {margin:0 15px;}
+
+@media (max-width:1024px) {
+	[data-result-form] {margin-top:30px;}
+	[data-result-form] .tit {margin-bottom:15px; font-size:24px;}
+	[data-result-form] .tab_menu li button {border-width:2px; font-size:16px; line-height:36px;}
+	[data-result-form] .tab_cont {padding:15px; border-width:2px;}
+	[data-result-form] .tab_cont dt {font-size:16px;}
+}
+
+@media (max-width:599px) {
+	[data-result-form] .tit {font-size:20px;}
+	[data-result-form] .tab_menu li button {border-width:1px; line-height:33px;}
+	[data-result-form] .tab_cont {border-width:1px;}
+	[data-result-form] .tab_cont dt,
+	[data-result-form] .tab_cont dd {float:none; width:100%;}
+	[data-result-form] .tab_cont dt {line-height:1.5em;}
+	[data-result-form] .tab_cont dt .wide {letter-spacing:-0.025em;}
 }
 
 /*=========================================================

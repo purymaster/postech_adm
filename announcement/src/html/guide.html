@@ -12,8 +12,15 @@
 		<div class="container">
 
 			<style>
-				.guide_tit {margin:1em 0; padding-left:1em; background:#ca0464; font-size:14px; font-weight:700; line-height:2em; color:#fff;}
-
+				.guide_tit {
+					margin: 1em 0;
+					padding-left: 1em;
+					background: #ca0464;
+					font-size: 14px;
+					font-weight: 700;
+					line-height: 2em;
+					color: #fff;
+				}
 			</style>
 
 			<!-- 컨텐츠 박스, 제목, 들여쓰기 -->
@@ -66,21 +73,40 @@
 			<div data-table data-input>
 				<table>
 					<colgroup>
+						<col style="width:20%;">
 						<col>
-						<col>
-						<col>
+						<col style="width:20%;">
 						<col>
 					</colgroup>
 					<tbody>
 						<tr>
-							<th scope="row">항목1</th>
-							<td>내용1</td>
-							<th scope="row">항목1</th>
-							<td>내용3</td>
+							<th scope="row">생년월일</th>
+							<td class="left">
+								<input type="text" style="width:90px;"  placeholder="YYYYMMDD" maxlength="8">
+								<p class="cmt">생년월일을 입력해주세요.</p>
+							</td>
+							<th scope="row" style="border-color:#ccc;">항목1</th>
+							<td class="left">내용1</td>
 						</tr>
 						<tr>
-							<th scope="row">항목1</th>
-							<td colspan="3">내용1</td>
+							<th scope="row">등록된 휴대폰 번호 입력</th>
+							<td class="left" colspan="3">
+								<input type="text" style="width:110px;" placeholder="00000000000" maxlength="11">
+
+								<!-- 인증 전 -->
+								<div class="status before">
+									<p class="cmt">휴대폰 번호을 입력해주세요.</p>
+									<button type="button"><span>인증하기</span></button>
+								</div>
+								<!-- //인증 전 -->
+
+								<!-- 인증 완료 -->
+								<div class="status pass" style="display:none;">
+									<p class="cmt">일치</p>
+								</div>
+								<!-- //인증 완료 -->
+
+							</td>
 						</tr>
 					</tbody>
 				</table>
