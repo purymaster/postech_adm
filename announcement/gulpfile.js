@@ -9,6 +9,7 @@ const gulp = require('gulp'),
 	pretty = require('gulp-pretty-html'),
 	beautify = require('gulp-beautify'),
 	imagemin = require('gulp-imagemin'),
+	removeline = require('gulp-remove-empty-lines'),
 	config = require('./config.js');
 	// combConfig = require('./csscomb.json');
 
@@ -29,8 +30,10 @@ gulp.task('html_merge', () => {
 			basepath: config.srcPath.include
 		}))
 		.pipe(pretty({
-			indent_with_tabs: true
+			indent_with_tabs: true,
+			unformatted: []
 		}))
+		.pipe(removeline())
 		.pipe(gulp.dest(config.devPath.html))
 		.pipe(
 			sync.reload({

@@ -170,7 +170,7 @@ html {overflow-y:scroll; -webkit-font-smoothing:antialiased; -moz-osx-font-smoot
 [data-table] {border:1px solid #ccc;}
 [data-table] table {width:100%; max-width:100%; font-size:16px; line-height:1.5em;}
 [data-table] table th,
-[data-table] table td {padding:8px 20px; border-right:1px solid #ccc; border-bottom:1px solid #ccc; text-align:center; vertical-align:middle;}
+[data-table] table td {height:40px; padding:0 20px; border-right:1px solid #ccc; border-bottom:1px solid #ccc; text-align:center; vertical-align:middle;}
 [data-table] table th {background:#ccc; border-color:#fff; letter-spacing:0.05em;}
 [data-table] table tr:last-child th,
 [data-table] table tr:last-child td {border-bottom:0;}
@@ -182,7 +182,7 @@ html {overflow-y:scroll; -webkit-font-smoothing:antialiased; -moz-osx-font-smoot
 @media (max-width:1024px) {
 	[data-table] table {font-size:14px;}
 	[data-table] table th,
-	[data-table] table td {padding:5px 10px;}
+	[data-table] table td {height:auto; padding:8px 10px;}
 }
 
 @media (max-width:599px) {
