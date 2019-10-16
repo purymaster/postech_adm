@@ -82,7 +82,7 @@
 						<tr>
 							<th scope="row">생년월일</th>
 							<td class="left">
-								<input type="text" style="width:90px;"  placeholder="YYYYMMDD" maxlength="8">
+								<input type="text" style="width:90px;" placeholder="YYYYMMDD" maxlength="8">
 								<p class="cmt">생년월일을 입력해주세요.</p>
 							</td>
 							<th scope="row" style="border-color:#ccc;">항목1</th>
@@ -112,6 +112,92 @@
 				</table>
 			</div>
 			<!-- //데이터 입력폼 -->
+
+			<!-- 데이터 선택폼 -->
+			<p class="guide_tit">데이터 선택폼</p>
+			<div data-table data-select>
+				<table>
+					<colgroup>
+						<col style="width:20%;">
+						<col style="width:10%;">
+						<col>
+						<col style="width:20%;">
+						<col style="width:100px;">
+						<col style="width:200px;">
+					</colgroup>
+					<thead>
+						<th scope="col">출발지(소요시간)</th>
+						<th scope="col">출발시간</th>
+						<th scope="col">승차장소</th>
+						<th scope="col">참고</th>
+						<th scope="col">이용여부</th>
+						<th scope="col">탑승인원(본인포함)</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="start">미사용</td>
+							<td class="start_time">-</td>
+							<td class="start_location">-</td>
+							<td class="etc">-</td>
+							<td class="bus_use">
+								<div class="radio_form">
+									<ul>
+										<li>
+											<input type="radio" id="select_none" name="transport">
+											<label for="select_none">미사용</label>
+										</li>
+									</ul>
+								</div>
+							</td>
+							<td class="member"></td>
+						</tr>
+						<tr>
+							<td class="start">포항시외버스터미널(10분)</td>
+							<td class="start_time">미정</td>
+							<td class="start_location">터미널 건너편 CGV 건물 스타벅스 앞</td>
+							<td class="etc">-</td>
+							<td class="bus_use">
+								<div class="radio_form">
+									<ul>
+										<li>
+											<input type="radio" id="select_01" name="transport">
+											<label for="select_01">사용</label>
+										</li>
+									</ul>
+								</div>
+							</td>
+							<td class="member">
+								<div>
+									<div class="select_form">
+										<input type="hidden">
+										<button type="button">
+											<span>1</span>
+										</button>
+										<ul>
+											<li>
+												<a href="#none">1</a>
+											</li>
+											<li>
+												<a href="#none">2</a>
+											</li>
+											<li>
+												<a href="#none">3</a>
+											</li>
+											<li>
+												<a href="#none">4</a>
+											</li>
+											<li>
+												<a href="#none">5</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //데이터 선택폼 -->
 
 			<!-- 리스트, 강조문구 -->
 			<p class="guide_tit">리스트, 강조문구</p>

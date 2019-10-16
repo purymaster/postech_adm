@@ -125,7 +125,8 @@ gulp.task('sync', ['html'], () => {
 			index: 'map_list.html'
 
 		},
-		browser: ['google chrome', 'chrome']
+		browser: 'google chrome'
+		// browser: ['google chrome', 'chrome']
 		// browser: ['google chrome', 'chrome', 'firefox', 'iexplore', 'opera', 'safari']
 	});
 });
