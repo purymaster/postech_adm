@@ -1,153 +1,65 @@
-@@include('header.html')
-<div class="content">
+<!DOCTYPE html>
+<html lang="ko">
 
-	<!-- 서브 페이지 컨텐츠 -->
-	<div class="" data-sub-content>
-		<div class="container">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>포항공과대학교</title>
+	<link rel="stylesheet" href="../css/ui.css">
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/common.js"></script>
+</head>
 
-			<div data-result-form>
-				<h2 class="tit">1단계 합격자 발표 조회</h2>
-				<ul class="tab_menu">
-					<li class="on">
-						<button type="button" data-val="personal">학생</button>
-					</li>
-					<li>
-						<button type="button" data-val="school">학교</button>
-					</li>
-				</ul>
+<body>
+	@@include('ie8.html')
 
-				<!-- 학생 조회 -->
-				<div class="tab_cont" id="personal">
-					<dl>
-						<div>
-							<dt>
-								<label for="personal_name" class="wide">이름</label>
-							</dt>
-							<dd>
-								<div class="input_wrap">
-									<input type="text" id="personal_name">
-								</div>
-								<p class="alert">수험생 본인의 이름을 정확히 입력해주세요!</p>
-							</dd>
-						</div>
-						<div>
-							<dt>
-								<label for="personal_number">수험번호</label>
-							</dt>
-							<dd>
-								<div class="input_wrap">
-									<input type="text" id="personal_number">
-								</div>
-								<p class="alert">수험번호를 정확히 입력해주세요!</p>
-							</dd>
-						</div>
-						<div>
-							<dt>
-								<label for="personal_year">생년월일</label>
-							</dt>
-							<dd>
-								<div class="birthday">
-									<div class="input_wrap" style="width:70px;">
-										<input type="text" id="personal_year" maxlength="4">
-										<span>년</span>
-									</div>
-									<div class="select_form">
-										<!-- [D] 선택한 값이 저장되는 input -->
-										<input type="hidden">
-										<button type="button">
-											<span>월</span>
-										</button>
-										<ul>
-											<li>
-												<a href="#none">1월</a>
-											</li>
-											<li>
-												<a href="#none">2월</a>
-											</li>
-											<li>
-												<a href="#none">3월</a>
-											</li>
-											<li>
-												<a href="#none">4월</a>
-											</li>
-											<li>
-												<a href="#none">5월</a>
-											</li>
-											<li>
-												<a href="#none">6월</a>
-											</li>
-											<li>
-												<a href="#none">7월</a>
-											</li>
-											<li>
-												<a href="#none">8월</a>
-											</li>
-											<li>
-												<a href="#none">9월</a>
-											</li>
-											<li>
-												<a href="#none">10월</a>
-											</li>
-											<li>
-												<a href="#none">11월</a>
-											</li>
-											<li>
-												<a href="#none">12월</a>
-											</li>
-										</ul>
-									</div>
-									<div class="input_wrap" style="width:60px;">
-										<input type="text" id="personal_day" maxlength="2">
-										<span>일</span>
-									</div>
-								</div>
-								<p class="alert">생년월일을 정확히 입력해주세요!</p>
-							</dd>
-						</div>
-					</dl>
+	<!-- 메인 페이지 -->
+	<h1 class="hidden">포항공과대학교</h1>
+	<div data-main-page>
+		<section class="junior">
+			<a href="#">
+				<div class="tit_wrap">
+					<h2 class="tit">학부</h2>
+					<span>Undergraduate</span>
 				</div>
-				<!-- //학생 조회 -->
-
-				<!-- 학교 조회 -->
-				<div class="tab_cont" id="school" style="display:none;">
-					<dl>
-						<div>
-							<dt>
-								<label for="school_code">학교코드</label>
-							</dt>
-							<dd>
-								<div class="input_wrap">
-									<input type="text" id="school_code">
-								</div>
-								<p class="alert">학교코드를 정확히 입력해주세요!</p>
-							</dd>
-						</div>
-						<div>
-							<dt>
-								<label for="school_pw">비밀번호</label>
-							</dt>
-							<dd>
-								<div class="input_wrap">
-									<input type="password" id="school_pw">
-								</div>
-								<p class="alert">비밀번호를 정확히 입력해주세요!</p>
-							</dd>
-						</div>
-					</dl>
+			</a>
+		</section>
+		<section class="senior">
+			<a href="#">
+				<div class="tit_wrap">
+					<h2 class="tit">대학원</h2>
+					<span>Graduate school</span>
 				</div>
-				<!-- //학교 조회 -->
-
-				<!-- 하단 버튼 -->
-				<div data-ctr-btn>
-					<button type="submit"><span>조회하기</span></button>
+			</a>
+		</section>
+		<section class="postechian">
+			<a href="#">
+				<div class="tit_wrap">
+					<h2 class="tit">포스테키안</h2>
+					<span>Postechian</span>
 				</div>
-				<!-- //하단 버튼 -->
+			</a>
+		</section>
+		<section class="announce">
+			<a href="#">
+				<div class="tit_wrap">
+					<h2 class="tit">학부 합격자 발표</h2>
+					<span>Announcement</span>
+				</div>
+			</a>
+		</section>
+		<section class="foreigner">
+			<a href="#">
 
-			</div>
-
-		</div>
+				<div class="tit_wrap">
+					<h2 class="tit">대학원(외국인)</h2>
+					<span>Graduate school (foreigner)</span>
+				</div>
 	</div>
-	<!-- //서브 페이지 컨텐츠 -->
+	</a>
+	</section>
+	</div>
+	<!-- //메인 페이지 -->
 
-</div>
-@@include('footer.html')
+</body>

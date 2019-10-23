@@ -1,0 +1,41 @@
+@@include('header.html')
+<div class="content">
+	@@include('result_view.html',{
+	"context" : {
+	"status" : "candidate",
+	"type" : "일반전형"
+	}
+	});
+	
+	<!-- 서브 페이지 컨텐츠 -->
+	<div class="" data-sub-content>
+		<div class="container">
+
+			<div data-content-box>
+				<p class="cont_tit">1. 추가합격자 발표안내</p>
+				<ul class="type1" data-list>
+					<li>추가합격자는 12월 16일(월)부터 12월 19일(목)까지 아래와 같이 발표됩니다.</li>
+					<li><strong>1차 발표</strong> : 12월 16일(월) 오전 10시 / 입학팀 홈페이지 일괄발표(<a href="https://admission.postech.ac.kr/" target="_blank" title="새창열림">admission.postech.ac.kr</a>)</li>
+					<li><strong>2차 발표</strong> : 12월 17일(화) 오후 5시 ~ 19일(목) / 개별 전화 안내 (주말, 공휴일 제외)</li>
+				</ul>
+			</div>
+
+			<div data-content-box>
+				<p class="cont_tit">2. 기타사항</p>
+				<ul class="type1" data-list>
+					<li>후보 순위는 발표하지 않습니다.</li>
+					<li>원활한 추가 합격 안내를 위해 지원자 혹은 보호자 연락처가 변경된 경우, 반드시 입학팀으로 연락주시기 바랍니다.</li>
+					<li>문의처: POSTECH 입학팀 (<a href="tel:054-279-3610">054-279-3610</a>, <a href="mailto:postech-admission@postech.ac.kr">postech-admission@postech.ac.kr</a>)</li>
+				</ul>
+			</div>
+
+			<div data-ctr-btn>
+				<a href="javascript:history.back();">뒤로가기</a>
+			</div>
+
+		</div>
+	</div>
+	<!-- //서브 페이지 컨텐츠 -->
+
+</div>
+@@include('footer.html')
