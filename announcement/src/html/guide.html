@@ -3,9 +3,12 @@
 	@@include('sub_visual.html')
 	@@include('result_view.html',{
 	"context" : {
-	"status" : "pass",
+	"status" : "finalpass",
 	"type" : "일반전형"
 	}
+	})
+	@@include('step.html',{
+	"step" : "step1"
 	})
 
 	<!-- 서브 페이지 컨텐츠 -->
@@ -24,14 +27,18 @@
 				}
 			</style>
 
-			<!-- 컨텐츠 박스, 제목, 들여쓰기 -->
+			<!-- 컨텐츠 박스, 제목, 들여쓰기, 버튼 -->
 			<p class="guide_tit">컨텐츠 박스, 제목, 들여쓰기</p>
 			<div data-content-box>
 				<p class="cont_tit">1. 제목</p>
 				<p class="sub_tit">가. 서브항목 제목</p>
 				<div class="indent">들여쓰기</div>
+				<div class="btn_wrap">
+					<a href="#">등록 바로가기</a>
+					<a href="#">등록 바로가기</a>
+				</div>
 			</div>
-			<!-- //컨텐츠 박스, 제목, 들여쓰기 -->
+			<!-- //컨텐츠 박스, 제목, 들여쓰기, 버튼 -->
 
 			<!-- 데이터 테이블 -->
 			<p class="guide_tit">데이터 테이블</p>
@@ -261,6 +268,19 @@
 				</ul>
 			</div>
 			<!-- //안내 박스 -->
+
+			<!-- 장학생 안내 -->
+			<p class="guide_tit">장학생 안내</p>
+			<div data-scholarship>
+				<p class="tit" data-animation="fadeInUp" data-delay="3">
+					<strong>PHDs<small>(Program for Highly Dedicated Students)</small><br> 장학생</strong>에 선정되셨습니다.
+				</p>
+				<p class="txt" data-animation="fadeInUp" data-delay="6">
+					『 PHDs 장학생 』은 대학민국 최우수 과학 인재를 엄격히 선별하여<br>
+					노벨상 수상자급 석학으로 양성하기 위한 POSTECH의 장학 프로그램입니다.
+				</p>
+			</div>
+			<!-- //장학생 안내 -->
 
 			<!-- 하단 버튼 -->
 			<p class="guide_tit">하단 버튼</p>

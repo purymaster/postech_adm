@@ -174,22 +174,28 @@ html {overflow-y:scroll; -webkit-font-smoothing:antialiased; -moz-osx-font-smoot
 .select_form ul li a {display:block; padding:5px 0; line-height:18px; color:#666; transition:all 0.3s;}
 .select_form ul li a:hover {font-weight:700; color:#ca0464;}
 
-/* 컨텐츠 박스, 제목, 들여쓰기 */
+/* 컨텐츠 박스, 제목, 들여쓰기, 버튼 */
 [data-content-box] {margin-bottom:40px;}
 [data-content-box]:last-of-type {margin:0;}
 [data-content-box] .cont_tit {margin-bottom:20px; font-size:30px; font-weight:500; line-height:1.3em;}
 [data-content-box] .sub_tit {margin-top:20px; margin-bottom:7px; font-size:16px; font-weight:700; line-height:1.5em; color:#555;}
 [data-content-box] .indent {padding-left:20px;}
+[data-content-box] .btn_wrap {margin:0 -10px; margin-top:10px;}
+[data-content-box] .btn_wrap a {display:inline-block; min-width:160px; margin:0 10px; padding:0 10px; border:1px solid #ca0464; background:#fff; font-size:16px; line-height:3em; color:#ca0464; text-align:center; white-space:nowrap; transition:all 0.3s;}
+[data-content-box] .btn_wrap a:hover {background:#ca0464; color:#fff;}
 
 @media (max-width:1024px) {
 	[data-content-box] + [data-content-box] {margin-top:30px;}
 	[data-content-box] .cont_tit {font-size:24px;}
+	[data-content-box] .btn_wrap a {min-width:0; font-size:14px; line-height:2.5em;}
 }
 
 @media (max-width:599px) {
 	[data-content-box] .cont_tit {font-size:18px;}
 	[data-content-box] .sub_tit {font-size:14px;}
 	[data-content-box] .indent {padding-left:0;}
+	[data-content-box] .btn_wrap {margin:0; margin-top:15px;}
+	[data-content-box] .btn_wrap a {display:block; width:100%; margin:0; margin-bottom:15px;}
 }
 
 /* 데이터 테이블 */
@@ -323,6 +329,30 @@ html {overflow-y:scroll; -webkit-font-smoothing:antialiased; -moz-osx-font-smoot
 	[data-info-box] .alert {font-size:12px;}
 }
 
+/* 장학생 안내 */
+[data-scholarship] {position:relative; text-align:center; padding:130px 30px 50px; background:#f9f7f5;}
+[data-scholarship]:before {position:absolute; top:50px; left:50%; width:84px; height:62px; margin-left:-42px; background:red; content:"";}
+[data-scholarship] .tit {font-size:34px; line-height:1.5em;}
+[data-scholarship] .tit strong {color:#ca0464;}
+[data-scholarship] .tit small {font-size:0.6em;}
+[data-scholarship] .txt {position:relative; padding-top:25px; font-size:16px; line-height:1.625em;}
+[data-scholarship] .txt:before {position:absolute; top:10px; left:50%; width:60px; height:1px; margin-left:-30px; background:#b0aba7; content:"";}
+
+@media (max-width:1024px) {
+	[data-scholarship] {padding:30px; padding-top:70px;}
+	[data-scholarship]:before {top:30px; transform:scale(0.5); transform-origin:top;}
+	[data-scholarship] .tit {font-size:24px; line-height:1.3em;}
+	[data-scholarship] .txt {font-size:14px; line-height:1.5em;}
+}
+
+@media (max-width:599px) {
+	[data-scholarship] {padding:15px; padding-top:50px;}
+	[data-scholarship]:before {top:15px;}
+	[data-scholarship] .tit {font-size:18px;}
+	[data-scholarship] .txt {font-size:12px;}
+	[data-scholarship] br {display:none;}
+}
+
 /* 하단 버튼 */
 [data-ctr-btn] {margin-top:60px; font-size:0; text-align:center;}
 [data-content-box] [data-ctr-btn] {margin-top:30px;}
@@ -423,6 +453,7 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 /*=========================================================
 6. 메인 페이지 스타일
 =========================================================*/
+
 [data-main-page] {overflow:hidden; height:100%;}
 [data-main-page] section {overflow:hidden; float:left; position:relative; width:20%; height:100%; text-align:center;}
 [data-main-page] section:before,
@@ -436,8 +467,8 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 [data-main-page] .postechian:before {background-image:url(../img/bg/bg_main_03.jpg);}
 [data-main-page] .announce:before {background-image:url(../img/bg/bg_main_04.jpg);}
 [data-main-page] .foreigner:before {background-image:url(../img/bg/bg_main_05.jpg);}
-[data-main-page] section a {display:block; height:100%; padding:95px 2vw 0;}
-[data-main-page] section .tit_wrap {position:relative; z-index:1; padding:120px 15px 30px;}
+[data-main-page] section a {display:block; position:relative; z-index:1; height:100%; padding:95px 2vw 0;}
+[data-main-page] section .tit_wrap {position:relative; padding:120px 15px 30px;}
 [data-main-page] section .tit_wrap:before {position:absolute; top:30px; left:50%; width:76px; height:76px; background:red; transform:translateX(-50%); content:"";}
 [data-main-page] section .tit_wrap:after {position:absolute; top:0; left:0; width:100%; height:100%; border:1px solid #fff; transform:scale(1.1); transition:all 0.3s; opacity:0; content:"";}
 [data-main-page] section:hover .tit_wrap:after {transform:scale(1); opacity:1;}
@@ -445,11 +476,18 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 [data-main-page] section .tit_wrap span {display:block; margin-top:5px; font-family:"Open Sans"; font-size:15px; line-height:1.5em; color:#fff; letter-spacing:0; opacity:0.5;}
 
 @media (max-width:1024px) {
-	[data-main-page] section {float:none; width:100%; height:auto;}
+	[data-main-page] {overflow:visible;}
+	[data-main-page] section {float:none; width:100%; height:auto; min-height:20%; animation-name:fadeInUp !important;}
+	[data-main-page] section a {padding:30px;}
+	[data-main-page] section .tit_wrap {padding:60px 0 0;}
+	[data-main-page] section .tit_wrap:before {top:0; transform:translateX(-50%) scale(0.5); transform-origin:top;}
+	[data-main-page] section .tit_wrap .tit {font-size:18px;}
+	[data-main-page] section .tit_wrap span {margin:0; font-size:14px;}
+	[data-main-page] section .tit_wrap:after {display:none;}
 }
 
 @media (max-width:599px) {
-	
+	[data-main-page] section a {padding:30px 15px;}
 }
 
 /*=========================================================
@@ -469,6 +507,52 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 	[data-visual] {height:150px;}
 	[data-visual] .txt_wrap {font-size:18px; padding:0 15px;}
 	[data-visual] .txt_wrap br {display:none;}
+}
+
+/* 온라인 등록 절차 */
+[data-step] {padding:60px 0 50px; background:#f9f7f5;}
+[data-step] .step {position:relative; max-width:1100px; margin:0 auto;}
+[data-step] .step:before {position:absolute; bottom:20px; left:-50px; width:calc(100% + 100px); height:1px; border-top:1px dotted #cdc4bb; content:"";}
+[data-step] .step ol {padding-bottom:20px;}
+[data-step] .step ol:before {position:absolute; bottom:20px; left:16.66%; z-index:1; width:66.66%; height:3px; margin-left:-40px; background:#ca0464; transform:scaleX(0); transform-origin:left; transition:transform 1s; content:"";}
+[data-step] .step ol:after {display:block; clear:both; content:"";}
+[data-step] .step li {float:left; position:relative; width:33.33%; padding-bottom:35px; padding-left:11.11%;}
+[data-step] .step li:before {position:absolute; bottom:1px; left:33.33%; width:100%; height:1px; margin-left:10px; background:#cdc4bb; content:"";}
+[data-step] .step li:last-child:before,
+[data-step] .step li:last-child:after {display:none;}
+[data-step] .step li .txt_wrap {position:relative;}
+[data-step] .step li .txt_wrap:before {position:absolute; z-index:2; bottom:-45px; left:10px; width:20px; height:20px; border:2px solid #cdc4bb; border-radius:50%; background:#f9f7f5; transition:all 0.3s; content:"";}
+[data-step] .step li span {position:absolute; top:-20px; left:0; font-size:40px; font-weight:700; line-height:1.5em; color:#a98147; transition:opacity 0.3s; opacity:0.5;}
+[data-step] .step li p {height:3em; padding-left:60px; font-size:20px; font-weight:700; line-height:1.5em; transition:opacity 0.3s; opacity:0.5;}
+[data-step] li:nth-child(1) .txt_wrap:before,
+[data-step] .step2 li:nth-child(1) .txt_wrap:before,
+[data-step] .step2 li:nth-child(2) .txt_wrap:before,
+[data-step] .step3 li .txt_wrap:before {border-color:#ca0464; background:#ca0464; transform:scale(1.3);}
+[data-step] .animated ol:before {width:16.66% !important; transform:scaleX(1) !important;}
+[data-step] .animated ol.step2:before {width:50% !important;}
+[data-step] .animated ol.step3:before {width:66.66% !important;}
+[data-step] .animated .step1 li:nth-child(1) span,
+[data-step] .animated .step1 li:nth-child(1) p,
+[data-step] .animated .step2 li:nth-child(1) span,
+[data-step] .animated .step2 li:nth-child(1) p,
+[data-step] .animated .step2 li:nth-child(2) span,
+[data-step] .animated .step2 li:nth-child(2) p,
+[data-step] .animated .step3 li span,
+[data-step] .animated .step3 li p {opacity:1;}
+[data-step] .msg {position:relative; padding:175px 30px 60px; text-align:center;}
+[data-step] .msg:before {position:absolute; top:70px; left:50%; width:76px; height:76px; margin-left:-38px; background:red; content:"";}
+[data-step] .msg .tit {font-size:50px; line-height:1.2em;}
+[data-step] .msg .txt {font-size:34px; line-height:1.5em; margin-top:10px;}
+[data-step] .msg .txt strong {color:#ca0464;}
+
+@media (max-width:1024px) {
+	[data-step] .step li span {top:-3px; font-size:20px;}
+	[data-step] .step li p {padding-left:30px; font-size:16px;}
+	[data-step] .step ol:before {margin-left:-20px;}
+}
+
+@media (max-width:599px) {
+	
 }
 
 /* 합격 결과 테이블 */
@@ -517,7 +601,7 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 	[data-result] .result dt {font-size:16px;}
 	[data-result] .result dt span.wide {padding-left:0.7em;}
 	[data-result] .result dd {font-size:14px;}
-	/* [data-result] .result ul li a {font-size:14px; line-height:2.5em;} */
+	[data-result] .result ul li a {font-size:14px; line-height:2.5em;}
 }
 
 @media (max-width:599px) {
@@ -534,8 +618,8 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 	[data-result] .result dt span.wide {padding-left:1.1em;}
 	[data-result] .result dd {width:calc(100% - 100px);}
 	[data-result] .result dd button {font-size:12px; line-height:2em;}
-	/* [data-result] .result ul {margin-top:15px; margin-bottom:-15px; padding:0 15px;}
-	[data-result] .result ul li {width:100%; margin-bottom:15px; padding:0;} */
+	[data-result] .result ul {margin-top:15px; margin-bottom:-15px; padding:0 15px;}
+	[data-result] .result ul li {width:100%; margin-bottom:15px; padding:0;}
 	[data-result] .result .notice {margin-top:15px; padding:0 15px; padding-left:22px; font-size:12px; line-height:1.5em; text-align:left; text-indent:-7px;}
 }
 

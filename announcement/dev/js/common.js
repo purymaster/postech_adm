@@ -17,14 +17,31 @@ $(function() {
         ($(this).hasClass('on')) ?
         select_form.find('button').removeClass('on'):
             (select_form.find('button').removeClass('on'), $(this).addClass('on'));
-    }).on('click', 'a', function() {
+    }).on('click', 'a', function(e) {
         $(this).closest('ul').siblings('button').removeClass('on').find('span').html($(this).text());
-        $(this).closest('.select_form').find('input[type=hidden]').val($(this).attr('value'));
+		$(this).closest('.select_form').find('input[type=hidden]').val($(this).attr('value'));
+		e.preventDefault();
     });
 
     $(document).on('mouseup touchend', function(e) {
         if (!select_form.is(e.target) && select_form.has(e.target).length === 0)
             select_form.find('button').removeClass('on');
+    });
+
+    /******************** 탭메뉴 제어 ********************/
+
+    var tab_menu = $('.tab_menu button'),
+        tab_cont = $('.tab_cont'),
+        target;
+
+    tab_menu.on('click', function() {
+        target = $(this).data('val');
+        $(this).parents('li').addClass('on').siblings().removeClass('on');
+        tab_cont.find('input[type="text"]').val('');
+        tab_cont.find('input[type="password"]').val('');
+        tab_cont.find('.select_form button').text('월');
+        tab_cont.hide();
+        $('#' + target).show();
     });
 
     /******************** 스크롤 애니메이션 정의 ********************/

@@ -1,0 +1,52 @@
+@@include('header.html')
+<div class="content">
+	@@include('result_view.html',{
+	"context" : {
+	"status" : "finalpass",
+	"type" : "일반전형"
+	}
+	})
+
+	<!-- 서브 페이지 컨텐츠 -->
+	<div class="" data-sub-content>
+		<div class="container">
+
+			<div data-content-box>
+				<p class="cont_tit">1. 등록 절차 안내</p>
+				<div class="indent">
+					<ul class="type1" data-list>
+						<li>등록 확인서 작성 및 필수 서류 업로드 후 등록 완료</li>
+					</ul>
+					<div class="btn_wrap">
+						<a href="#">등록 바로가기</a>
+					</div>
+				</div>
+			</div>
+
+			<div data-content-box>
+				<p class="cont_tit">2. 이중등록 관련 유의사항</p>
+				<div class="indent">
+					<ul class="type1" data-list>
+						<li>수시모집 합격자(추가합격 포함)는 등록 여부에 관계없이 정시 및 추가 모집에 지원할 수 없습니다.</li>
+						<li>수시모집 복수 합격자는 수시모집 등록기간 내에 1개의 대학에만 등록해야 합니다.</li>
+					</ul>
+				</div>
+			</div>
+
+			<div data-content-box>
+				<p class="cont_tit">3. 기타 사항</p>
+				<div class="indent">
+					<ul class="type1" data-list>
+						<li>기간 내에 등록이 완료되지 않는 경우, 별도의 확인 절차 없이 합격이 취소됩니다.</li>
+						<li>문의처 : 입학팀 (<a href="tel:054-279-3610">054-279-3610</a>, <a
+								href="mailto:postech-admission@postech.ac.kr">postech-admission@postech.ac.kr</a>)</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- //서브 페이지 컨텐츠 -->
+
+</div>
+@@include('footer.html')
