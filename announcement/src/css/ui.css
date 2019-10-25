@@ -99,7 +99,7 @@ label {cursor:pointer;}
 :-moz-placeholder {font-weight:400; color:#ccc;}
 
 /* 워드프레스 테마 리셋 */
-html {overflow-y:scroll; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+html {-webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
 #buffer-extension-hover-button,.entry-footer,.skip-link,.post-edit-link,.screen-reader-text,.dropdown-toggle,.site-header svg,.menu-toggle,.submenu-expand,.mobile-parent-nav-menu-item,.main-menu-more {display:none !important;}
  
 @media (max-width:599px) {
