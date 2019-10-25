@@ -599,7 +599,7 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 [data-result] .result dd {float:left; line-height:60px; padding:0 30px; border-bottom:1px solid #ccc;}
 [data-result] .result dt {width:190px; border-color:#cfb493; background:#bba078; font-size:18px; font-weight:700; color:#fff;}
 [data-result] .result dt span {display:inline-block; width:80px; letter-spacing:0.1em;}
-[data-result] .result dt span.wide {letter-spacing:1.5em; padding-left:0.5em;}
+[data-result] .result dt span.wide {letter-spacing:1em; padding-left:0.6em;}
 [data-result] .result dd {width:calc(100% - 190px); background:#fff; font-size:16px; text-align:left;}
 [data-result] .result dd .status {font-weight:700; color:#ca0464;}
 [data-result] .result dd button {min-width:60px; margin-left:20px; padding:0 10px; background:#666; font-size:14px; line-height:30px; color:#fff; transition:all 0.3s;}
