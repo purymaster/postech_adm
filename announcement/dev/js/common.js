@@ -17,10 +17,9 @@ $(function() {
         ($(this).hasClass('on')) ?
         select_form.find('button').removeClass('on'):
             (select_form.find('button').removeClass('on'), $(this).addClass('on'));
-    }).on('click', 'a', function(e) {
+    }).on('click', 'a', function() {
         $(this).closest('ul').siblings('button').removeClass('on').find('span').html($(this).text());
-		$(this).closest('.select_form').find('input[type=hidden]').val($(this).attr('value'));
-		e.preventDefault();
+        $(this).closest('.select_form').find('input[type=hidden]').val($(this).attr('value'));
     });
 
     $(document).on('mouseup touchend', function(e) {

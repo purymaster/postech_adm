@@ -1,7 +1,7 @@
 <div data-step>
 	<div class="container">
 		<div class="step" data-animation>
-			<ol class=@@step>
+			<ol class=@@context.step>
 				<li>
 					<div class="txt_wrap">
 						<span>01</span>
@@ -28,11 +28,13 @@
 				</li>
 			</ol>
 		</div>
+		@@if(context.step === "step3"){
 		<div class="msg">
-			<p class="tit">축하합니다!</p>
-			<p class="txt">
+			<p class="tit" data-animation="fadeInUp" data-delay="0">축하합니다!</p>
+			<p class="txt" data-animation="fadeInUp" data-delay="3">
 				<strong>포스텍 2020학년도 신입생</strong>이 되셨습니다!
 			</p>
 		</div>
+		}
 	</div>
 </div>

@@ -1,6 +1,11 @@
 @@include('header.html')
 <div class="content">
 	@@include('sub_visual.html')
+	@@include('step.html',{
+	"context" : {
+	"step" : "step2"
+	}
+	})
 
 	<!-- 서브 페이지 컨텐츠 -->
 	<div class="" data-sub-content>
@@ -68,7 +73,7 @@
 					<span>등록 완료</span>
 				</button>
 			</div>
-			
+
 		</div>
 	</div>
 	<!-- //서브 페이지 컨텐츠 -->
