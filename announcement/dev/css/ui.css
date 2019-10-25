@@ -257,6 +257,7 @@ html {overflow-y:scroll; -webkit-font-smoothing:antialiased; -moz-osx-font-smoot
 [data-table][data-select] .select_form {min-width:90px;}
 [data-table][data-select] .select_form button {border-color:#666; background:#666; line-height:28px; color:#fff;}
 [data-table][data-select] .select_form button:after {right:8px; width:8px; height:8px; margin-top:-8px; border-width:1px; border-color:#fff;}
+[data-table][data-select] .select_form button.on:after {margin-top:-2px;}
 [data-table][data-select] .select_form ul {padding:4px 10px; border:1px solid #666;}
 [data-table][data-select] .select_form button.on + ul {background:#f9f7f5;}
 [data-table][data-select] .select_form ul li a:hover {color:#333;}
@@ -273,6 +274,7 @@ html {overflow-y:scroll; -webkit-font-smoothing:antialiased; -moz-osx-font-smoot
 	[data-table][data-select] tr {padding:10px 0; border-right:1px solid #ccc; border-bottom:1px solid #ccc;}
 	[data-table][data-select] td {padding:0 15px;}
 	[data-table][data-select] td:before {font-weight:700;}
+	[data-table][data-select] .select_form button:after {margin-top:-8px;}
 	[data-table][data-select] .start:before {content:"출발지(소요시간) : ";}
 	[data-table][data-select] .start_time:before {content:"출발시간 : ";}
 	[data-table][data-select] .start_location:before {content:"승차장소 : ";}
