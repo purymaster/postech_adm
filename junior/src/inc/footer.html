@@ -1,33 +1,49 @@
 <footer>
-	<div class="bottom_list">
+	<div class="bottom_wrap">
 		<div class="container">
-			<ul>
-				<li><a href="#">개인정보취급방침</a></li>
+			<ul class="bottom_list">
+				<li class="personal"><a href="#">개인정보취급방침</a></li>
 				<li><a href="#">이메일무단수집거부</a></li>
 				<li><a href="#">저작권정책</a></li>
 			</ul>
+			<div class="link">
+				@@include('select.html', {
+				"context" : {
+				"use" : true,
+				"value" : ["학과 홈페이지", "홈페이지1", "홈페이지2"]
+				}
+				})
+				@@include('select.html', {
+				"context" : {
+				"use" : true,
+				"value" : ["교내 주요 사이트", "홈페이지1", "홈페이지2"]
+				}
+				})
+			</div>
 		</div>
 	</div>
 	<div class="footer_wrap">
 		<div class="container">
-			<img src="" alt="">
-			<dl class="info">
-				<div>
-					<dt class="hidden">주소</dt>
-					<dd>37673 경상북도 포항시 남구 청암로 77 (효자동 산31) POSTECH 입학팀</dd>
-				</div>
-				<div>
-					<dt>TEL</dt>
-					<dd><a href="tel:054-279-3610">054-279-3610</a></dd>
-				</div>
-				<div>
-					<dt>E-mail</dt>
-					<dd><a href="mailto:postech-admission@postech.ac.kr">postech-admission@postech.ac.kr</a></dd>
-				</div>
-			</dl>
-			<p class="copyright">
-				COPYRIGHT 2019 POHANG UNIVERSITY OF SCIENCE AND TECHNOLOGY ALL RIGHTS RESERVED.
-			</p>
+			<img class="logo" src="../img/img/img_footer_logo.png" alt="가치창출대학 POSTECH">
+			<div class="info">
+				<dl>
+					<div>
+						<dt class="hidden">주소</dt>
+						<dd>37673 경상북도 포항시 남구 청암로 77 (효자동 산31) POSTECH 입학팀</dd>
+					</div>
+					<div>
+						<dt>TEL</dt>
+						<dd><a href="tel:054-279-3610">054-279-3610</a></dd>
+					</div>
+					<div>
+						<dt>E-mail</dt>
+						<dd><a href="mailto:postech-admission@postech.ac.kr">postech-admission@postech.ac.kr</a></dd>
+					</div>
+				</dl>
+				<p class="copyright">
+					COPYRIGHT 2019 POHANG UNIVERSITY OF SCIENCE AND TECHNOLOGY ALL RIGHTS RESERVED.
+				</p>
+			</div>
 		</div>
 	</div>
 </footer>

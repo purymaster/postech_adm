@@ -8,10 +8,8 @@
 @font-face {
 	font-family: "Noto Sans KR";
 	font-weight: normal;
-	font-style: normal;
+	src: url("../fonts/notokr-regular.eot");
 	src: local("※"), 
-	url("../fonts/notokr-regular.eot"), 
-	url("../fonts/notokr-regular.eot?#iefix") format("embedded-opentype"),
 	url("../fonts/notokr-regular.woff2") format("woff2"), 
 	url("../fonts/notokr-regular.woff") format("woff");
 }
@@ -19,10 +17,8 @@
 @font-face {
 	font-family: "Noto Sans KR";
 	font-weight: 500;
-	font-style: normal;
+	src: url("../fonts/notokr-medium.eot");
 	src: local("※"), 
-	url("../fonts/notokr-medium.eot"), 
-	url("../fonts/notokr-medium.eot?#iefix") format("embedded-opentype"),
 	url("../fonts/notokr-medium.woff2") format("woff2"), 
 	url("../fonts/notokr-medium.woff") format("woff");
 }
@@ -30,10 +26,8 @@
 @font-face {
 	font-family: "Noto Sans KR";
 	font-weight: 700;
-	font-style: normal;
+	src: url("../fonts/notokr-bold.eot");
 	src: local("※"), 
-	url("../fonts/notokr-bold.eot"), 
-	url("../fonts/notokr-bold.eot?#iefix") format("embedded-opentype"),
 	url("../fonts/notokr-bold.woff2") format("woff2"), 
 	url("../fonts/notokr-bold.woff") format("woff");
 }
@@ -41,10 +35,8 @@
 @font-face {
 	font-family: "Noto Sans KR";
 	font-weight: 900;
-	font-style: normal;
+	src: url("../fonts/notokr-black.eot");
 	src: local("※"), 
-	url("../fonts/notokr-black.eot"), 
-	url("../fonts/notokr-black.eot?#iefix") format("embedded-opentype"),
 	url("../fonts/notokr-black.woff2") format("woff2"), 
 	url("../fonts/notokr-black.woff") format("woff");
 }
@@ -54,9 +46,9 @@
 =========================================================*/
 
 html {font-size:1em; letter-spacing:-0.025em;}
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,button {-webkit-box-sizing:border-box;box-sizing:border-box; margin:0; padding:0; border:0; font-family:"Nanum Barun Gothic",Dotum,"돋움",Helvetica,"Apple SD Gothic Neo",sans-serif; font-size:100%; vertical-align:baseline;}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,button {-webkit-box-sizing:border-box;box-sizing:border-box; margin:0; padding:0; border:0; font-family:"Noto Sans KR",Dotum,"돋움",Helvetica,"Apple SD Gothic Neo",sans-serif; font-size:100%; vertical-align:baseline;}
 
-input[type="text"],input[type="email"],input[type="number"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="password"],input[type="url"],input[type="search"],input[type="file"],button,textarea {-webkit-box-sizing:border-box;box-sizing:border-box; margin:0; padding:0; border:none; border-radius:0; background:none; font-family:"Nanum Barun Gothic",Dotum,"돋움",Helvetica,"Apple SD Gothic Neo",sans-serif; font-size:100%; letter-spacing:-0.04em; -webkit-appearance:none; -moz-appearance:none; appearance:none;}
+input[type="text"],input[type="email"],input[type="number"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="password"],input[type="url"],input[type="search"],input[type="file"],button,textarea {-webkit-box-sizing:border-box;box-sizing:border-box; margin:0; padding:0; border:none; border-radius:0; background:none; font-family:"Noto Sans KR",Dotum,"돋움",Helvetica,"Apple SD Gothic Neo",sans-serif; font-size:100%; letter-spacing:-0.04em; -webkit-appearance:none; -moz-appearance:none; appearance:none;}
 body {position:relative; background:#fff; font-size:14px; line-height:1.8; color:#333; word-wrap:break-word; word-break:keep-all; -webkit-text-size-adjust:none; -moz-text-size-adjust:none;}
 blockquote,q {quotes:none;}
 /* input:focus,button:focus {border:none;} */
@@ -96,7 +88,7 @@ label {cursor:pointer;}
 :-moz-placeholder {font-weight:400; color:#ccc;}
 
 /* 워드프레스 테마 리셋 */
-html {overflow-y:scroll; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+html {-webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
 #buffer-extension-hover-button,.entry-footer,.skip-link,.post-edit-link,.screen-reader-text,.dropdown-toggle,.site-header svg,.menu-toggle,.submenu-expand,.mobile-parent-nav-menu-item,.main-menu-more {display:none !important;}
  
 @media (max-width:599px) {
@@ -107,8 +99,9 @@ html {overflow-y:scroll; -webkit-font-smoothing:antialiased; -moz-osx-font-smoot
 3. 공통 레이아웃
 =========================================================*/
 
-.container {position:relative; max-width:1400px; margin:0 auto; padding:0 100px;}
-.content {}
+.container {position:relative; max-width:1260px; margin:0 auto; padding:0 30px;}
+.container.wide {max-width:1400px; padding:0;}
+.content {padding-top:150px;}
 .move_top {visibility:hidden; position:fixed; right:30px; bottom:100px; z-index:7; -webkit-transition:all 0.3s; transition:all 0.3s; opacity:0;}
 .move_top.on {visibility:visible; bottom:110px; opacity:1;}
 .move_top button {position:relative; width:30px; height:30px; border:1px solid #ca0464; background:#fff; line-height:1; text-align:center; text-indent:-9999px; -webkit-transition:all 0.3s; transition:all 0.3s;}
@@ -122,13 +115,41 @@ html {overflow-y:scroll; -webkit-font-smoothing:antialiased; -moz-osx-font-smoot
 .ie9 button {overflow:hidden; position:absolute; top:20px; right:20px; width:30px; height:30px; background:url(../img/sprite/sprite.png); background-position:-10px -258px; text-indent:-9999px;}
 
 @media (max-width:1024px) {
-	.content {padding-top:50px;}
+	
 }
 
 @media (max-width:599px) {
 	.container {padding:0 15px;}
 	.move_top {right:15px; bottom:50px;}
 	.move_top.on {bottom:60px;}
+}
+
+/* 라디오버튼 */
+.radio_form {margin:3px 0;}
+.radio_form ul {margin:-3px 0; font-size:0;}
+.radio_form ul > li {float:left; margin:3px 0; line-height:1;}
+.radio_form input[type="radio"] {width:0; height:0; margin:0; padding:0; font-size:0; line-height:0; opacity:0;}
+.radio_form ul:after,
+.radio_form ul > li:after {display:block; clear:both; content:"";}
+.radio_form input[type="radio"] + label {float:left; position:relative; margin-right:15px; padding-left:27px; font-size:14px; font-weight:500; line-height:26px; color:#333; cursor:pointer;}
+.radio_form ul > li:last-child input[type="radio"] + label {margin-right:0;}
+.radio_form input[type="radio"] + label:before {display:inline-block; position:absolute; top:50%; left:2px; -webkit-box-sizing:border-box; box-sizing:border-box; width:22px; height:22px; margin-top:-11px; border:1px solid #dedede; border-radius:50%; background:#fff; content:"";}
+.radio_form input[type="radio"]:checked + label:after {display:inline-block; position:absolute; top:50%; left:9px; width:8px; height:8px; margin-top:-4px; border-radius:50%; background:#ca0464; content:"";}
+
+/* 셀렉트박스 */
+.select_form {display:inline-block; position:relative; background:#fff; font-size:14px; text-align:left;}
+.select_form button {display:block; overflow:hidden; position:relative; width:100%; min-width:180px; padding:0 15px; padding-right:35px; border:0; border:1px solid #e8e5e2; background:#fff; line-height:38px; text-align:left; text-overflow:ellipsis; white-space:nowrap;}
+.select_form button:after {position:absolute; top:50%; right:15px; width:6px; height:6px; margin-top:-6px; border-right:2px solid #353535; border-bottom:2px solid #353535; -webkit-transform:rotate(45deg); transform:rotate(45deg); -webkit-transition:all 0.2s; transition:all 0.2s; content:"";}
+.select_form button.on:after {margin-top:-2px; -webkit-transform:rotate(225deg); transform:rotate(225deg);}
+.select_form ul {visibility:hidden; overflow:hidden; position:absolute; width:100%; height:0; padding:5px 15px; border:1px solid #dfdfdf; border-top:0; -webkit-transition:opacity 0.1s; transition:opacity 0.1s; opacity:0;}
+.select_form button.on + ul {visibility:visible; overflow-y:auto; z-index:1; height:auto; max-height:300px; background:#fff; opacity:1;}
+.select_form ul li a {display:block; padding:3px 0; line-height:1.3em; color:#555; -webkit-transition:all 0.3s; transition:all 0.3s;}
+.select_form ul li a:hover {font-weight:700; color:#a88f62; text-decoration:underline;}
+
+@media (max-width:320px) {
+    .select_form button {padding-left:10px; padding-right:25px;}
+	.select_form button:after {right:10px;}
+	.select_form button.on + ul {max-height:200px;}
 }
 
 /*=========================================================
@@ -141,8 +162,7 @@ html {overflow-y:scroll; -webkit-font-smoothing:antialiased; -moz-osx-font-smoot
 5. 헤더
 =========================================================*/
 
-header {background:#fff; padding:35px 30px; height:120px;}
-
+header {position:fixed; top:0; left:0; width:100%; height:150px;}
 nav {display:none;}
 
 /* 워드프레스 관리자 헤더 커스터마이징 */
@@ -164,14 +184,54 @@ nav {display:none;}
 =========================================================*/
 
 footer {}
-
+footer .bottom_wrap {background:#a88f62; padding:7px 0;}
+footer .bottom_wrap:after {display:block; clear:both; content:"";}
+footer .bottom_wrap .bottom_list {overflow:hidden; float:left; margin:0 -20px; padding:7px 0;}
+footer .bottom_wrap .bottom_list li {float:left; position:relative; padding:0 20px;}
+footer .bottom_wrap .bottom_list li:after {position:absolute; top:50%; right:0; width:1px; height:14px; margin-top:-9px; background:#fff; opacity:0.4; content:"";}
+footer .bottom_wrap .bottom_list li:last-child:after {display:none;}
+footer .bottom_wrap .bottom_list li a {display:block; font-size:14px; line-height:1.5em; color:#fff; -webkit-transition:all 0.3s; transition:all 0.3s;}
+footer .bottom_wrap .bottom_list li a:hover {color:#71542a;}
+footer .bottom_wrap .bottom_list li.personal a {font-weight:700; color:#71542a;}
+footer .bottom_wrap .link {float:right;}
+footer .bottom_wrap .link .select_form {background:none;}
+footer .bottom_wrap .link .select_form button {background:none; line-height:34px; color:#fff;}
+footer .bottom_wrap .link .select_form button:after {border-color:#fff;}
+footer .bottom_wrap .link .select_form ul {bottom:35px; border-top:1px solid #dfdfdf;}
+footer .footer_wrap {padding:20px 0;}
+footer .footer_wrap img {float:left; height:40px; margin-top:5px; margin-right:70px;}
+footer .footer_wrap .info {overflow:hidden; line-height:2em; font-size:12px;}
+footer .footer_wrap .info dl {overflow:hidden; color:#ac8e63; margin-left:-20px;}
+footer .footer_wrap .info dl > div {display:inline-block; position:relative; padding:0 20px;}
+footer .footer_wrap .info dl > div:after {position:absolute; top:50%; right:0; width:1px; height:12px; margin-top:-7px; background:#ded2c1; opacity:0.4; content:"";}
+footer .footer_wrap .info dl > div:last-child:after {display:none;}
+footer .footer_wrap .info dt,
+footer .footer_wrap .info dd {display:inline-block;}
+footer .footer_wrap .info dt {font-weight:700;} 
+footer .footer_wrap .info dt:after {content:":"; padding:0 0.5em;}
+footer .footer_wrap .info dd a {color:inherit;}
+footer .footer_wrap .info .copyright {color:#ccc;}
 
 @media (max-width:1024px) {
-	
+	footer {text-align:center;}
+	footer .footer_wrap {padding:15px 0;}
+	footer .bottom_wrap .bottom_list {float:none;}
+	footer .bottom_wrap .bottom_list li {display:inline-block; float:none;}
+	footer .bottom_wrap .link {float:none;}
+	footer .footer_wrap img {margin-right:30px;}
+	footer .footer_wrap .info {line-height:1.75em;}
+	footer .footer_wrap .info dl {margin-left:-10px;}
+	footer .footer_wrap .info dl > div {padding:0 10px;}
+	footer .footer_wrap .info .copyright {font-size:10px; line-height:1.5em;}
 }
 
 @media (max-width:599px) {
-	
+	footer .bottom_wrap .bottom_list {margin:0 -10px; padding:10px 0;}
+	footer .bottom_wrap .bottom_list li {padding:0 10px;}
+	footer .bottom_wrap .link .select_form {width:100%; margin:5px 0;}
+	footer .footer_wrap img {display:block; float:none; margin:0 auto; margin-bottom:15px;}
+	footer .footer_wrap .info {line-height:1.5em;}
+	footer .footer_wrap .info dl > div:after {display:none;}
 }
 
 /*=========================================================
@@ -179,20 +239,15 @@ footer {}
 =========================================================*/
 
 /*=========================================================
-8. 합격자 발표 페이지 스타일
-=========================================================*/
-
-
-/*=========================================================
-9. 메인 페이지 스타일
+8. 메인 페이지 스타일
 =========================================================*/
 
 /*=========================================================
-10. 서브 페이지 스타일
+9. 서브 페이지 스타일
 =========================================================*/
 
 /*=========================================================
-11. animate
+10. animate
 =========================================================*/
 
 /*!
@@ -210,6 +265,16 @@ footer {}
 
 @keyframes fadeInUp {
 	0% {-webkit-transform:translate3d(0, 50px, 0); transform:translate3d(0, 50px, 0); -webkit-transform-origin:50% 50%; transform-origin:50% 50%; opacity:0;}
+	100% {-webkit-transform:translate3d(0, 0, 0); transform:translate3d(0, 0, 0); -webkit-transform-origin:50% 50%; transform-origin:50% 50%; opacity:1;}
+}
+
+@-webkit-keyframes fadeInDown {
+	0% {-webkit-transform:translate3d(0, -50px, 0); transform:translate3d(0, -50px, 0); -webkit-transform-origin:50% 50%; transform-origin:50% 50%; opacity:0;}
+	100% {-webkit-transform:translate3d(0, 0, 0); transform:translate3d(0, 0, 0); -webkit-transform-origin:50% 50%; transform-origin:50% 50%; opacity:1;}
+}
+
+@keyframes fadeInDown {
+	0% {-webkit-transform:translate3d(0, -50px, 0); transform:translate3d(0, -50px, 0); -webkit-transform-origin:50% 50%; transform-origin:50% 50%; opacity:0;}
 	100% {-webkit-transform:translate3d(0, 0, 0); transform:translate3d(0, 0, 0); -webkit-transform-origin:50% 50%; transform-origin:50% 50%; opacity:1;}
 }
 
@@ -234,6 +299,7 @@ footer {}
 }
 
 .fadeInUp {-webkit-animation-name:fadeInUp; animation-name:fadeInUp;}
+.fadeInDown {-webkit-animation-name:fadeInDown; animation-name:fadeInDown;}
 .fadeInLeft {-webkit-animation-name:fadeInLeft; animation-name:fadeInLeft;}
 .fadeInRight {-webkit-animation-name:fadeInRight; animation-name:fadeInRight;}
 .wait-animation {opacity:0; -webkit-animation-play-state:paused; animation-play-state:paused;}
