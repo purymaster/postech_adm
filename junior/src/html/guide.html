@@ -1,15 +1,209 @@
+<style>
+	.guide_tit {
+		margin: 1em 0;
+		padding-left: 1em;
+		background: #ca0464;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 2em;
+		color: #fff;
+	}
+</style>
+
 @@include('header.html')
 <div class="content">
 
+	<div class="container wide">
+		@@include('sub_visual.html', {
+		"type" : "type1",
+		"sub_tit" : "1DEPTH MENU TITLE",
+		"tit" : "페이지 제목"
+		})
+	</div>
+
 	<!-- 서브 페이지 컨텐츠 -->
 	<div class="" data-sub-content>
-		<div class="container wide">
+		<div class="container">
 
-			@@include('sub_visual.html', {
-			"type" : "type1",
-			"sub_tit" : "1DEPTH MENU TITLE",
-			"tit" : "페이지 제목"
+			<div data-sub-title>
+				<h2 class="tit">페이지 제목</h2>
+				<p class="txt">
+					포항공과대학교 전형에 관련하여 자주 묻는 질문을 확인하실 수 있습니다.<br>
+					유형별 선택보기로 전형을 선택하시면 편리하게 찾을 수 있습니다.
+				</p>
+			</div>
+
+			@@include('tab.html', {
+			"has_tab" : true,
+			"tab_list" : ["전체", "공통", "수시모집", "정시모집", "편입학", "재외국민"],
+			"type" : "type6"
 			})
+
+			<!-- 검색창 -->
+			<p class="guide_tit">검색창</p>
+			<div data-board-misc>
+				<div data-search-box>
+					@@include('select.html', {
+					"context" : {
+					"use" : true,
+					"value" : ["전체", "제목", "작성자"]
+					}
+					})
+					<div class="search_wrap">
+						<input type="text" placeholder="검색어 입력">
+						<button type="submit">검색</button>
+					</div>
+				</div>
+				<p class="status">총 <span>999</span>건의 게시물이 있습니다.</p>
+			</div>
+			<!-- //검색창 -->
+
+			<!-- 제어 버튼 -->
+			<p class="guide_tit">제어 버튼(inline style 제거 후 사용)</p>
+
+			<!-- 가로 full 사이즈 -->
+			<div style="max-width:330px; margin:0 auto;">
+				<button type="submit" data-btn class="full login">
+					<span>로그인</span>
+				</button>
+				<button type="submit" data-btn class="full sns naver" style="margin-top:10px;">
+					<span>네이버 로그인</span>
+				</button>
+				<button type="submit" data-btn class="full sns kakao" style="margin-top:10px;">
+					<span>카카오 로그인</span>
+				</button>
+				<button type="submit" data-btn class="full sns facebook" style="margin-top:10px;">
+					<span>페이스북 로그인</span>
+				</button>
+			</div>
+
+			<!-- 버튼 복수 -->
+			<div data-ctr-btn>
+				<!-- 작은 사이즈 -->
+				<a href="#" data-btn>목록</a>
+				<button type="submit" data-btn>
+					<span>확인</span>
+				</button>
+			</div>
+
+			<!-- 버튼 단일 -->
+			<div data-ctr-btn>
+				<!-- 큰 사이즈 -->
+				<button type="submit" data-btn class="wide">확인</button>
+			</div>
+
+			<!-- //제어 버튼 -->
+
+			<!-- 게시판(일반) 리스트 -->
+			<p class="guide_tit">게시판(일반) 리스트</p>
+			<div data-board-list>
+				<table>
+					<colgroup>
+						<col style="width:8%;">
+						<col>
+						<col style="width:12%;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">번호</th>
+							<th scope="col">제목</th>
+							<th scope="col">상태</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td data-type="num">99999</td>
+							<td data-type="title">
+								<a href="#">
+									<span class="cate">[정시]</span>
+									<p class="tit">
+										군사법원의 조직·권한 및 재판관의 자격은 법률로 정한다. 대법원장의 임기는 6년으로 하며, 중임할 수 없다. 모든 국민은 근로의 권리를
+										가진다. 국가는 사회적·경제적 방법으로 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며, 법률이 정하는 바에 의하여 최저임금제를
+										시행하여야 한다.
+									</p>
+									<span class="secret">비밀글</span>
+								</a>
+							</td>
+							<td data-type="status">
+								<span>답변대기</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-type="num">99999</td>
+							<td data-type="title">
+								<a href="#">
+									<span class="cate">[편입학]</span>
+									<p class="tit">
+										국민경제의 발전을 위한 중요정책의 수립에 관하여 대통령의 자문에 응하기 위하여 국민경제자문회의를 둘 수 있다.
+									</p>
+								</a>
+							</td>
+							<td data-type="status">
+								<span class="on">답변완료</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div data-ctr-btn class="right">
+				<a href="#" data-btn>문의하기</a>
+			</div>
+			<!-- //게시판(일반) 리스트 -->
+
+			<!-- 페이징 -->
+			<p class="guide_tit">페이징</p>
+			@@include('paging.html')
+			<!-- //페이징 -->
+
+			<!-- 게시판 뷰 -->
+			<p class="guide_tit">게시판 뷰</p>
+			<div data-board-view>
+				<div class="view_header">
+					<h3 class="tit">
+						<span class="cate">[수시]</span>
+						국가는 전통문화의 계승·발전과 민족문화의 창달에 노력하여야 한다. 헌법에 의하여 체결·공포된 조약과 일반적으로 승인된 국제법규는 국내법과 같은 효력을 가진다.
+					</h3>
+					<ul class="misc">
+						<li class="author">
+							<div>
+								<span class="hidden">작성자</span>
+								홍길동
+							</div>
+						</li>
+						<li class="date">
+							<div>
+								<span class="hidden">작성시각</span>
+								9999-99-99
+							</div>
+						</li>
+						<li class="view">
+							<div>
+								<span class="hidden">조회수</span>
+								999
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="view_content" data-editor>
+					<!-- [D] 에디터 삽입 영역 -->
+					<p>
+						안녕하세요, 포항공과대학교에 2020년도 수시로 신소재공학과에 입학을 하고싶어 지원한 지원자입니다. 혹시 면접 일자가 언제인지 궁금합니다. 확인하시면 답변 부탁드립니다.
+						감사합니다
+						:)
+					</p>
+					<!-- [D] //에디터 삽입 영역 -->
+				</div>
+				<div class="answer">
+					<span class="tit">
+						답변완료
+					</span>
+					<p>
+						안녕하세요, 먼저, 우리 포항공과대에 관심을 가져주시고 지원해주셔서 감사합니다. 문의해주신 내용을 답변해드리면, 신소재공학과의 면접날짜는 11월 28일 입니다. 더 자세한
+						사항을 원하시면, 054-0000-0000 (신소재공학과 학과사무실)로 연락하여 문의해주시기 바랍니다. 감사합니다. 포항공과대학교 드림
+					</p>
+				</div>
+			</div>
+			<!-- //게시판 뷰 -->
 
 		</div>
 	</div>
