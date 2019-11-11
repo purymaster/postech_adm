@@ -20,6 +20,7 @@
 	<title>포항공과대학교 - 학부</title>
 	<link rel="stylesheet" href="../css/ui.css">
 	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/jquery-ui.min.js"></script>
 	<script src="../js/slick.min.js"></script>
 	<script src="../js/common.js"></script>
 </head>
@@ -251,22 +252,16 @@
 							</h3>
 							<ul class="misc">
 								<li class="author">
-									<div>
-										<span class="hidden">작성자</span>
-										홍길동
-									</div>
+									<span class="hidden">작성자</span>
+									홍길동
 								</li>
 								<li class="date">
-									<div>
-										<span class="hidden">작성시각</span>
-										9999-99-99
-									</div>
+									<span class="hidden">작성시각</span>
+									9999-99-99
 								</li>
 								<li class="view">
-									<div>
-										<span class="hidden">조회수</span>
-										999
-									</div>
+									<span class="hidden">조회수</span>
+									999
 								</li>
 							</ul>
 						</div>
@@ -289,7 +284,273 @@
 							</p>
 						</div>
 					</div>
+					<div data-ctr-btn>
+						<a href="#" data-btn class="list">목록</a>
+					</div>
 					<!-- //게시판 뷰 -->
+
+					<!-- Q&A -->
+					<p class="guide_tit">Q&amp;A</p>
+					<ul data-faq>
+						<li>
+							<div class="cont question">
+								<i>Q</i>
+								<p class="tit">
+									<span class="cate">[편입학]</span>
+									제목
+								</p>
+								<ul class="misc">
+									<li>
+										<div class="view">
+											<span class="hidden">조회수</span>
+											999
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="cont answer">
+								<i>A</i>
+								<p class="txt">
+									내용
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="cont question">
+								<i>Q</i>
+								<p class="tit">
+									<span class="cate">[편입학]</span>
+									국가는 전통문화의 계승·발전과 민족문화의 창달에 노력하여야 한다. 헌법에 의하여 체결·공포된 조약과 일반적으로 승인된 국제법규는 국내법과 같은 효력을 가진다.
+								</p>
+								<ul class="misc">
+									<li>
+										<div class="file">
+											<a href="#">첨부파일</a>
+										</div>
+									</li>
+									<li>
+										<div class="view">
+											<span class="hidden">조회수</span>
+											999
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="cont answer">
+								<i>A</i>
+								<p class="txt">
+									2020학년도 정시 신입학 대학수학능력시험 환산점수 방법 및 예시를 붙임파일로 안내하오니 수험생 및 학부모님께서는 참고하시기 바랍니다. 붙임파일의 점수는 모두
+									예시 점수이며
+									2019학년도 대학수학능력시험 결과 및 탐구 백분위 변환표준범수를 반영하였습니다. (2020학년도 대학수학능력시험 종료 후 반영하여 재업로드 예정)
+									2020학년도 정시 신입학 대학수학능력시험 환산점수 방법 및 예시를 붙임파일로 안내하오니 수험생 및 학부모님께서는 참고하시기 바랍니다. 붙임파일의 점수는 모두
+									예시 점수이며
+									2019학년도 대학수학능력시험 결과 및 탐구 백분위 변환표준범수를 반영하였습니다. (2020학년도 대학수학능력시험 종료 후 반영하여 재업로드 예정)
+								</p>
+								<ul class="file">
+									<li>
+										<a href="#">
+											파일명.pdf
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<!-- //Q&A -->
+
+					<!-- 입력폼(게시물) -->
+					<p class="guide_tit">입력폼(게시물)</p>
+					<div data-input-form>
+						<table>
+							<colgroup>
+								<col style="width:16%;">
+								<col style="width:25%;">
+								<col style="width:16%;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">
+										<label for="input_01">제목</label>
+									</th>
+									<td colspan="3">
+										<input type="text" id="input_01">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">
+										<label for="radio_01">비밀글 여부</label>
+									</th>
+									<td>
+										<div class="radio_form">
+											<ul>
+												<li>
+													<input type="radio" id="radio_01" name="select_secret" checked>
+													<label for="radio_01">공개</label>
+												</li>
+												<li>
+													<input type="radio" id="radio_02" name="select_secret">
+													<label for="radio_02">비공개</label>
+												</li>
+											</ul>
+										</div>
+									</td>
+									<th scope="row">
+										<label for="input_02">비밀번호</label>
+									</th>
+									<td>
+										<input type="password" id="input_02">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">
+										<label for="input_03">이름</label>
+									</th>
+									<td colspan="3">
+										<input type="text" id="input_03">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">
+										<label for="input_04">이메일</label>
+									</th>
+									<td colspan="3">
+										<div class="input_box mail">
+											<input type="text" id="input_04" title="이메일 주소">
+											<span class="letter at">@</span>
+											<input type="text" id="input_05" title="이메일 계정">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">
+										<label for="input_06">전화번호</label>
+									</th>
+									<td colspan="3">
+										<div class="input_box tel">
+											<div class="select_form">
+												<input type="hidden">
+
+
+												<button type="button"><span>010</span></button>
+
+												<ul>
+
+													<li><a href="#none">010</a></li>
+
+													<li><a href="#none">019</a></li>
+
+												</ul>
+
+											</div>
+											<input type="text" id="input_06" title="전화번호 중간 4자리" maxlength="4">
+											<span class="letter dash">-</span>
+											<input type="text" id="input_07" title="전화번호 마지막 4자리" maxlength="4">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">
+										<label>구분</label>
+									</th>
+									<td colspan="3">
+										<div class="select_form">
+											<input type="hidden">
+
+
+											<button type="button"><span>정시모집</span></button>
+
+											<ul>
+
+												<li><a href="#none">정시모집</a></li>
+
+												<li><a href="#none">수시모집</a></li>
+
+												<li><a href="#none">편입학</a></li>
+
+											</ul>
+
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">
+										<label for="input_09">내용</label>
+									</th>
+									<td colspan="3">
+										<textarea id="input_09" cols="30" rows="10"></textarea>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">
+										<label>스팸방지 번호</label>
+									</th>
+									<td>
+
+									</td>
+									<th scope="row">
+										<label for="input_10">스팸방지 번호 입력</label>
+									</th>
+									<td>
+										<input type="text" id="input_10">
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //입력폼(게시물) -->
+
+					<!-- 입력폼(회원가입) -->
+					<p class="guide_tit">입력폼(회원가입)</p>
+					<div data-input-form data-input-join>
+						<table>
+							<colgroup>
+								<col style="width:110px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">
+										<label for="input_11">아이디</label>
+									</th>
+									<td>
+										<div class="input_box">
+											<input type="text" id="input_11" placeholder="아이디 입력">
+											<button type="button" class="ctr check">
+												<span>중복확인</span>
+											</button>
+										</div>
+										<p class="info_txt">*5~12자의 영문 소문자, 숫자 입력</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">
+										<label for="radio_03">성별</label>
+									</th>
+									<td>
+										<div class="radio_form">
+											<ul>
+												<li>
+													<input type="radio" id="radio_03" name="select_gender" checked>
+													<label for="radio_03">남자</label>
+												</li>
+												<li>
+													<input type="radio" id="radio_04" name="select_gender">
+													<label for="radio_04">여자</label>
+												</li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+
+
+
+
+
+							</tbody>
+						</table>
+					</div>
+					<!-- //입력폼(회원가입) -->
 
 				</div>
 			</div>
