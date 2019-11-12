@@ -1,15 +1,3 @@
-<style>
-	.guide_tit {
-		margin: 1em 0;
-		padding-left: 1em;
-		background: #ca0464;
-		font-size: 14px;
-		font-weight: 700;
-		line-height: 2em;
-		color: #fff;
-	}
-</style>
-
 @@include('header.html')
 <div class="content">
 
@@ -24,6 +12,18 @@
 	<!-- 서브 페이지 컨텐츠 -->
 	<div class="" data-sub-content>
 		<div class="container">
+
+			<style>
+				.guide_tit {
+					margin: 1em 0;
+					padding-left: 1em;
+					background: #ca0464;
+					font-size: 14px;
+					font-weight: 700;
+					line-height: 2em;
+					color: #fff;
+				}
+			</style>
 
 			<div data-sub-title>
 				<h2 class="tit">페이지 제목</h2>
@@ -332,6 +332,12 @@
 									<input type="text" id="input_04" title="이메일 주소">
 									<span class="letter at">@</span>
 									<input type="text" id="input_05" title="이메일 계정">
+									@@include('select.html', {
+									"context" : {
+									"use" : true,
+									"value" : ["naver.com", "직접입력"]
+									}
+									})
 								</div>
 							</td>
 						</tr>
@@ -435,7 +441,14 @@
 								</div>
 							</td>
 						</tr>
-
+						<tr>
+							<th scope="row">
+								<label for="input_12">생년월일</label>
+							</th>
+							<td>
+								<input type="text" data-datepicker>
+							</td>
+						</tr>
 
 
 
@@ -444,6 +457,12 @@
 				</table>
 			</div>
 			<!-- //입력폼(회원가입) -->
+
+			<!-- 팝업 -->
+			<p class="guide_tit">팝업</p>
+			<button onclick="show_modal('#school');">학교검색</button>
+			@@include('modal/school.html')
+			<!-- //팝업 -->
 
 		</div>
 	</div>

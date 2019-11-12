@@ -49,6 +49,7 @@ html {font-size:1em; letter-spacing:-0.025em;}
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,button {-webkit-box-sizing:border-box;box-sizing:border-box; margin:0; padding:0; border:0; font-family:"Noto Sans KR",Dotum,"돋움",Helvetica,"Apple SD Gothic Neo",sans-serif; font-size:100%; vertical-align:baseline;}
 
 input[type="text"],input[type="email"],input[type="number"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="password"],input[type="url"],input[type="search"],input[type="file"],button,textarea {-webkit-box-sizing:border-box;box-sizing:border-box; margin:0; padding:0; border:none; border-radius:0; background:none; font-family:"Noto Sans KR",Dotum,"돋움",Helvetica,"Apple SD Gothic Neo",sans-serif; font-size:100%; letter-spacing:-0.04em; -webkit-appearance:none; -moz-appearance:none; appearance:none;}
+input[type="text"]:disabled,input[type="password"]:disabled {background:#efefef;}
 body {position:relative; background:#fff; font-size:14px; line-height:1.8; color:#333; word-wrap:break-word; word-break:keep-all; -webkit-text-size-adjust:none; -moz-text-size-adjust:none;}
 blockquote,q {quotes:none;}
 /* input:focus,button:focus {border:none;} */
@@ -128,6 +129,24 @@ html {-webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
 input[type="text"],input[type="email"],input[type="number"],input[type="tel"],input[type="password"],input[type="url"],input[type="search"],input[type="file"],textarea {-webkit-box-sizing:border-box;box-sizing:border-box; height:40px; margin:0; padding:0 15px; border:1px solid #e8e5e2; border-radius:0; background:#fff; font-family:inherit; font-size:14px; line-height:40px; color:#666; -webkit-appearance:none; -moz-appearance:none; -ms-appearance:none; -o-appearance:none;}
 textarea {width:100%; padding:10px 15px; line-height:1.5em;}
 
+@media (max-width:320px) {
+	input[type="text"],input[type="email"],input[type="number"],input[type="tel"],input[type="password"],input[type="url"],input[type="search"],input[type="file"] {padding:0 10px;}
+	textarea {padding:10px;}
+}
+
+/* 체크박스 */
+.check_form {margin:3px 0;}
+.check_form ul {margin:-3px 0; font-size:0;}
+.check_form ul > li {float:left; margin:3px 0; line-height:1;}
+.check_form input[type="checkbox"] {width:0; height:0; margin:0; padding:0; font-size:0; line-height:0; opacity:0;}
+.check_form ul:after,
+.check_form ul > li:after {display:block; clear:both; content:"";}
+.check_form input[type="checkbox"] + label {float:left; position:relative; margin-right:30px; padding-left:30px; font-size:14px; font-weight:500; line-height:20px; color:#333; cursor:pointer;}
+.check_form ul > li:last-child input[type="checkbox"] + label {margin-right:0;}
+.check_form input[type="checkbox"] + label:before {display:inline-block; position:absolute; top:50%; left:2px; -webkit-box-sizing:border-box; box-sizing:border-box; width:20px; height:20px; margin-top:-10px; border:1px solid #dedede; background:#fff; content:"";}
+.check_form input[type="checkbox"]:checked + label:after {display:inline-block; position:absolute; top:2px; left:9px; width:5px; height:10px; border-right:2px solid #ca0464; border-bottom:2px solid #ca0464; content:""; -webkit-transform:rotate(35deg) skewY(15deg); transform:rotate(35deg) skewY(15deg);}
+.check_form input[type="checkbox"]:disabled + label:before {background:#dedede;}
+
 /* 라디오버튼 */
 .radio_form {margin:3px 0;}
 .radio_form ul {margin:-3px 0; font-size:0;}
@@ -139,6 +158,7 @@ textarea {width:100%; padding:10px 15px; line-height:1.5em;}
 .radio_form ul > li:last-child input[type="radio"] + label {margin-right:0;}
 .radio_form input[type="radio"] + label:before {display:inline-block; position:absolute; top:50%; left:2px; -webkit-box-sizing:border-box; box-sizing:border-box; width:20px; height:20px; margin-top:-10px; border:1px solid #dedede; border-radius:50%; background:#fff; content:"";}
 .radio_form input[type="radio"]:checked + label:after {display:inline-block; position:absolute; top:50%; left:7px; width:10px; height:10px; margin-top:-5px; border-radius:50%; background:#ca0464; content:"";}
+.radio_form input[type="radio"]:disabled + label:before {background:#dedede;}
 
 /* 셀렉트박스 */
 .select_form {display:inline-block; position:relative; background:#fff; font-size:14px; text-align:left;}
@@ -150,11 +170,34 @@ textarea {width:100%; padding:10px 15px; line-height:1.5em;}
 .select_form ul li a {display:block; padding:3px 0; line-height:1.3em; color:#555; -webkit-transition:all 0.3s; transition:all 0.3s;}
 .select_form ul li a:hover {font-weight:700; color:#a88f62; text-decoration:underline;}
 
+@media (max-width:1024px) {
+    .select_form button {min-width:0;}
+}
+
 @media (max-width:320px) {
     .select_form button {padding-left:10px; padding-right:25px;}
 	.select_form button:after {right:10px;}
 	.select_form button.on + ul {max-height:200px;}
 }
+
+/* Datepicker */
+.ui-datepicker {width:200px; margin-left:1px; background:#fff; outline:1px solid #ca0464;}
+.ui-datepicker th,.ui-datepicker td {padding:0; border:0; font-size:12px; line-height:20px; text-align:center;}
+.ui-datepicker th {border-bottom:1px solid #ca0464; background:#e6eff1; color:#ca0464;}
+.ui-datepicker td a {display:block; font-weight:700; color:#999; -webkit-transition:all 0.3s; transition:all 0.3s;}
+.ui-datepicker td.ui-datepicker-unselectable span {color:#eee;}
+.ui-datepicker td a:hover {background:#ca0464; color:#fff;}
+.ui-datepicker td.ui-datepicker-unselectable span {color:#eee;}
+.ui-datepicker .ui-datepicker-prev,.ui-datepicker .ui-datepicker-next {position:absolute; top:5px; width:20px; height:20px; text-indent:-9999px; -webkit-transition:all 0.3s; transition:all 0.3s;}
+.ui-datepicker .ui-datepicker-prev {left:5px;}
+.ui-datepicker .ui-datepicker-next {right:5px;}
+.ui-datepicker .ui-datepicker-prev:before,.ui-datepicker .ui-datepicker-next:before {content:""; width:10px; height:10px; border:2px solid #fff; -webkit-transform:translateX(-50%) rotate(45deg); transform:translateX(-50%) rotate(45deg); position:absolute; left:50%; top:5px;}
+.ui-datepicker .ui-datepicker-prev:before {margin-left:2px; border-top:0; border-right:0;}
+.ui-datepicker .ui-datepicker-next:before {margin-left:-2px; border-bottom:0; border-left:0;}
+.ui-datepicker .ui-datepicker-title {background:#ca0464; font-size:14px; font-weight:700; line-height:30px; color:#fff; text-align:center;}
+.ui-datepicker select {margin-right:3px; padding:0 5px; background:#fff; border:1px solid #fff; border-radius:0; color:#ca0464; font-size:14px; font-weight:700; font-family:inherit; -webkit-appearance:none; -moz-appearance:none; appearance:none;}
+.ui-datepicker select::-ms-expand {display:none;}
+.ui-datepicker select option {color:#ca0464;}
 
 /*=========================================================
 4. Slick
@@ -187,7 +230,6 @@ nav {display:none;}
 6. 푸터
 =========================================================*/
 
-footer {}
 footer .bottom_wrap {background:#a88f62; padding:7px 0;}
 footer .bottom_wrap:after {display:block; clear:both; content:"";}
 footer .bottom_wrap .bottom_list {overflow:hidden; float:left; margin:0 -20px; padding:7px 0;}
@@ -241,6 +283,21 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 /*=========================================================
 7. 모달, 로딩
 =========================================================*/
+
+/* 모달 */
+[data-modal] {position:fixed; top:0; right:0; bottom:0; left:0; z-index:100; background:rgba(187,187,187,0.5);}
+[data-modal] .modal {overflow-y:auto; position:absolute; top:30px; left:50%; max-width:calc(100vw - 60px); max-height:calc(100vh - 60px); padding:30px; border:1px solid #999; background:#fff; -webkit-transform:translateY(-50%); transform:translateY(-50%); -webkit-box-shadow:10px 10px 20px rgba(0,0,0,0.05); box-shadow:10px 10px 20px rgba(0,0,0,0.05);}
+[data-modal] .modal_tit {font-size:20px; font-weight:500; line-height:1.5em;}
+[data-modal] .modal_subtxt {margin-top:15px; padding:15px 20px; background:#f9f7f5;}
+[data-modal] .modal_subtxt p {font-size:14px; line-height:1.85em; color:#555;}
+[data-modal] .modal_subtxt p strong {font-weight:400; color:#ca0464;}
+[data-modal] .modal .close {position:absolute; top:35px; right:30px; width:20px; height:20px; text-indent:-9999px;}
+[data-modal] .modal .close:before,[data-modal] .modal .close:after {position:absolute; left:0; width:1px; height:28px; background:#999; content:"";}
+[data-modal] .modal .close:before {top:0; -webkit-transform:rotate(-45deg); transform:rotate(-45deg); -webkit-transform-origin:top; transform-origin:top;}
+[data-modal] .modal .close:after {bottom:0; -webkit-transform:rotate(45deg); transform:rotate(45deg); -webkit-transform-origin:bottom; transform-origin:bottom;}
+
+/* 학교검색 */
+[data-modal]#school .modal {width:600px; margin-left:-300px;} 
 
 /*=========================================================
 8. 메인 페이지 스타일
@@ -535,6 +592,7 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 }
 
 /* 입력폼(게시물) */
+[data-input-form]:after {display:block; clear:both; content:"";}
 [data-input-form] table {border-top:3px solid #333;}
 [data-input-form] th,
 [data-input-form] td {height:60px; padding:10px 20px; border-bottom:1px solid #e8e5e2; vertical-align:middle;}
@@ -551,29 +609,67 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 [data-input-form] .input_box .at {margin:0 10px;}
 [data-input-form] .input_box .dash {margin:0 5px;}
 [data-input-form] .input_box .select_form {margin-right:10px;}
-[data-input-form] .mail input[type='text']:first-child {width:160px;}
+[data-input-form] .mail input[type='text'] {width:160px;}
+[data-input-form] .mail input[type='text']:first-child {width:100px;}
+[data-input-form] .mail .select_form {margin:0; margin-left:10px;}
 [data-input-form] .tel .select_form {width:100px;}
 [data-input-form] .tel .select_form button {min-width:0;}
 [data-input-form] .tel input[type='text'] {width:80px;}
 [data-input-form] textarea {height:450px;}
 [data-input-form] .info_txt {margin-top:5px; padding:0.15em 0; font-size:14px; line-height:1.5em;}
+[data-input-form] .ui-datepicker-trigger {width:25px; margin-left:10px; vertical-align:middle; cursor:pointer;}
 
 @media (max-width:1024px) {
-	
+	[data-input-form] table,
+	[data-input-form] table thead,
+	[data-input-form] table tbody,
+	[data-input-form] table tr,
+	[data-input-form] table th,
+	[data-input-form] table td {display:block; float:left; clear:both; width:100%; text-align:left;}
+	[data-input-form] table {border-bottom:1px solid #333;}
+	[data-input-form] table th,
+	[data-input-form] table td {height:auto; padding:0; border:0; background:none; line-height:1.5em;}
+	[data-input-form] table th {font-size:16px; padding:5px 0;}
+	[data-input-form] table td {padding-bottom:5px;}
+	[data-input-form] .info_txt {font-size:12px;}
+	[data-input-form] .input_box .letter {margin:0 3px;}
+	[data-input-form] .input_box .select_form {margin-right:5px;}
+	[data-input-form] .mail .select_form {margin-left:5px;}
+	[data-input-form] .input_box .ctr {padding:0 10px; font-size:14px;}
+	[data-input-form] textarea {height:300px;}
 }
 
 @media (max-width:599px) {
-	
+	[data-input-form] input[type='password'],
+	[data-input-form] input[type='text'] {width:100%;}
+	[data-input-form] .mail input[type='text'] {width:80px !important;} 
+	[data-input-form] .mail .select_form {width:120px;}	
+	[data-input-form] textarea {height:150px;}
+}
+
+@media (max-width:320px) {
+	[data-input-form] .mail .select_form {width:100px;}	
 }
 
 /* 입력폼(회원가입) */
 [data-input-form][data-input-join] table {border:0;}
 [data-input-form][data-input-join] th,
-[data-input-form][data-input-join] td {height:auto; padding:10px 0; text-align:left; vertical-align:top;}
-[data-input-form][data-input-join] th {background:none; font-size:16px; font-weight:500;}
+[data-input-form][data-input-join] td {height:auto; padding:10px 0; text-align:left;}
+[data-input-form][data-input-join] th {background:none; font-size:16px; font-weight:500; vertical-align:top;}
 [data-input-form][data-input-join] th label {line-height:40px; white-space:nowrap;}
+[data-input-form][data-input-join] td {vertical-align:middle;}
 [data-input-form][data-input-join] input[type='text'],
 [data-input-form][data-input-join] input[type='password'] {width:200px;}
+
+@media (max-width:1024px) {
+	[data-input-form][data-input-join] th label {line-height:1.5em; font-weight:700;}
+	[data-input-form][data-input-join] th {padding:5px 0;}
+	[data-input-form][data-input-join] td {padding:0; padding-bottom:5px;}
+}
+
+@media (max-width:599px) {
+	
+}
 
 /*=========================================================
 10. animate
