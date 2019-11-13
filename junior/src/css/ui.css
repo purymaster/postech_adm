@@ -147,6 +147,10 @@ textarea {width:100%; padding:10px 15px; line-height:1.5em;}
 .check_form input[type="checkbox"]:checked + label:after {display:inline-block; position:absolute; top:2px; left:9px; width:5px; height:10px; border-right:2px solid #ca0464; border-bottom:2px solid #ca0464; content:""; transform:rotate(35deg) skewY(15deg);}
 .check_form input[type="checkbox"]:disabled + label:before {background:#dedede;}
 
+/* 체크박스(단일) */
+.check_form.single {display:inline-block; margin:0;}
+.check_form.single input[type="checkbox"] + label {height:20px; margin:0; padding-left:22px;}
+
 /* 라디오버튼 */
 .radio_form {margin:3px 0;}
 .radio_form ul {margin:-3px 0; font-size:0;}
@@ -286,13 +290,14 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 
 /* 모달 */
 [data-modal] {position:fixed; top:0; right:0; bottom:0; left:0; z-index:100; background:rgba(187,187,187,0.5);}
-[data-modal] .modal {overflow-y:auto; position:absolute; top:30px; left:50%; max-width:calc(100vw - 60px); max-height:calc(100vh - 60px); padding:30px; border:1px solid #999; background:#fff; transform:translateY(-50%); box-shadow:10px 10px 20px rgba(0,0,0,0.05);}
-[data-modal] .modal_tit {font-size:20px; font-weight:500; line-height:1.5em;}
+[data-modal] .modal {overflow-y:auto; position:absolute; top:30px; left:50%; max-width:calc(100vw - 60px); max-height:calc(100vh - 60px); padding:30px; border:1px solid #999; background:#fff; box-shadow:10px 10px 20px rgba(0,0,0,0.05);}
+[data-modal] .modal_tit {font-size:30px; font-weight:700; line-height:1.5em;}
+[data-modal] .modal_tit.center {text-align:center;}
 [data-modal] .modal_subtxt {margin-top:15px; padding:15px 20px; background:#f9f7f5;}
 [data-modal] .modal_subtxt p {font-size:14px; line-height:1.85em; color:#555;}
 [data-modal] .modal_subtxt p strong {font-weight:400; color:#ca0464;}
-[data-modal] .modal .close {position:absolute; top:35px; right:30px; width:20px; height:20px; text-indent:-9999px;}
-[data-modal] .modal .close:before,[data-modal] .modal .close:after {position:absolute; left:0; width:1px; height:28px; background:#999; content:"";}
+[data-modal] .modal .close {position:absolute; top:15px; right:15px; width:24px; height:24px; text-indent:-9999px;}
+[data-modal] .modal .close:before,[data-modal] .modal .close:after {position:absolute; left:0; width:2px; height:34px; background:#333; content:"";}
 [data-modal] .modal .close:before {top:0; transform:rotate(-45deg); transform-origin:top;}
 [data-modal] .modal .close:after {bottom:0; transform:rotate(45deg); transform-origin:bottom;}
 
@@ -448,17 +453,26 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 	[data-board-list] table td {display:block; float:left; clear:both; width:100%; text-align:left;}
 	[data-board-list] table thead {overflow:hidden; position:absolute; left:-9999px; width:1px; height:1px;}
 	[data-board-list] table tr {padding:5px 0; border-bottom:1px solid #cdcdcd;}
-	[data-board-list] table td {font-size:14px; height:auto; padding:5px 0; border:0;}
+	[data-board-list] table td {font-size:14px; height:auto !important; padding:5px 0; border:0;}
 	[data-board-list] table td[data-type="num"] {font-weight:700;}
 	[data-board-list] table td[data-type="title"] {font-weight:500;}
 	[data-board-list] table td[data-type="title"] .secret {transform:scale(0.75); transform-origin:left top;}
+	[data-board-list] table td[data-type="date"] {font-size:12px !important;}
 	[data-board-list] table td[data-type="status"] span {width:auto; margin-top:5px; padding:0 10px; font-size:12px; line-height:2em;}
+
+	[data-board-list] table td[data-type="category"]:before {content:"분류 : "}
 }
 
 @media (max-width:599px) {
 	[data-board-list] table td {padding:3px 0;}
 	/* [data-board-list] table td[data-type="title"] {font-size:12px;} */
 }
+
+/* 게시판(현황판, 팝업) 리스트 */
+[data-board-list].info table th {height:50px;}
+[data-board-list].info table td {height:40px; font-size:14px;}
+[data-board-list].info table td[data-type="title"] a {display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+[data-board-list].info table td[data-type="title"] .tit {font-weight:400;}
 
 /* 페이징 */
 [data-paging] {overflow:hidden; clear:both; padding-top:50px;}
