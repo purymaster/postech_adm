@@ -54,6 +54,8 @@
 				}
 			</style>
 
+					<!-- 페이지 제목 -->
+					<p class="guide_tit">페이지 제목</p>
 					<div data-sub-title>
 						<h2 class="tit">페이지 제목</h2>
 						<p class="txt">
@@ -61,7 +63,10 @@
 					유형별 선택보기로 전형을 선택하시면 편리하게 찾을 수 있습니다.
 				</p>
 					</div>
+					<!-- //페이지 제목 -->
 
+					<!-- 탭메뉴 -->
+					<p class="guide_tit">탭메뉴</p>
 
 					<!-- 탭메뉴 -->
 					<div data-tab-menu>
@@ -102,6 +107,71 @@
 					</div>
 					<!-- //탭메뉴 -->
 
+					<!-- //탭메뉴 -->
+
+					<!-- 컨텐츠 박스 -->
+					<p class="guide_tit">컨텐츠 박스</p>
+					<div data-content-box>
+						<h3 class="column_tit">컨텐츠 제목</h3>
+					</div>
+					<!-- //컨텐츠 박스 -->
+
+					<!-- 대시보드 박스-->
+					<p class="guide_tit">대시보드 박스</p>
+					<div data-content-box>
+						<div data-dashboard-box>
+							<h3 class="column_tit">게시판 제목</h3>
+							<div data-board-list class="info">
+								<table>
+									<colgroup>
+										<col style="width:8%;">
+										<col style="width:15%;">
+										<col style="width:12%;">
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">
+												<div class="check_form single">
+													<input type="checkbox" id="check_all" name="check">
+													<label for="check_all"></label>
+												</div>
+											</th>
+											<th scope="col">일자</th>
+											<th scope="col">분류</th>
+											<th scope="col">제목</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td data-type="check">
+												<div class="check_form single">
+													<input type="checkbox" id="check_001" name="list_check">
+													<label for="check_001"></label>
+												</div>
+											</td>
+											<td data-type="date">9999-99-99</td>
+											<td data-type="category">상담신청</td>
+											<td data-type="title">
+												<a href="#">
+													<p class="tit">
+														군사법원의 조직·권한 및 재판관의 자격은 법률로 정한다. 대법원장의 임기는 6년으로 하며, 중임할 수 없다. 모든 국민은 근로의
+														권리를
+														가진다. 국가는 사회적·경제적 방법으로 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며, 법률이 정하는 바에 의하여
+														최저임금제를
+														시행하여야 한다.
+													</p>
+												</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- <a href="#" class="more">더보기</a> -->
+
+						</div>
+					</div>
+					<!-- //대시보드 박스-->
 
 					<!-- 검색창 -->
 					<p class="guide_tit">검색창</p>
@@ -225,8 +295,8 @@
 					</div>
 					<!-- //게시판(일반) 리스트 -->
 
-					<!-- 게시판(현황판, 팝업) 리스트 -->
-					<p class="guide_tit">게시판(현황판, 팝업) 리스트</p>
+					<!-- 게시판(대시보드) 리스트 -->
+					<p class="guide_tit">게시판(대시보드) 리스트</p>
 					<div data-board-list class="info">
 						<table>
 							<colgroup>
@@ -271,7 +341,7 @@
 							</tbody>
 						</table>
 					</div>
-					<!-- //게시판(현황판, 팝업) 리스트 -->
+					<!-- //게시판(대시보드) 리스트 -->
 
 					<!-- 페이징 -->
 					<p class="guide_tit">페이징</p>
@@ -613,10 +683,6 @@
 										<input type="text" data-datepicker>
 									</td>
 								</tr>
-
-
-
-
 							</tbody>
 						</table>
 					</div>

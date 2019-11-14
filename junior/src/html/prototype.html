@@ -1,0 +1,67 @@
+@@include('header.html')
+<div class="content">
+
+	<div class="container wide">
+		@@include('sub_visual.html', {
+		"type" : "type1",
+		"sub_tit" : "1DEPTH MENU TITLE",
+		"tit" : "페이지 제목"
+		})
+	</div>
+
+	<!-- 서브 페이지 컨텐츠 -->
+	<div class="" data-sub-content>
+		<div class="container">
+			<div data-content-box>
+				<h3 class="column_tit">컨텐츠 제목</h3>
+				<div data-board-list class="info">
+						<table>
+							<colgroup>
+								<col style="width:8%;">
+								<col style="width:15%;">
+								<col style="width:12%;">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">
+										<div class="check_form single">
+											<input type="checkbox" id="check_all" name="check">
+											<label for="check_all"></label>
+										</div>
+									</th>
+									<th scope="col">일자</th>
+									<th scope="col">분류</th>
+									<th scope="col">제목</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-type="check">
+										<div class="check_form single">
+											<input type="checkbox" id="check_001" name="list_check">
+											<label for="check_001"></label>
+										</div>
+									</td>
+									<td data-type="date">9999-99-99</td>
+									<td data-type="category">상담신청</td>
+									<td data-type="title">
+										<a href="#">
+											<p class="tit">
+												군사법원의 조직·권한 및 재판관의 자격은 법률로 정한다. 대법원장의 임기는 6년으로 하며, 중임할 수 없다. 모든 국민은 근로의 권리를
+												가진다. 국가는 사회적·경제적 방법으로 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며, 법률이 정하는 바에 의하여 최저임금제를
+												시행하여야 한다.
+											</p>
+										</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+			</div>
+		</div>
+	</div>
+	<!-- //서브 페이지 컨텐츠 -->
+
+</div>
+@@include('footer.html')
