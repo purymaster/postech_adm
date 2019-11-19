@@ -5,20 +5,18 @@ $(function () {
 
 	/******************** 모바일 판별 및 네비게이션, 검색창 초기화 ********************/
 
-	// $(window).on('load resize', function () {
-	// 	$('h1').removeClass('hidden');
-	// 	$('header .search button').removeClass('on').siblings('input').val('');
-	// 	($(window).width() + scrollbar_width) > 1024 ?
-	// 		(
-	// 			is_mobile = false,
-	// 			$('header .menu_wrap,nav .main-menu li').removeClass('on'),
-	// 			$('header nav .sub-menu').show()
-	// 		) : (
-	// 			is_mobile = true,
-	// 			$('header .menu_wrap').removeClass('on'),
-	// 			$('nav .main-menu li').removeClass('on').find('.sub-menu').hide()
-	// 		)
-	// });
+	$(window).on('load resize', function () {
+		($(window).width() + scrollbar_width) > 1024 ?
+			(
+				is_mobile = false,
+				$('header .nav_wrap,nav .main-menu li').removeClass('on'),
+				$('header nav .sub-menu').show()
+			) : (
+				is_mobile = true,
+				$('header .nav_wrap').removeClass('on'),
+				$('nav .main-menu li').removeClass('on').find('.sub-menu').hide()
+			)
+	});
 
 	/******************** 하위브라우저 경고 ********************/
 
@@ -26,46 +24,31 @@ $(function () {
 		$('.ie9').fadeOut();
 	});
 
-	/******************** 헤더 검색창 제어 ********************/
-
-	// $('header .search button').on('click', function () {
-	// 	if (is_mobile) $('h1').addClass('hidden');
-	// 	$(this).hasClass('on') ?
-	// 		$(this).siblings('input[type="text"]').val() === "" ?
-	// 			(
-	// 				$(this).text('검색창 열기').removeClass('on'),
-	// 				$('h1').removeClass('hidden')
-	// 			) :
-	// 			// [D] 검색 결과 페이지로 이동
-	// 			location.href = "https://naver.com" :
-	// 		$(this).addClass('on').text('검색창 닫기');
-	// });
-
 	/******************** 네비게이션 제어 ********************/
 
-	// /* 모바일 메뉴 열기 */
-	// $('header .open_menu').on('click', function () {
-	// 	$('header .menu_wrap').addClass('on');
-	// });
+	/* 모바일 메뉴 열기 */
+	$('header .open_menu').on('click', function () {
+		$('header .nav_wrap').addClass('on');
+	});
 
-	// /* 모바일 메뉴 펼치기 */
-	// $('nav .main-menu > li > a').on('click', (function () {
-	// 	if (is_mobile) {
-	// 		$(this).parent().hasClass('on') ?
-	// 			$('nav .main-menu li').removeClass('on').find('.sub-menu').stop().slideUp(100) :
-	// 			(
-	// 				$('nav .main-menu li').removeClass('on').find('.sub-menu').stop().slideUp(100),
-	// 				$(this).parent().addClass('on').find('.sub-menu').stop().slideDown(100)
-	// 			)
-	// 		return false;
-	// 	}
-	// }));
+	/* 모바일 메뉴 펼치기 */
+	$('nav .main-menu > li > a').on('click', (function () {
+		if (is_mobile) {
+			$(this).parent().hasClass('on') ?
+				$('nav .main-menu li').removeClass('on').find('.sub-menu').stop().slideUp(100) :
+				(
+					$('nav .main-menu li').removeClass('on').find('.sub-menu').stop().slideUp(100),
+					$(this).parent().addClass('on').find('.sub-menu').stop().slideDown(100)
+				)
+			return false;
+		}
+	}));
 
-	// /* 모바일 메뉴 닫기 */
-	// $('header .close_menu').on('click', function () {
-	// 	$('header .menu_wrap').removeClass('on');
-	// 	$('nav .main-menu > li').removeClass('on').find('.sub-menu').slideUp(100);
-	// });
+	/* 모바일 메뉴 닫기 */
+	$('header .close_menu').on('click', function () {
+		$('header .nav_wrap').removeClass('on');
+		$('nav .main-menu > li').removeClass('on').find('.sub-menu').slideUp(100);
+	});
 
 	/******************** 셀렉트박스 제어 ********************/
 

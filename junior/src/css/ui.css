@@ -236,8 +236,8 @@ header nav .sub-menu li a:hover {font-weight:700;}
 header .upper_menu {position:absolute; top:30px; right:30px; font-size:0;}
 header .upper_menu ul {display:inline-block; overflow:hidden; margin-right:10px;}
 header .upper_menu li {float:left; position:relative; padding:0 15px;}
-header .upper_menu li:before {position:absolute; top:50%; left:0; width:1px; height:12px; margin-top:-7px; background:#333; content:"";}
-header .upper_menu li:first-child:before {display:none;}
+header .upper_menu li:after {position:absolute; top:50%; right:0; width:1px; height:12px; margin-top:-7px; background:#333; content:"";}
+header .upper_menu li:last-child:after {display:none;}
 header .upper_menu li a {display:block; font-size:14px; line-height:25px; transition:all 0.3s;}
 header .upper_menu li a:hover {text-decoration:underline; color:#ca0464;}
 header .upper_menu .lang {display:inline-block; width:50px; border:1px solid #333; font-size:12px; line-height:25px; text-align:center; vertical-align:top; transition:all 0.3s;}
@@ -262,9 +262,9 @@ header .upper_menu .lang:hover {border-color:#ca0464; background:#ca0464; color:
 	header .open_menu span:nth-child(3) {bottom:3px;}
 	header .nav_wrap {visibility:hidden; position:fixed; top:0; left:0; z-index:999; width:100%; height:100%; background:rgba(0,0,0,0.5); opacity:0; -webkit-backface-visibility:hidden;}
 	header .nav_wrap.on {visibility:visible; opacity:1; -webkit-transition:all 0.3s; transition:all 0.3s;}
-	header .nav_menu {position:relative; width:50%; min-width:290px; height:100vh; padding:15px 30px; background:#fff; transform:translateX(-100%);}
+	header .nav_menu {position:relative; width:50%; min-width:290px; height:100vh; padding:10px 30px; background:#fff; transform:translateX(-100%);}
 	header .nav_wrap.on .nav_menu {transform:translateX(0); transition:transform 0.3s;}
-	header .nav_menu .nav_box {height:100%; overflow-y:auto;}
+	header .nav_menu .nav_box {overflow-y:auto; height:calc(100% - 70px);}
 	header .nav_menu .close_menu {overflow:hidden; position:absolute; top:0; right:-30px; width:30px; height:30px; text-indent:-9999px; transform:scale(0.8);}
 	header .nav_menu .close_menu:before,
 	header .nav_menu .close_menu:after {position:absolute; left:-1px; width:2px; height:50px; background:#fff; content:"";}
@@ -273,14 +273,27 @@ header .upper_menu .lang:hover {border-color:#ca0464; background:#ca0464; color:
 	header nav {position:static;}
 	header nav .main-menu {margin:0;}
 	header nav .main-menu > li {float:none; position:relative; padding:0; border-bottom:1px solid #d5d5d5; text-align:left;}
+	header nav .main-menu > li:last-child {border:0;}
+	header nav .main-menu > li:before,
+	header nav .main-menu > li:after {position:absolute; top:1em; right:0; width:10px; height:2px; background:#ca0464; content:"";}
+	header nav .main-menu > li:after {transform:rotate(90deg) scaleX(1); transition:all 0.3s;}
+	header nav .main-menu > li.on:after {transform:rotate(90deg) scaleX(0);}
 	header nav .main-menu > li > a {font-size:16px; line-height:2em; padding:0;}
 	header nav .sub-menu {visibility:visible; position:static; width:auto; margin:0; margin-bottom:10px; padding:5px 15px; border:1px solid #d5d5d5; background:#f3f1ee; opacity:1;}
 	header nav .sub-menu li {border-color:#d5d5d5;}
-	header nav .sub-menu li a {font-size:14px; line-height:1.5em; padding:5px 0; color:#999;}
+	header nav .sub-menu li a {font-size:14px; line-height:1.5em; padding:5px 0; color:#555;}
 	header nav .sub-menu li[class*='current'] a,
 	header nav .sub-menu li a:hover {color:#ca0464;}
+	header .upper_menu {position:absolute; top:auto; right:auto; bottom:10px; width:calc(100% - 60px); }
+	header .upper_menu ul {display:block; margin:0; margin-left:-5px;}
+	header .upper_menu li {padding:0 5px;}
+	header .upper_menu li a {font-size:12px; line-height:1.5em;}
+	header .upper_menu .lang {width:100%; margin-top:5px; line-height:1.5em;}
+}
 
-	header .upper_menu {position:static;}
+@media (max-width:599px) {
+	header .upper_menu {width:calc(100% - 30px);}
+	header .nav_menu {padding:10px 15px;}
 }
 
 /* 워드프레스 관리자 헤더 커스터마이징 */
