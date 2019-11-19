@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>포항공과대학교 - 학부</title>
+	<link rel="stylesheet" href="../css/ui.css">
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/jquery-ui.min.js"></script>
+	<script src="../js/slick.min.js"></script>
+	<script src="../js/common.js"></script>
+</head>
+
+<body>
+	<!--[if lte IE 8]>
+<div class="ie9">
+	<div class="inner">
+		<p>
+			본 사이트는 인터넷 익스플로러9 버전 이상의 최신 브라우저에 최적화되어있습니다. 최신 브라우저로 업데이트해주시길 바랍니다.
+		</p>
+		<a href="http://windows.microsoft.com/ko-kr/internet-explorer/download-ie/"
+			target="_blank" title="새창열림">인터넷 익스플로러 업데이트</a>
+	</div>
+	<button type="button">안내창 닫기</button>
+</div>
+<![endif]-->
+	<div class="wrap">
+		<header>
+			<div class="header_wrap">
+				<h1>
+					<a href="#">
+						<img src="../img/img/img_logo.png" alt="가치창출대학 POSTECH, POHANG UNIVERSITY OF SCIENCE AND TECHNOLOGY">
+					</a>
+					<a href="#" class="sub_link">입학처</a>
+				</h1>
+				<button type="button" class="mobile open_menu">
+					<span></span>
+					<span></span>
+					<span></span>
+					모바일 메뉴 열기
+				</button>
+				<div class="nav_wrap on">
+					<div class="nav_menu">
+						<div class="nav_box">
+							<nav>
+								<ul class="main-menu">
+									<li>
+										<a href="#">About POSTECH</a>
+									</li>
+									<li>
+										<a href="#">일정</a>
+									</li>
+									<li>
+										<a href="#">입시</a>
+										<ul class="sub-menu">
+											<li><a href="#">모집요강</a></li>
+											<li><a href="#">각종 서식</a></li>
+											<li><a href="#">입시통계 자료</a></li>
+											<li><a href="#">FAQ</a></li>
+											<li><a href="#">합격자발표 및 등록</a></li>
+											<li><a href="#">신입생 학사 안내</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">참여프로그램</a>
+										<ul class="sub-menu">
+											<li><a href="#">이공계대탐험</a></li>
+											<li><a href="#">잠재력개발과정</a></li>
+											<li><a href="#">고교방문 설명회</a></li>
+											<li><a href="#">지역설명회</a></li>
+											<li><a href="#">Campus Tours</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">입학도우미</a>
+										<ul class="sub-menu">
+											<li><a href="#">온라인상담</a></li>
+											<li><a href="#">공지사항</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+							<div class="upper_menu">
+								<ul>
+									<li><a href="#">SITEMAP</a></li>
+									<li><a href="#">GRADUATE</a></li>
+									<li><a href="#">POSTECH</a></li>
+									<li><a href="#">POSTECHIAN</a></li>
+								</ul>
+								<a href="#" class="lang">ENG</a>
+							</div>
+						</div>
+						<button class="mobile close_menu">
+							모바일 메뉴 닫기
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="content">
+
+			<div class="container wide">
+				<div data-sub-visual class=type1 data-animation style="line-height:400px; text-align:center; background:green;">
+					임시 서브비주얼영역
+				</div>
+			</div>
+
+			<!-- 서브 페이지 컨텐츠 -->
+			<div class="join" data-sub-content>
+				<div class="container">
+					<div data-sub-title>
+						<h2 class="tit">회원가입</h2>
+					</div>
+
+					<!-- 회원정보 입력 -->
+					<div data-content-box class="column no_border">
+						<h3 class="column_tit">회원정보 입력</h3>
+						<div data-input-form data-input-join>
+							<table>
+								<colgroup>
+									<col style="width:110px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">
+											<label for="input_01">아이디</label>
+										</th>
+										<td>
+											<div class="input_box">
+												<input type="text" id="input_01" placeholder="아이디 입력" maxlength="12">
+												<button type="button" class="ctr check">
+													<span>중복확인</span>
+												</button>
+											</div>
+											<p class="info_txt">*5~12자의 영문 소문자, 숫자 입력</p>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<label for="input_02">비밀번호</label>
+										</th>
+										<td>
+											<div class="input_box">
+												<input type="password" id="input_02" placeholder="비밀번호 입력" maxlength="12">
+											</div>
+											<p class="info_txt">*영문+숫자 조합으로 8~12자로 입력해주세요. 대소문자를 구분합니다.</p>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<label for="input_03">비밀번호 확인</label>
+										</th>
+										<td>
+											<div class="input_box">
+												<input type="password" id="input_03" placeholder="비밀번호 재입력" maxlength="12">
+											</div>
+											<p class="info_txt">*입력하신 비밀번호를 다시 한번 입력해주세요.</p>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<label for="input_04">이름</label>
+										</th>
+										<td>
+											<div class="input_box">
+												<input type="text" id="input_04" placeholder="이름">
+											</div>
+											<p class="info_txt">*이름을 정확하게 입력해주세요.</p>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<label for="radio_01">성별</label>
+										</th>
+										<td>
+											<div class="radio_form">
+												<ul>
+													<li>
+														<input type="radio" id="radio_01" name="select_gender" checked="">
+														<label for="radio_01">남</label>
+													</li>
+													<li>
+														<input type="radio" id="radio_02" name="select_gender">
+														<label for="radio_02">여</label>
+													</li>
+												</ul>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<label for="input_05">생년월일</label>
+										</th>
+										<td>
+											<input type="text" data-datepicker id="input_05">
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<label for="">사용자 타입</label>
+										</th>
+										<td>
+											<div class="select_form">
+												<input type="hidden">
+
+
+												<button type="button"><span>학생</span></button>
+
+												<ul>
+
+													<li><a href="#none">학생</a></li>
+
+													<li><a href="#none">그외</a></li>
+
+												</ul>
+
+											</div>
+										</td>
+									</tr>
+
+									<!-- [D] 사용자 타입(학생) 출력항목 -->
+									<tr class="option student">
+										<th scope="row">
+											<label for="input_010">학교명</label>
+										</th>
+										<td>
+											<div class="input_box">
+												<input type="text" id="input_010">
+												<button type="button" class="ctr search">
+													<span>학교검색</span>
+												</button>
+											</div>
+										</td>
+									</tr>
+									<tr class="option student">
+										<th scope="row">
+											<label for="">학년</label>
+										</th>
+										<td>
+											<div class="select_form">
+												<input type="hidden">
+
+
+												<button type="button"><span>1학년</span></button>
+
+												<ul>
+
+													<li><a href="#none">1학년</a></li>
+
+													<li><a href="#none">2학년</a></li>
+
+													<li><a href="#none">3학년</a></li>
+
+												</ul>
+
+											</div>
+										</td>
+									</tr>
+									<!-- // [D] 사용자 타입(학생) 출력항목 -->
+
+									<tr>
+										<th scope="row">
+											<label for="input_06">이메일</label>
+										</th>
+										<td>
+											<div class="input_box mail">
+												<input type="text" id="input_06" title="이메일 주소">
+												<span class="letter at">@</span>
+												<input type="text" id="input_07" title="이메일 계정">
+												<div class="select_form">
+													<input type="hidden">
+
+
+													<button type="button"><span>네이버</span></button>
+
+													<ul>
+
+														<li><a href="#none">네이버</a></li>
+
+														<li><a href="#none">직접입력</a></li>
+
+													</ul>
+
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- //회원정보 입력 -->
+
+					<!-- 이용약관 동의 -->
+					<div data-content-box class="column">
+						<h3 class="column_tit">이용약관 동의</h3>
+						<ul class="term_list">
+							<li>
+								<div class="check_form">
+									<ul>
+										<li>
+											<input type="checkbox" id="term_01" name="term_check">
+											<label for="term_01">서비스 약관에 동의합니다.</label>
+										</li>
+									</ul>
+								</div>
+								<a href="#" class="detail" target="_blank" title="새창열림">내용 보기</a>
+							</li>
+							<li>
+								<div class="check_form">
+									<ul>
+										<li>
+											<input type="checkbox" id="term_02" name="term_check">
+											<label for="term_02">개인정보 수집 및 이용에 동의합니다.</label>
+										</li>
+									</ul>
+								</div>
+								<a href="#" class="detail" target="_blank" title="새창열림">내용 보기</a>
+							</li>
+						</ul>
+					</div>
+					<!-- //이용약관 동의 -->
+
+					<!-- 자동 등록 방지 -->
+					<div data-content-box class="column">
+						<h3 class="column_tit">자동 등록 방지</h3>
+						<!-- [D] 캡챠 삽입 영역 -->
+					</div>
+					<!-- //자동 등록 방지 -->
+
+				</div>
+			</div>
+			<!-- //서브 페이지 컨텐츠 -->
+
+		</div>
+		<footer>
+			<div class="bottom_wrap">
+				<div class="container">
+					<ul class="bottom_list">
+						<li class="personal"><a href="#">개인정보취급방침</a></li>
+						<li><a href="#">이메일무단수집거부</a></li>
+						<li><a href="#">저작권정책</a></li>
+					</ul>
+					<div class="link">
+						<div class="select_form">
+							<input type="hidden">
+
+
+							<button type="button"><span>학과 홈페이지</span></button>
+
+							<ul>
+
+								<li><a href="#none">학과 홈페이지</a></li>
+
+								<li><a href="#none">홈페이지1</a></li>
+
+								<li><a href="#none">홈페이지2</a></li>
+
+							</ul>
+
+						</div>
+						<div class="select_form">
+							<input type="hidden">
+
+
+							<button type="button"><span>교내 주요 사이트</span></button>
+
+							<ul>
+
+								<li><a href="#none">교내 주요 사이트</a></li>
+
+								<li><a href="#none">홈페이지1</a></li>
+
+								<li><a href="#none">홈페이지2</a></li>
+
+							</ul>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer_wrap">
+				<div class="container">
+					<img class="logo" src="../img/img/img_footer_logo.png" alt="가치창출대학 POSTECH">
+					<div class="info">
+						<dl>
+							<div>
+								<dt class="hidden">주소</dt>
+								<dd>37673 경상북도 포항시 남구 청암로 77 (효자동 산31) POSTECH 입학팀</dd>
+							</div>
+							<div>
+								<dt>TEL</dt>
+								<dd><a href="tel:054-279-3610">054-279-3610</a></dd>
+							</div>
+							<div>
+								<dt>E-mail</dt>
+								<dd><a href="mailto:postech-admission@postech.ac.kr">postech-admission@postech.ac.kr</a></dd>
+							</div>
+						</dl>
+						<p class="copyright">
+							COPYRIGHT 2019 POHANG UNIVERSITY OF SCIENCE AND TECHNOLOGY ALL RIGHTS RESERVED.
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div class="move_top">
+		<button type="button">페이지 최상단으로 이동</button>
+	</div>
+</body>
+
+</html>

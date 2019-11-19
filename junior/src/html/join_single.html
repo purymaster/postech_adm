@@ -1,0 +1,212 @@
+@@include('header.html')
+<div class="content">
+
+	<div class="container wide">
+		@@include('sub_visual.html', {
+		"type" : "type1",
+		"sub_tit" : "1DEPTH MENU TITLE",
+		"tit" : "페이지 제목"
+		})
+	</div>
+
+	<!-- 서브 페이지 컨텐츠 -->
+	<div class="join" data-sub-content>
+		<div class="container">
+			<div data-sub-title>
+				<h2 class="tit">회원가입</h2>
+			</div>
+
+			<!-- 회원정보 입력 -->
+			<div data-content-box class="column no_border">
+				<h3 class="column_tit">회원정보 입력</h3>
+				<div data-input-form data-input-join>
+					<table>
+						<colgroup>
+							<col style="width:110px;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">
+									<label for="input_01">아이디</label>
+								</th>
+								<td>
+									<div class="input_box">
+										<input type="text" id="input_01" placeholder="아이디 입력" maxlength="12">
+										<button type="button" class="ctr check">
+											<span>중복확인</span>
+										</button>
+									</div>
+									<p class="info_txt">*5~12자의 영문 소문자, 숫자 입력</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<label for="input_02">비밀번호</label>
+								</th>
+								<td>
+									<div class="input_box">
+										<input type="password" id="input_02" placeholder="비밀번호 입력" maxlength="12">
+									</div>
+									<p class="info_txt">*영문+숫자 조합으로 8~12자로 입력해주세요. 대소문자를 구분합니다.</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<label for="input_03">비밀번호 확인</label>
+								</th>
+								<td>
+									<div class="input_box">
+										<input type="password" id="input_03" placeholder="비밀번호 재입력" maxlength="12">
+									</div>
+									<p class="info_txt">*입력하신 비밀번호를 다시 한번 입력해주세요.</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<label for="input_04">이름</label>
+								</th>
+								<td>
+									<div class="input_box">
+										<input type="text" id="input_04" placeholder="이름">
+									</div>
+									<p class="info_txt">*이름을 정확하게 입력해주세요.</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<label for="radio_01">성별</label>
+								</th>
+								<td>
+									<div class="radio_form">
+										<ul>
+											<li>
+												<input type="radio" id="radio_01" name="select_gender" checked="">
+												<label for="radio_01">남</label>
+											</li>
+											<li>
+												<input type="radio" id="radio_02" name="select_gender">
+												<label for="radio_02">여</label>
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<label for="input_05">생년월일</label>
+								</th>
+								<td>
+									<input type="text" data-datepicker id="input_05">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<label for="">사용자 타입</label>
+								</th>
+								<td>
+									@@include('select.html', {
+									"context" : {
+									"use" : true,
+									"value" : ["학생", "그외"]
+									}
+									})
+								</td>
+							</tr>
+
+							<!-- [D] 사용자 타입(학생) 출력항목 -->
+							<tr class="option student">
+								<th scope="row">
+									<label for="input_010">학교명</label>
+								</th>
+								<td>
+									<div class="input_box">
+										<input type="text" id="input_010">
+										<button type="button" class="ctr search">
+											<span>학교검색</span>
+										</button>
+									</div>
+								</td>
+							</tr>
+							<tr class="option student">
+								<th scope="row">
+									<label for="">학년</label>
+								</th>
+								<td>
+									@@include('select.html', {
+									"context" : {
+									"use" : true,
+									"value" : ["1학년", "2학년", "3학년"]
+									}
+									})
+								</td>
+							</tr>
+							<!-- // [D] 사용자 타입(학생) 출력항목 -->
+
+							<tr>
+								<th scope="row">
+									<label for="input_06">이메일</label>
+								</th>
+								<td>
+									<div class="input_box mail">
+										<input type="text" id="input_06" title="이메일 주소">
+										<span class="letter at">@</span>
+										<input type="text" id="input_07" title="이메일 계정">
+										@@include('select.html', {
+										"context" : {
+										"use" : true,
+										"value" : ["네이버", "직접입력"]
+										}
+										})
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //회원정보 입력 -->
+
+			<!-- 이용약관 동의 -->
+			<div data-content-box class="column">
+				<h3 class="column_tit">이용약관 동의</h3>
+				<ul class="term_list">
+					<li>
+						<div class="check_form">
+							<ul>
+								<li>
+									<input type="checkbox" id="term_01" name="term_check">
+									<label for="term_01">서비스 약관에 동의합니다.</label>
+								</li>
+							</ul>
+						</div>
+						<a href="#" class="detail" target="_blank" title="새창열림">내용 보기</a>
+					</li>
+					<li>
+						<div class="check_form">
+							<ul>
+								<li>
+									<input type="checkbox" id="term_02" name="term_check">
+									<label for="term_02">개인정보 수집 및 이용에 동의합니다.</label>
+								</li>
+							</ul>
+						</div>
+						<a href="#" class="detail" target="_blank" title="새창열림">내용 보기</a>
+					</li>
+				</ul>
+			</div>
+			<!-- //이용약관 동의 -->
+
+			<!-- 자동 등록 방지 -->
+			<div data-content-box class="column">
+				<h3 class="column_tit">자동 등록 방지</h3>
+				<!-- [D] 캡챠 삽입 영역 -->
+			</div>
+			<!-- //자동 등록 방지 -->
+
+		</div>
+	</div>
+	<!-- //서브 페이지 컨텐츠 -->
+
+</div>
+@@include('footer.html')

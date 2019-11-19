@@ -68,7 +68,37 @@ $(function () {
 			select_form.find('button').removeClass('on');
 	});
 
-	/******************** 슬라이드 제어 ********************/
+	/******************** 메인페이지 제어 ********************/
+
+	/* 메인 슬라이드 */
+	$('.main_visual [data-slide].main_slide').slick({
+		arrows: false,
+		fade: true,
+		dots: true,
+		speed: 1000,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		pauseOnHover: false,
+		pauseOnFocus: false,
+	});
+
+	/* 공지사항 슬라이드 */
+	var current = $('.main_visual .notice').find('.current'),
+		total = $('.main_visual .notice').find('.total');
+
+	$('.main_visual [data-slide].notice_slide').slick({
+		arrows: true,
+		dots: false,
+		speed: 1000,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		pauseOnHover: false,
+		pauseOnFocus: false,
+	}).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+		current.text(nextSlide + 1);
+	});
+
+	total.text($('.main_visual [data-slide].notice_slide .slide').not('.slick-cloned').length);
 
 	/******************** Datepicker ********************/
 
@@ -86,7 +116,7 @@ $(function () {
 		buttonImage: "../img/img/img_calendar.png",
 		buttonImageOnly: true,
 		buttonText: "Select date",
-		defaultDate: "-18y",
+		// defaultDate: "-18y",
 	});
 
 	/******************** 스크롤 애니메이션 정의 ********************/
@@ -156,26 +186,26 @@ $(function () {
 
 	/******************** 모달 제어 ********************/
 
-    $('[data-modal] .close').on('click', function() {
-        close_modal();
+	$('[data-modal] .close').on('click', function () {
+		close_modal();
 	})
-	
+
 });
 
 /******************** 모달, 로딩 제어 ********************/
 
 function show_modal(target) {
-    $(target).show();
+	$(target).show();
 }
 
 function close_modal() {
-    $('[data-modal]').hide();
+	$('[data-modal]').hide();
 }
 
 function show_loading() {
-    $('[data-loading]').show();
+	$('[data-loading]').show();
 }
 
 function hide_loading() {
-    $('[data-loading]').hide();
+	$('[data-loading]').hide();
 }
