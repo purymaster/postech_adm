@@ -102,8 +102,25 @@
 		<div class="content">
 
 			<div class="container wide">
-				<div data-sub-visual class=type1 data-animation style="line-height:400px; text-align:center; background:green;">
-					임시 서브비주얼영역
+				<div data-sub-visual style="background-image:url(../img/bg/bg_subvisual_type1.jpg);">
+					<div class="container">
+						<div class="tit">페이지 제목</div>
+					</div>
+					<div class="breadcrumb">
+						<div class="container">
+							<ol>
+								<li class="home">
+									<a href="#">HOME</a>
+								</li>
+								<li>
+									<a href="#">1depth 메뉴</a>
+								</li>
+								<li>
+									<a href="#">2depth 메뉴</a>
+								</li>
+							</ol>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -183,6 +200,9 @@
 					<div data-content-box>
 						<h3 class="column_tit">컨텐츠 제목</h3>
 					</div>
+					<div data-content-box class="column">
+						<h3 class="column_tit">컨텐츠 제목</h3>
+					</div>
 					<!-- //컨텐츠 박스 -->
 
 					<!-- 대시보드 박스-->
@@ -236,11 +256,64 @@
 									</tbody>
 								</table>
 							</div>
-							<!-- <a href="#" class="more">더보기</a> -->
+
+							<!-- 게시물 제어 -->
+							<div data-ctr-btn>
+								<button type="button" data-btn class="select">
+									<span>선택삭제</span>
+								</button>
+								<button type="button" data-btn>
+									<span>전체삭제</span>
+								</button>
+							</div>
+
+							<!-- 우측상단 버튼 -->
+							<!-- <div data-ctr-btn class="side">
+						<a href="#" data-btn>고교별 관리자 전환 신청</a>
+					</div> -->
+
+							<!-- 더보기 -->
+							<div class="more">
+								<a href="#">더보기</a>
+							</div>
 
 						</div>
 					</div>
 					<!-- //대시보드 박스-->
+
+					<!-- 리스트, 강조문구 -->
+					<p class="guide_tit">리스트, 강조문구</p>
+					<ul class="type1" data-list>
+						<li>리스트1</li>
+						<li>리스트1</li>
+						<li>리스트1</li>
+					</ul>
+					<ul class="type2" data-list>
+						<li>리스트2</li>
+						<li>리스트2</li>
+						<li>리스트2</li>
+					</ul>
+					<p data-alert>경고문구</p>
+					<p data-description>부연설명</p>
+					<div class="inner" data-wrap>
+						들여쓰기(10px)
+					</div>
+					<div class="inner more" data-wrap>
+						더 들여쓰기(20px)
+					</div>
+					<!-- //리스트, 강조문구 -->
+
+					<!-- 안내 박스 -->
+					<p class="guide_tit">안내 박스</p>
+					<div data-info-box>
+						<p class="sub_tit">제목</p>
+						<ul class="type1" data-list>
+							<li>리스트1</li>
+							<li>리스트1</li>
+							<li>리스트1</li>
+						</ul>
+					</div>
+					<!-- //안내 박스 -->
 
 					<!-- 검색창 -->
 					<p class="guide_tit">검색창</p>
@@ -757,18 +830,213 @@
 					</div>
 					<!-- //입력폼(회원가입) -->
 
+					<!-- 서식 양식 -->
+					<p class="guide_tit">서식 양식</p>
+					<div data-document-list>
+						<ul>
+							<li data-format="pdf">
+								<a href="#">
+									<span class="date">9999-99-99</span>
+									<p class="tit">
+										대법원장의 임기는 6년으로 하며, 중임할 수 없다. 모든 국민은 근로의 권리를 가진다.
+									</p>
+									<div class="link">
+										<span>DOWNLOAD</span>
+									</div>
+								</a>
+							</li>
+							<li data-format="pdf">
+								<a href="#">
+									<span class="date">9999-99-99</span>
+									<p class="tit">
+										대법원장의 임기는 6년으로 하며, 중임할 수 없다. 모든 국민은 근로의 권리를 가진다.
+									</p>
+									<div class="link">
+										<span>DOWNLOAD</span>
+									</div>
+								</a>
+							</li>
+							<li data-format="pdf">
+								<a href="#">
+									<span class="date">9999-99-99</span>
+									<p class="tit">
+										대법원장의 임기는 6년으로 하며, 중임할 수 없다. 모든 국민은 근로의 권리를 가진다.
+									</p>
+									<div class="link">
+										<span>DOWNLOAD</span>
+									</div>
+								</a>
+							</li>
+							<li data-format="doc">
+								<a href="#">
+									<span class="date">9999-99-99</span>
+									<p class="tit">
+										대법원장의 임기는 6년으로 하며, 중임할 수 없다. 모든 국민은 근로의 권리를 가진다.
+									</p>
+									<div class="link">
+										<span>DOWNLOAD</span>
+									</div>
+								</a>
+							</li>
+							<li data-format="hwp">
+								<a href="#">
+									<span class="date">9999-99-99</span>
+									<p class="tit">
+										대법원장의 임기는 6년으로 하며, 중임할 수 없다. 모든 국민은 근로의 권리를 가진다.
+									</p>
+									<div class="link">
+										<span>DOWNLOAD</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- //서식 양식 -->
+
 					<!-- 팝업 -->
 					<p class="guide_tit">팝업</p>
 					<button onclick="show_modal('#school');">학교검색</button>
+					<!-- 학교검색 팝업 -->
 					<div data-modal="" id="school" style="display:none;">
 						<div class="modal">
 							<div class="modal_tit">학교검색</div>
 							<div class="modal_cont">
+								<div class="search_box">
+									<input type="text" placeholder="학교명 입력">
+									<button type="submit">
+										<span>검색</span>
+									</button>
+								</div>
+								<div data-address-list>
+
+									<!-- 검색 헤더 -->
+									<div class="data_header">
+										<span data-value="num" style="width:10%;">No.</span>
+										<span>시, 도</span>
+										<span>시, 군, 구</span>
+										<span style="width:50%;">학교명</span>
+									</div>
+									<!-- //검색 헤더 -->
+
+									<!-- 검색 결과 리스트 -->
+									<ul class="data_list">
+										<li>
+											<input type="radio" name="address" id="address1" class="hidden">
+											<label for="address1">
+												<span data-value="num" style="width:10%;">1</span>
+												<span data-value="legion">서울</span>
+												<span data-value="legion">강남구</span>
+												<span style="width:50%;" data-value="name">이화여자대학교 사범대학 부속 이화·금란고등학교</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="address" id="address2" class="hidden">
+											<label for="address2">
+												<span data-value="num" style="width:10%;">2</span>
+												<span data-value="legion">경기</span>
+												<span data-value="legion">남양주시</span>
+												<span style="width:50%;" data-value="name">남양주고등학교</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="address" id="address3" class="hidden">
+											<label for="address3">
+												<span data-value="num" style="width:10%;">3</span>
+												<span data-value="legion">서울</span>
+												<span data-value="legion">강남구</span>
+												<span style="width:50%;" data-value="name">강남고등학교</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="address" id="address4" class="hidden">
+											<label for="address4">
+												<span data-value="num" style="width:10%;">4</span>
+												<span data-value="legion">경기</span>
+												<span data-value="legion">남양주시</span>
+												<span style="width:50%;" data-value="name">남양주고등학교</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="address" id="address5" class="hidden">
+											<label for="address5">
+												<span data-value="num" style="width:10%;">5</span>
+												<span data-value="legion">서울</span>
+												<span data-value="legion">강남구</span>
+												<span style="width:50%;" data-value="name">강남고등학교</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="address" id="address6" class="hidden">
+											<label for="address6">
+												<span data-value="num" style="width:10%;">6</span>
+												<span data-value="legion">경기</span>
+												<span data-value="legion">남양주시</span>
+												<span style="width:50%;" data-value="name">남양주고등학교</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="address" id="address7" class="hidden">
+											<label for="address7">
+												<span data-value="num" style="width:10%;">7</span>
+												<span data-value="legion">서울</span>
+												<span data-value="legion">강남구</span>
+												<span style="width:50%;" data-value="name">강남고등학교</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="address" id="address8" class="hidden">
+											<label for="address8">
+												<span data-value="num" style="width:10%;">8</span>
+												<span data-value="legion">경기</span>
+												<span data-value="legion">남양주시</span>
+												<span style="width:50%;" data-value="name">남양주고등학교</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="address" id="address9" class="hidden">
+											<label for="address9">
+												<span data-value="num" style="width:10%;">9</span>
+												<span data-value="legion">서울</span>
+												<span data-value="legion">강남구</span>
+												<span style="width:50%;" data-value="name">강남고등학교</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="address" id="address10" class="hidden">
+											<label for="address10">
+												<span data-value="num" style="width:10%;">99999</span>
+												<span data-value="legion">경기</span>
+												<span data-value="legion">남양주시</span>
+												<span style="width:50%;" data-value="name">남양주고등학교</span>
+											</label>
+										</li>
+									</ul>
+									<!-- //검색 결과 리스트 -->
+								</div>
+
+								<div data-paging>
+									<ul>
+										<li class="first btn"><a class="item" href="#">첫 페이지</a></li>
+										<li class="prev btn"><a class="item" href="#">이전 페이지</a></li>
+										<li class="active"><span class="item">1</span></li>
+										<li><a class="item" href="#">2</a></li>
+										<li><a class="item" href="#">3</a></li>
+										<li><a class="item" href="#">4</a></li>
+										<li><a class="item" href="#">999</a></li>
+										<li class="next btn"><a class="item" href="#">다음 페이지</a></li>
+										<li class="last btn"><a class="item" href="#">마지막 페이지</a></li>
+									</ul>
+								</div>
+
+								<div data-ctr-btn>
+									<button type="submit" data-btn class="wide">확인</button>
+								</div>
 
 							</div>
 							<button type="button" class="close">팝업창 닫기</button>
 						</div>
 					</div>
+					<!-- //학교검색 팝업 -->
 					<!-- //팝업 -->
 
 				</div>

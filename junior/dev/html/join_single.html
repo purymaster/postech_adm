@@ -102,8 +102,25 @@
 		<div class="content">
 
 			<div class="container wide">
-				<div data-sub-visual class=type1 data-animation style="line-height:400px; text-align:center; background:green;">
-					임시 서브비주얼영역
+				<div data-sub-visual style="background-image:url(../img/bg/bg_subvisual_type1.jpg);">
+					<div class="container">
+						<div class="tit">회원가입</div>
+					</div>
+					<div class="breadcrumb">
+						<div class="container">
+							<ol>
+								<li class="home">
+									<a href="#">HOME</a>
+								</li>
+								<li>
+									<a href="#">1depth 메뉴</a>
+								</li>
+								<li>
+									<a href="#">2depth 메뉴</a>
+								</li>
+							</ol>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -113,6 +130,26 @@
 					<div data-sub-title>
 						<h2 class="tit">회원가입</h2>
 					</div>
+					<ol class="join_step">
+						<li>
+							<span>
+						<strong>1</strong><br>
+						가입 인증
+					</span>
+						</li>
+						<li class="on">
+							<span>
+						<strong>2</strong><br>
+						회원정보 입력
+					</span>
+						</li>
+						<li>
+							<span>
+						<strong>3</strong><br>
+						가입 완료
+					</span>
+						</li>
+					</ol>
 
 					<!-- 회원정보 입력 -->
 					<div data-content-box class="column no_border">
@@ -213,7 +250,9 @@
 
 													<li><a href="#none">학생</a></li>
 
-													<li><a href="#none">그외</a></li>
+													<li><a href="#none">교사</a></li>
+
+													<li><a href="#none">학부모</a></li>
 
 												</ul>
 
@@ -229,7 +268,7 @@
 										<td>
 											<div class="input_box">
 												<input type="text" id="input_010">
-												<button type="button" class="ctr search">
+												<button type="button" class="ctr search" onclick="show_modal('#school');">
 													<span>학교검색</span>
 												</button>
 											</div>
@@ -321,6 +360,16 @@
 								<a href="#" class="detail" target="_blank" title="새창열림">내용 보기</a>
 							</li>
 						</ul>
+						<div class="agreement">
+							<div class="check_form">
+								<ul>
+									<li>
+										<input type="checkbox" id="term_all" name="term_check">
+										<label for="term_all">약관 전체 동의</label>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 					<!-- //이용약관 동의 -->
 
@@ -330,6 +379,152 @@
 						<!-- [D] 캡챠 삽입 영역 -->
 					</div>
 					<!-- //자동 등록 방지 -->
+
+					<div data-ctr-btn>
+						<button type="submit" data-btn class="wide">회원 가입</button>
+					</div>
+
+					<!-- 학교검색 팝업 -->
+					<div data-modal="" id="school" style="display:none;">
+						<div class="modal">
+							<div class="modal_tit">학교검색</div>
+							<div class="modal_cont">
+								<div class="search_box">
+									<input type="text" placeholder="학교명 입력">
+									<button type="submit">
+										<span>검색</span>
+									</button>
+								</div>
+								<div data-address-list>
+
+									<!-- 검색 헤더 -->
+									<div class="data_header">
+										<span data-value="num" style="width:10%;">No.</span>
+										<span>시, 도</span>
+										<span>시, 군, 구</span>
+										<span style="width:50%;">학교명</span>
+									</div>
+									<!-- //검색 헤더 -->
+
+									<!-- 검색 결과 리스트 -->
+									<ul class="data_list">
+										<li>
+											<input type="radio" name="address" id="address1" class="hidden">
+											<label for="address1">
+												<span data-value="num" style="width:10%;">1</span>
+												<span data-value="legion">서울</span>
+												<span data-value="legion">강남구</span>
+												<span style="width:50%;" data-value="name">이화여자대학교 사범대학 부속 이화·금란고등학교</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="address" id="address2" class="hidden">
+											<label for="address2">
+												<span data-value="num" style="width:10%;">2</span>
+												<span data-value="legion">경기</span>
+												<span data-value="legion">남양주시</span>
+												<span style="width:50%;" data-value="name">남양주고등학교</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="address" id="address3" class="hidden">
+											<label for="address3">
+												<span data-value="num" style="width:10%;">3</span>
+												<span data-value="legion">서울</span>
+												<span data-value="legion">강남구</span>
+												<span style="width:50%;" data-value="name">강남고등학교</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="address" id="address4" class="hidden">
+											<label for="address4">
+												<span data-value="num" style="width:10%;">4</span>
+												<span data-value="legion">경기</span>
+												<span data-value="legion">남양주시</span>
+												<span style="width:50%;" data-value="name">남양주고등학교</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="address" id="address5" class="hidden">
+											<label for="address5">
+												<span data-value="num" style="width:10%;">5</span>
+												<span data-value="legion">서울</span>
+												<span data-value="legion">강남구</span>
+												<span style="width:50%;" data-value="name">강남고등학교</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="address" id="address6" class="hidden">
+											<label for="address6">
+												<span data-value="num" style="width:10%;">6</span>
+												<span data-value="legion">경기</span>
+												<span data-value="legion">남양주시</span>
+												<span style="width:50%;" data-value="name">남양주고등학교</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="address" id="address7" class="hidden">
+											<label for="address7">
+												<span data-value="num" style="width:10%;">7</span>
+												<span data-value="legion">서울</span>
+												<span data-value="legion">강남구</span>
+												<span style="width:50%;" data-value="name">강남고등학교</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="address" id="address8" class="hidden">
+											<label for="address8">
+												<span data-value="num" style="width:10%;">8</span>
+												<span data-value="legion">경기</span>
+												<span data-value="legion">남양주시</span>
+												<span style="width:50%;" data-value="name">남양주고등학교</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="address" id="address9" class="hidden">
+											<label for="address9">
+												<span data-value="num" style="width:10%;">9</span>
+												<span data-value="legion">서울</span>
+												<span data-value="legion">강남구</span>
+												<span style="width:50%;" data-value="name">강남고등학교</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="address" id="address10" class="hidden">
+											<label for="address10">
+												<span data-value="num" style="width:10%;">99999</span>
+												<span data-value="legion">경기</span>
+												<span data-value="legion">남양주시</span>
+												<span style="width:50%;" data-value="name">남양주고등학교</span>
+											</label>
+										</li>
+									</ul>
+									<!-- //검색 결과 리스트 -->
+								</div>
+
+								<div data-paging>
+									<ul>
+										<li class="first btn"><a class="item" href="#">첫 페이지</a></li>
+										<li class="prev btn"><a class="item" href="#">이전 페이지</a></li>
+										<li class="active"><span class="item">1</span></li>
+										<li><a class="item" href="#">2</a></li>
+										<li><a class="item" href="#">3</a></li>
+										<li><a class="item" href="#">4</a></li>
+										<li><a class="item" href="#">999</a></li>
+										<li class="next btn"><a class="item" href="#">다음 페이지</a></li>
+										<li class="last btn"><a class="item" href="#">마지막 페이지</a></li>
+									</ul>
+								</div>
+
+								<div data-ctr-btn>
+									<button type="submit" data-btn class="wide">확인</button>
+								</div>
+
+							</div>
+							<button type="button" class="close">팝업창 닫기</button>
+						</div>
+					</div>
+					<!-- //학교검색 팝업 -->
 
 				</div>
 			</div>

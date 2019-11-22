@@ -104,7 +104,7 @@
 			<div class="container wide">
 				<div data-sub-visual style="background-image:url(../img/bg/bg_subvisual_type1.jpg);">
 					<div class="container">
-						<div class="tit">페이지 제목</div>
+						<div class="tit">아이디/비밀번호 찾기</div>
 					</div>
 					<div class="breadcrumb">
 						<div class="container">
@@ -127,9 +127,134 @@
 			<!-- 서브 페이지 컨텐츠 -->
 			<div class="" data-sub-content>
 				<div class="container">
-					<div data-content-box>
-						<h3 class="column_tit">컨텐츠 제목</h3>
+
+					<div data-sub-title>
+						<h2 class="tit">아이디/비밀번호 찾기</h2>
 					</div>
+
+
+					<!-- 탭메뉴 -->
+					<div data-tab-menu>
+						<ul class="type2">
+							<!-- [D] 현재 페이지에 해당 되는 li에 on 클래스 부여 -->
+							<li>
+								<a href="#">
+									<span>아이디 찾기</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>비밀번호 찾기</span>
+								</a>
+							</li>
+
+						</ul>
+					</div>
+					<!-- //탭메뉴 -->
+
+
+					<!-- 아이디 찾기 -->
+					<div data-content-box class="column">
+						<h3 class="column_tit">아이디 찾기</h3>
+						<div data-form>
+							<dl>
+								<div>
+									<dt>
+										<label for="user_name">이름</label>
+									</dt>
+									<dd>
+										<input type="text" id="user_name" placeholder="이름 입력" style="width:200px;">
+									</dd>
+								</div>
+								<div>
+									<dt>
+										<label for="user_mail">이메일</label>
+									</dt>
+									<dd>
+										<div class="input_box mail">
+											<input type="text" id="user_mail" title="이메일 주소" style="width:180px;">
+											<span class="letter at">@</span>
+											<input type="text" id="mail_account" title="이메일 계정" style="width:180px;">
+											<div class="select_form">
+												<input type="hidden">
+
+
+												<button type="button"><span>네이버</span></button>
+
+												<ul>
+
+													<li><a href="#none">네이버</a></li>
+
+													<li><a href="#none">직접입력</a></li>
+
+												</ul>
+
+											</div>
+										</div>
+									</dd>
+								</div>
+							</dl>
+						</div>
+					</div>
+					<!-- //아이디 찾기 -->
+
+					<!-- 비밀번호 찾기 -->
+					<!-- <div data-content-box class="column">
+				<h3 class="column_tit">비밀번호 찾기</h3>
+				<div data-form>
+					<dl>
+						<div>
+							<dt>
+								<label for="user_id1">아이디</label>
+							</dt>
+							<dd>
+								<input type="text" id="user_id1" placeholder="아이디 입력" style="width:200px;">
+							</dd>
+						</div>
+						<div>
+							<dt>
+								<label for="user_name1">이름</label>
+							</dt>
+							<dd>
+								<input type="text" id="user_name1" placeholder="이름 입력" style="width:200px;">
+							</dd>
+						</div>
+						<div>
+							<dt>
+								<label for="user_mail1">이메일</label>
+							</dt>
+							<dd>
+								<div class="input_box mail">
+									<input type="text" id="user_mail1" title="이메일 주소" style="width:180px;">
+									<span class="letter at">@</span>
+									<input type="text" id="mail_account1" title="이메일 계정" style="width:180px;">
+									<div class="select_form">
+	<input type="hidden">
+	
+	 
+		<button type="button"><span>네이버</span></button>
+	
+		<ul>
+			 
+			<li><a href="#none">네이버</a></li>
+			 
+			<li><a href="#none">직접입력</a></li>
+			
+		</ul>
+		
+</div>
+								</div>
+							</dd>
+						</div>
+					</dl>
+				</div>
+			</div> -->
+					<!-- //비밀번호 찾기 -->
+
+					<div data-ctr-btn>
+						<button type="submit" data-btn class="wide">확인</button>
+					</div>
+
 				</div>
 			</div>
 			<!-- //서브 페이지 컨텐츠 -->

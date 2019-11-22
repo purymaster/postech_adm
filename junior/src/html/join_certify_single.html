@@ -1,0 +1,97 @@
+@@include('header.html')
+<div class="content">
+
+	<div class="container wide">
+		@@include('sub_visual.html', {
+		"type" : "type1",
+		"tit" : "회원가입"
+		})
+	</div>
+
+	<!-- 서브 페이지 컨텐츠 -->
+	<div class="certify" data-sub-content>
+		<div class="container">
+			<div data-sub-title>
+				<h2 class="tit">회원가입</h2>
+			</div>
+			<ol class="join_step">
+				<li class="on">
+					<span>
+						<strong>1</strong><br>
+						가입 인증
+					</span>
+				</li>
+				<li>
+					<span>
+						<strong>2</strong><br>
+						회원정보 입력
+					</span>
+				</li>
+				<li>
+					<span>
+						<strong>3</strong><br>
+						가입 완료
+					</span>
+				</li>
+			</ol>
+
+			<!-- 이메일 인증 -->
+			<div class="certify_box">
+				<div data-content-box class="column">
+					<h3 class="column_tit center">회원정보 입력</h3>
+					<div data-form>
+						<dl>
+							<div>
+								<dt>
+									<label for="user_name">이름</label>
+								</dt>
+								<dd>
+									<input type="text" id="user_name" placeholder="이름 입력" style="width:200px;">
+								</dd>
+							</div>
+							<div>
+								<dt>
+									<label for="user_mail">이메일</label>
+								</dt>
+								<dd>
+									<div class="input_box mail">
+										<input type="text" id="user_mail" title="이메일 주소" style="width:150px;"
+											placeholder="이메일 입력">
+										<span class="letter at">@</span>
+										<input type="text" id="mail_account" title="이메일 계정" style="width:120px;">
+										@@include('select.html', {
+										"context" : {
+										"use" : true,
+										"value" : ["naver.com", "직접입력"]
+										}
+										})
+									</div>
+								</dd>
+							</div>
+							<div>
+								<dt>
+									<label for="user_code">인증코드</label>
+								</dt>
+								<dd>
+									<div class="input_box code">
+										<input type="text" id="user_code" placeholder="인증코드 입력" style="width:200px;">
+										<button type="submit" class="get_code">
+											<span>인증코드 받기</span>
+										</button>
+									</div>
+								</dd>
+							</div>
+						</dl>
+						<div data-ctr-btn>
+							<button type="submit" data-btn class="wide">회원 가입</button>
+						</div>
+					</div>
+				</div>
+				<!-- //이메일 인증 -->
+
+			</div>
+		</div>
+		<!-- //서브 페이지 컨텐츠 -->
+
+	</div>
+	@@include('footer.html')

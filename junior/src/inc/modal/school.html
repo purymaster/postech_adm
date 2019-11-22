@@ -1,9 +1,129 @@
+<!-- 학교검색 팝업 -->
 <div data-modal="" id="school" style="display:none;">
 	<div class="modal">
 		<div class="modal_tit">학교검색</div>
 		<div class="modal_cont">
-			
+			<div class="search_box">
+				<input type="text" placeholder="학교명 입력">
+				<button type="submit">
+					<span>검색</span>
+				</button>
+			</div>
+			<div data-address-list>
+
+				<!-- 검색 헤더 -->
+				<div class="data_header">
+					<span data-value="num" style="width:10%;">No.</span>
+					<span>시, 도</span>
+					<span>시, 군, 구</span>
+					<span style="width:50%;">학교명</span>
+				</div>
+				<!-- //검색 헤더 -->
+
+				<!-- 검색 결과 리스트 -->
+				<ul class="data_list">
+					<li>
+						<input type="radio" name="address" id="address1" class="hidden">
+						<label for="address1">
+							<span data-value="num" style="width:10%;">1</span>
+							<span data-value="legion">서울</span>
+							<span data-value="legion">강남구</span>
+							<span style="width:50%;" data-value="name">이화여자대학교 사범대학 부속 이화·금란고등학교</span>
+						</label>
+					</li>
+					<li>
+						<input type="radio" name="address" id="address2" class="hidden">
+						<label for="address2">
+							<span data-value="num" style="width:10%;">2</span>
+							<span data-value="legion">경기</span>
+							<span data-value="legion">남양주시</span>
+							<span style="width:50%;" data-value="name">남양주고등학교</span>
+						</label>
+					</li>
+					<li>
+						<input type="radio" name="address" id="address3" class="hidden">
+						<label for="address3">
+							<span data-value="num" style="width:10%;">3</span>
+							<span data-value="legion">서울</span>
+							<span data-value="legion">강남구</span>
+							<span style="width:50%;" data-value="name">강남고등학교</span>
+						</label>
+					</li>
+					<li>
+						<input type="radio" name="address" id="address4" class="hidden">
+						<label for="address4">
+							<span data-value="num" style="width:10%;">4</span>
+							<span data-value="legion">경기</span>
+							<span data-value="legion">남양주시</span>
+							<span style="width:50%;" data-value="name">남양주고등학교</span>
+						</label>
+					</li>
+					<li>
+						<input type="radio" name="address" id="address5" class="hidden">
+						<label for="address5">
+							<span data-value="num" style="width:10%;">5</span>
+							<span data-value="legion">서울</span>
+							<span data-value="legion">강남구</span>
+							<span style="width:50%;" data-value="name">강남고등학교</span>
+						</label>
+					</li>
+					<li>
+						<input type="radio" name="address" id="address6" class="hidden">
+						<label for="address6">
+							<span data-value="num" style="width:10%;">6</span>
+							<span data-value="legion">경기</span>
+							<span data-value="legion">남양주시</span>
+							<span style="width:50%;" data-value="name">남양주고등학교</span>
+						</label>
+					</li>
+					<li>
+						<input type="radio" name="address" id="address7" class="hidden">
+						<label for="address7">
+							<span data-value="num" style="width:10%;">7</span>
+							<span data-value="legion">서울</span>
+							<span data-value="legion">강남구</span>
+							<span style="width:50%;" data-value="name">강남고등학교</span>
+						</label>
+					</li>
+					<li>
+						<input type="radio" name="address" id="address8" class="hidden">
+						<label for="address8">
+							<span data-value="num" style="width:10%;">8</span>
+							<span data-value="legion">경기</span>
+							<span data-value="legion">남양주시</span>
+							<span style="width:50%;" data-value="name">남양주고등학교</span>
+						</label>
+					</li>
+					<li>
+						<input type="radio" name="address" id="address9" class="hidden">
+						<label for="address9">
+							<span data-value="num" style="width:10%;">9</span>
+							<span data-value="legion">서울</span>
+							<span data-value="legion">강남구</span>
+							<span style="width:50%;" data-value="name">강남고등학교</span>
+						</label>
+					</li>
+					<li>
+						<input type="radio" name="address" id="address10" class="hidden">
+						<label for="address10">
+							<span data-value="num" style="width:10%;">99999</span>
+							<span data-value="legion">경기</span>
+							<span data-value="legion">남양주시</span>
+							<span style="width:50%;" data-value="name">남양주고등학교</span>
+						</label>
+					</li>
+				</ul>
+				<!-- //검색 결과 리스트 -->
+			</div>
+
+			@@include('paging.html')
+
+			<div data-ctr-btn>
+				<button type="submit" data-btn class="wide">확인</button>
+			</div>
+
 		</div>
 		<button type="button" class="close">팝업창 닫기</button>
 	</div>
 </div>
+<!-- //학교검색 팝업 -->

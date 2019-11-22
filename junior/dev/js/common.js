@@ -26,6 +26,8 @@ $(function() {
 
     /******************** 네비게이션 제어 ********************/
 
+    $('.main-menu > li').has('.sub-menu').addClass('sub');
+
     /* 모바일 메뉴 열기 */
     $('header .open_menu').on('click', function() {
         $('header .nav_wrap').addClass('on');
@@ -112,6 +114,7 @@ $(function() {
         buttonText: "선택",
         yearSuffix: "년",
         changeYear: true,
+        yearRange: "-100:+0",
         showOn: "button",
         buttonImage: "../img/img/img_calendar.png",
         buttonImageOnly: true,

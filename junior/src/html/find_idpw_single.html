@@ -1,0 +1,114 @@
+@@include('header.html')
+<div class="content">
+
+	<div class="container wide">
+		@@include('sub_visual.html', {
+		"type" : "type1",
+		"tit" : "아이디/비밀번호 찾기"
+		})
+	</div>
+
+	<!-- 서브 페이지 컨텐츠 -->
+	<div class="" data-sub-content>
+		<div class="container">
+
+			<div data-sub-title>
+				<h2 class="tit">아이디/비밀번호 찾기</h2>
+			</div>
+
+			@@include('tab.html', {
+			"has_tab" : true,
+			"tab_list" : ["아이디 찾기", "비밀번호 찾기"],
+			"type" : "type2"
+			})
+
+			<!-- 아이디 찾기 -->
+			<div data-content-box class="column">
+				<h3 class="column_tit">아이디 찾기</h3>
+				<div data-form>
+					<dl>
+						<div>
+							<dt>
+								<label for="user_name">이름</label>
+							</dt>
+							<dd>
+								<input type="text" id="user_name" placeholder="이름 입력" style="width:200px;">
+							</dd>
+						</div>
+						<div>
+							<dt>
+								<label for="user_mail">이메일</label>
+							</dt>
+							<dd>
+								<div class="input_box mail">
+									<input type="text" id="user_mail" title="이메일 주소" style="width:180px;">
+									<span class="letter at">@</span>
+									<input type="text" id="mail_account" title="이메일 계정" style="width:180px;">
+									@@include('select.html', {
+									"context" : {
+									"use" : true,
+									"value" : ["네이버", "직접입력"]
+									}
+									})
+								</div>
+							</dd>
+						</div>
+					</dl>
+				</div>
+			</div>
+			<!-- //아이디 찾기 -->
+
+			<!-- 비밀번호 찾기 -->
+			<!-- <div data-content-box class="column">
+				<h3 class="column_tit">비밀번호 찾기</h3>
+				<div data-form>
+					<dl>
+						<div>
+							<dt>
+								<label for="user_id1">아이디</label>
+							</dt>
+							<dd>
+								<input type="text" id="user_id1" placeholder="아이디 입력" style="width:200px;">
+							</dd>
+						</div>
+						<div>
+							<dt>
+								<label for="user_name1">이름</label>
+							</dt>
+							<dd>
+								<input type="text" id="user_name1" placeholder="이름 입력" style="width:200px;">
+							</dd>
+						</div>
+						<div>
+							<dt>
+								<label for="user_mail1">이메일</label>
+							</dt>
+							<dd>
+								<div class="input_box mail">
+									<input type="text" id="user_mail1" title="이메일 주소" style="width:180px;">
+									<span class="letter at">@</span>
+									<input type="text" id="mail_account1" title="이메일 계정" style="width:180px;">
+									@@include('select.html', {
+									"context" : {
+									"use" : true,
+									"value" : ["네이버", "직접입력"]
+									}
+									})
+								</div>
+							</dd>
+						</div>
+					</dl>
+				</div>
+			</div> -->
+			<!-- //비밀번호 찾기 -->
+
+			<div data-ctr-btn>
+				<button type="submit" data-btn class="wide">확인</button>
+			</div>
+
+		</div>
+	</div>
+	<!-- //서브 페이지 컨텐츠 -->
+
+</div>
+@@include('footer.html')
