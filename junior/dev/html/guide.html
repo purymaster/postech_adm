@@ -205,6 +205,18 @@
 					</div>
 					<!-- //컨텐츠 박스 -->
 
+					<!-- 2단 분할 영역 -->
+					<p class="guide_tit">2단 분할 영역(inline style 제거 후 사용)</p>
+					<div data-grid-wrap>
+						<div data-grid>
+							<div style="background:rgba(255,0,0,0.1)">1단</div>
+						</div>
+						<div data-grid>
+							<div style="background:rgba(255,0,255,0.1)">2단</div>
+						</div>
+					</div>
+					<!-- //2단 분할 영역 -->
+
 					<!-- 대시보드 박스-->
 					<p class="guide_tit">대시보드 박스</p>
 					<div data-content-box>
@@ -795,7 +807,7 @@
 												<span>중복확인</span>
 											</button>
 										</div>
-										<p class="info_txt">*5~12자의 영문 소문자, 숫자 입력</p>
+										<p class="info_txt">5~12자의 영문 소문자, 숫자 입력</p>
 									</td>
 								</tr>
 								<tr>
@@ -829,6 +841,169 @@
 						</table>
 					</div>
 					<!-- //입력폼(회원가입) -->
+
+					<!-- 마이 캘린더 -->
+					<p class="guide_tit">마이 캘린더</p>
+					<div data-content-box>
+						<div data-dashboard-box data-mycalendar>
+							<h3 class="column_tit">마이 캘린더</h3>
+							<div class="ctr">
+								<button type="button" data-view="calendar" class="on">
+									<i></i>
+									<span>캘린더</span>
+								</button>
+								<button type="button" data-view="list">
+									<i></i>
+									<span>목록</span>
+								</button>
+							</div>
+
+							<!-- 달력 -->
+							<!-- <div data-content="calendar">
+						<div class="calendar_wrap">
+							<div class="side_header">
+								<div class="table_header">스크랩 일정</div>
+								<div class="table_header">추천 일정</div>
+								<div class="table_header">내가 참여한 일정</div>
+							</div>
+							<div class="table_wrap">
+								<table>
+									<colgroup>
+										<col style="width:170px;">
+										<col style="width:170px;">
+										<col style="width:170px;">
+										<col style="width:170px;">
+										<col style="width:170px;">
+										<col style="width:170px;">
+										<col style="width:170px;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">2020/01</th>
+											<th scope="col">2020/02</th>
+											<th scope="col">2020/03</th>
+											<th scope="col">2020/04</th>
+											<th scope="col">2020/05</th>
+											<th scope="col">2020/06</th>
+											<th scope="col">2020/07</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div> -->
+							<!-- //달력 -->
+
+							<!-- 목록 -->
+							<div data-content="list">
+								<dl>
+									<div>
+										<dt>스크랩 일정</dt>
+										<dd>
+											<ul>
+												<li>
+													<div class="tit">
+														1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표
+													</div>
+													<div class="date">
+														9999-99-99 (월) 99:99 | 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지
+													</div>
+												</li>
+												<li>
+													<div class="tit">
+														1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표
+													</div>
+													<div class="date">
+														9999-99-99 (월) 99:99 | 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지
+													</div>
+												</li>
+												<li>
+													<div class="tit">
+														1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표
+													</div>
+													<div class="date">
+														9999-99-99 (월) 99:99 | 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지
+													</div>
+												</li>
+											</ul>
+										</dd>
+									</div>
+									<div>
+										<dt>추천 일정</dt>
+										<dd>
+											<ul>
+												<li>
+													<div class="tit">
+														1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표
+													</div>
+													<div class="date">
+														9999-99-99 (월) 99:99 | 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지
+													</div>
+												</li>
+												<li>
+													<div class="tit">
+														1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표
+													</div>
+													<div class="date">
+														9999-99-99 (월) 99:99 | 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지
+													</div>
+												</li>
+												<li>
+													<div class="tit">
+														1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표
+													</div>
+													<div class="date">
+														9999-99-99 (월) 99:99 | 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지
+													</div>
+												</li>
+											</ul>
+										</dd>
+									</div>
+									<div>
+										<dt>내가 참여한 일정</dt>
+										<dd>
+											<div style="text-align:center;">참여 내역이 없습니다.</div>
+										</dd>
+									</div>
+								</dl>
+							</div>
+							<!-- //목록 -->
+
+							<div data-ctr-btn class="side">
+								<a href="#" data-btn class="export">구글 캘린더로 내보내기</a>
+							</div>
+						</div>
+					</div>
+					<!-- //마이 캘린더 -->
 
 					<!-- 서식 양식 -->
 					<p class="guide_tit">서식 양식</p>

@@ -1,0 +1,167 @@
+@@include('header.html')
+<div class="content">
+
+	<div class="container wide">
+		@@include('sub_visual.html', {
+		"type" : "type1",
+		"tit" : "마이 대시보드"
+		})
+	</div>
+
+	<!-- 서브 페이지 컨텐츠 -->
+	<div class="convert" data-sub-content>
+		<div class="container">
+			<div data-sub-title>
+				<h2 class="tit">마이 대시보드</h2>
+			</div>
+
+			<!-- 기본 정보 -->
+			<div data-content-box>
+				<div data-dashboard-box>
+					<h3 class="column_tit">기본 정보</h3>
+					<div data-board-list class="info">
+						<table>
+							<colgroup>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col style="width:20%;">
+								<col style="width:20%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">이름</th>
+									<th scope="col">ID</th>
+									<th scope="col">사용자 타입</th>
+									<th scope="col">학교</th>
+									<th scope="col">학년</th>
+									<th scope="col">이메일</th>
+									<th scope="col">연락처</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-type="name">라이언</td>
+									<td data-type="id">ID</td>
+									<td data-type="user_type">교수</td>
+									<td data-type="school">경기고등학교</td>
+									<td data-type="grade">2학년</td>
+									<td data-type="email">ryan123@naver.com</td>
+									<td data-type="tel">999-9999-9999</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div data-ctr-btn class="side">
+						<a href="#" data-btn>고교별 관리자 전환 신청</a>
+					</div>
+				</div>
+			</div>
+			<!-- //기본 정보 -->
+
+			<!-- 마이 캘린더 -->
+			<div data-content-box>
+				<div data-dashboard-box data-mycalendar>
+					<h3 class="column_tit">마이 캘린더</h3>
+					<div class="ctr">
+						<button type="button" data-view="calendar" class="on">
+							<i></i>
+							<span>캘린더</span>
+						</button>
+						<button type="button" data-view="list">
+							<i></i>
+							<span>목록</span>
+						</button>
+					</div>
+
+					<!-- 목록 -->
+					<div data-content="list">
+						<dl>
+							<div>
+								<dt>스크랩 일정</dt>
+								<dd>
+									<ul>
+										<li>
+											<div class="tit">
+												1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표
+											</div>
+											<div class="date">
+												9999-99-99 (월) 99:99 | 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지
+											</div>
+										</li>
+										<li>
+											<div class="tit">
+												1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표
+											</div>
+											<div class="date">
+												9999-99-99 (월) 99:99 | 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지
+											</div>
+										</li>
+										<li>
+											<div class="tit">
+												1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표
+											</div>
+											<div class="date">
+												9999-99-99 (월) 99:99 | 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지
+											</div>
+										</li>
+									</ul>
+								</dd>
+							</div>
+							<div>
+								<dt>추천 일정</dt>
+								<dd>
+									<ul>
+										<li>
+											<div class="tit">
+												1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표
+											</div>
+											<div class="date">
+												9999-99-99 (월) 99:99 | 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지
+											</div>
+										</li>
+										<li>
+											<div class="tit">
+												1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표
+											</div>
+											<div class="date">
+												9999-99-99 (월) 99:99 | 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지
+											</div>
+										</li>
+										<li>
+											<div class="tit">
+												1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표 1차 합격자 발표
+											</div>
+											<div class="date">
+												9999-99-99 (월) 99:99 | 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지 입학팀 홈페이지
+											</div>
+										</li>
+									</ul>
+								</dd>
+							</div>
+							<div>
+								<dt>내가 참여한 일정</dt>
+								<dd>
+									<div style="text-align:center;">참여 내역이 없습니다.</div>
+								</dd>
+							</div>
+						</dl>
+					</div>
+					<!-- //목록 -->
+
+					<div data-ctr-btn class="side">
+						<a href="#" data-btn class="export">구글 캘린더로 내보내기</a>
+					</div>
+				</div>
+			</div>
+			<!-- //마이 캘린더 -->
+
+		</div>
+	</div>
+	<!-- //서브 페이지 컨텐츠 -->
+
+</div>
+@@include('footer.html')

@@ -104,7 +104,7 @@
 			<div class="container wide">
 				<div data-sub-visual style="background-image:url(../img/bg/bg_subvisual_type1.jpg);">
 					<div class="container">
-						<div class="tit">회원가입</div>
+						<div class="tit">고교별 관리자 연동 신청</div>
 					</div>
 					<div class="breadcrumb">
 						<div class="container">
@@ -125,263 +125,114 @@
 			</div>
 
 			<!-- 서브 페이지 컨텐츠 -->
-			<div class="join" data-sub-content>
+			<div class="convert" data-sub-content>
 				<div class="container">
 					<div data-sub-title>
-						<h2 class="tit">회원가입</h2>
+						<h2 class="tit">고교별 관리자 연동 신청</h2>
 					</div>
-					<ol class="join_step">
-						<li>
-							<span>
-						<strong>1</strong><br>
-						가입 인증
-					</span>
-						</li>
-						<li class="on">
-							<span>
-						<strong>2</strong><br>
-						회원정보 입력
-					</span>
-						</li>
-						<li>
-							<span>
-						<strong>3</strong><br>
-						가입 완료
-					</span>
-						</li>
-					</ol>
 
-					<!-- 회원정보 입력 -->
+					<div data-info-box>
+						<p class="sub_tit">고교별 관리자가 되시면</p>
+						<ul class="type1" data-list>
+							<li>고교별 관리자의 권한은 연동 신청일 기준 익년 2월 말일까지 유효하며, 이후 다시 신청해야 사용 가능합니다.</li>
+							<li><strong>개별적으로 관리자의 허락을 받을 경우에 한하여 계정 유효기간이 연장될 수 있습니다.</strong></li>
+						</ul>
+					</div>
+
+					<!-- 추가정보 입력 -->
 					<div data-content-box class="column no_border">
-						<h3 class="column_tit">회원정보 입력</h3>
+						<h3 class="column_tit">추가 입력 정보</h3>
 						<div data-input-form data-input-join>
 							<table>
 								<colgroup>
-									<col style="width:110px;">
+									<col style="width:210px;">
 									<col>
 								</colgroup>
 								<tbody>
 									<tr>
 										<th scope="row">
-											<label for="input_01">아이디</label>
+											<label for="input_01">
+												재직 중인 교고의 NEIS CODE
+											</label>
+										</th>
+										<td>
+											<input type="text" id="input_01" placeholder="학교 NEIS CODE 입력">
+											<p class="info_txt">알파벳 + 9자리 숫자 입력</p>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<label for="input_02">비밀번호 확인</label>
 										</th>
 										<td>
 											<div class="input_box">
-												<input type="text" id="input_01" placeholder="아이디 입력" maxlength="12">
-												<button type="button" class="ctr check">
-													<span>중복확인</span>
-												</button>
+												<input type="password" id="input_02" placeholder="일반회원 비밀번호 입력" maxlength="12">
 											</div>
-											<p class="info_txt">5~12자의 영문 소문자, 숫자 입력</p>
+											<p class="info_txt">일반회원 비밀번호를 입력해주세요. 영문+숫자 조합으로 8~12자로 입력해주세요. 대소문자를 구분합니다.</p>
 										</td>
 									</tr>
 									<tr>
 										<th scope="row">
-											<label for="input_02">비밀번호</label>
+											<label for="input_03">직급</label>
 										</th>
 										<td>
 											<div class="input_box">
-												<input type="password" id="input_02" placeholder="비밀번호 입력" maxlength="12">
-											</div>
-											<p class="info_txt">영문+숫자 조합으로 8~12자로 입력해주세요. 대소문자를 구분합니다.</p>
-										</td>
-									</tr>
-									<tr>
-										<th scope="row">
-											<label for="input_03">비밀번호 확인</label>
-										</th>
-										<td>
-											<div class="input_box">
-												<input type="password" id="input_03" placeholder="비밀번호 재입력" maxlength="12">
-											</div>
-											<p class="info_txt">입력하신 비밀번호를 다시 한번 입력해주세요.</p>
-										</td>
-									</tr>
-									<tr>
-										<th scope="row">
-											<label for="input_04">이름</label>
-										</th>
-										<td>
-											<div class="input_box">
-												<input type="text" id="input_04" placeholder="이름">
-											</div>
-											<p class="info_txt">이름을 정확하게 입력해주세요.</p>
-										</td>
-									</tr>
-									<tr>
-										<th scope="row">
-											<label for="radio_01">성별</label>
-										</th>
-										<td>
-											<div class="radio_form">
-												<ul>
-													<li>
-														<input type="radio" id="radio_01" name="select_gender" checked="">
-														<label for="radio_01">남</label>
-													</li>
-													<li>
-														<input type="radio" id="radio_02" name="select_gender">
-														<label for="radio_02">여</label>
-													</li>
-												</ul>
+												<input type="text" id="input_03" placeholder="직급을 입력해주세요. ex)진로상담부장" style="width:280px;">
 											</div>
 										</td>
 									</tr>
 									<tr>
 										<th scope="row">
-											<label for="input_05">생년월일</label>
+											<label for="input_04">교내 전화번호</label>
 										</th>
 										<td>
-											<input type="text" data-datepicker id="input_05">
-										</td>
-									</tr>
-									<tr>
-										<th scope="row">
-											<label for="">사용자 타입</label>
-										</th>
-										<td>
-											<div class="select_form">
-												<input type="hidden">
-
-
-												<button type="button"><span>학생</span></button>
-
-												<ul>
-
-													<li><a href="#none">학생</a></li>
-
-													<li><a href="#none">교사</a></li>
-
-													<li><a href="#none">학부모</a></li>
-
-												</ul>
-
-											</div>
-										</td>
-									</tr>
-
-									<!-- [D] 사용자 타입(학생) 출력항목 -->
-									<tr class="option student">
-										<th scope="row">
-											<label for="input_010">학교명</label>
-										</th>
-										<td>
-											<div class="input_box">
-												<input type="text" id="input_010">
-												<button type="button" class="ctr search" onclick="show_modal('#school');">
-													<span>학교검색</span>
-												</button>
-											</div>
-										</td>
-									</tr>
-									<tr class="option student">
-										<th scope="row">
-											<label for="">학년</label>
-										</th>
-										<td>
-											<div class="select_form">
-												<input type="hidden">
-
-
-												<button type="button"><span>1학년</span></button>
-
-												<ul>
-
-													<li><a href="#none">1학년</a></li>
-
-													<li><a href="#none">2학년</a></li>
-
-													<li><a href="#none">3학년</a></li>
-
-												</ul>
-
-											</div>
-										</td>
-									</tr>
-									<!-- // [D] 사용자 타입(학생) 출력항목 -->
-
-									<tr>
-										<th scope="row">
-											<label for="input_06">이메일</label>
-										</th>
-										<td>
-											<div class="input_box mail">
-												<input type="text" id="input_06" title="이메일 주소">
-												<span class="letter at">@</span>
-												<input type="text" id="input_07" title="이메일 계정">
+											<div class="input_box tel">
 												<div class="select_form">
 													<input type="hidden">
 
 
-													<button type="button"><span>네이버</span></button>
+													<button type="button"><span>02</span></button>
 
 													<ul>
 
-														<li><a href="#none">네이버</a></li>
+														<li><a href="#none">02</a></li>
 
-														<li><a href="#none">직접입력</a></li>
+														<li><a href="#none">019</a></li>
 
 													</ul>
 
 												</div>
+												<input type="text" id="input_04" title="전화번호 중간 4자리" maxlength="4">
+												<span class="letter dash">-</span>
+												<input type="text" id="input_05" title="전화번호 마지막 4자리" maxlength="4">
 											</div>
+											<p class="info_txt">직접 연락 가능한 전화번호를 입력해주세요.</p>
 										</td>
 									</tr>
+									<th scope="row">
+										<label for="input_06">개인정보 수집 동의</label>
+									</th>
+									<td>
+										<div data-term>
+											약관내용
+										</div>
+										<div class="check_form">
+											<ul>
+												<li>
+													<input type="checkbox" id="term_01" name="term_check">
+													<label for="term_01">개인정보 수집에 동의합니다.</label>
+												</li>
+											</ul>
+										</div>
+									</td>
 								</tbody>
 							</table>
 						</div>
 					</div>
-					<!-- //회원정보 입력 -->
-
-					<!-- 이용약관 동의 -->
-					<div data-content-box class="column">
-						<h3 class="column_tit">이용약관 동의</h3>
-						<ul class="term_list">
-							<li>
-								<div class="check_form">
-									<ul>
-										<li>
-											<input type="checkbox" id="term_01" name="term_check">
-											<label for="term_01">서비스 약관에 동의합니다.</label>
-										</li>
-									</ul>
-								</div>
-								<a href="#" class="detail" target="_blank" title="새창열림">내용 보기</a>
-							</li>
-							<li>
-								<div class="check_form">
-									<ul>
-										<li>
-											<input type="checkbox" id="term_02" name="term_check">
-											<label for="term_02">개인정보 수집 및 이용에 동의합니다.</label>
-										</li>
-									</ul>
-								</div>
-								<a href="#" class="detail" target="_blank" title="새창열림">내용 보기</a>
-							</li>
-						</ul>
-						<div class="agreement">
-							<div class="check_form">
-								<ul>
-									<li>
-										<input type="checkbox" id="term_all" name="term_check">
-										<label for="term_all">약관 전체 동의</label>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<!-- //이용약관 동의 -->
-
-					<!-- 자동 등록 방지 -->
-					<div data-content-box class="column">
-						<h3 class="column_tit">자동 등록 방지</h3>
-						<!-- [D] 캡챠 삽입 영역 -->
-					</div>
-					<!-- //자동 등록 방지 -->
+					<!-- //추가정보 입력 -->
 
 					<div data-ctr-btn>
-						<button type="submit" data-btn class="wide">회원 가입</button>
+						<button type="submit" data-btn class="wide">신청하기</button>
 					</div>
 
 					<!-- 학교검색 팝업 -->

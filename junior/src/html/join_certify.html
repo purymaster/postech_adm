@@ -37,8 +37,8 @@
 
 			<!-- 이메일 인증 -->
 			<div class="certify_box">
-				<div data-content-box class="column">
-					<h3 class="column_tit center">회원정보 입력</h3>
+				<div data-content-box class="column full">
+					<h3 class="column_tit center">이메일 인증</h3>
 					<div data-form>
 						<dl>
 							<div>
@@ -46,7 +46,7 @@
 									<label for="user_name">이름</label>
 								</dt>
 								<dd>
-									<input type="text" id="user_name" placeholder="이름 입력" style="width:200px;">
+									<input type="text" id="user_name" placeholder="이름 입력" style="width:100%;">
 								</dd>
 							</div>
 							<div>
@@ -66,6 +66,7 @@
 										}
 										})
 									</div>
+									<p class="alert" style="display:none;">잘못된 이메일입니다.</p>
 								</dd>
 							</div>
 							<div>
@@ -74,11 +75,12 @@
 								</dt>
 								<dd>
 									<div class="input_box code">
-										<input type="text" id="user_code" placeholder="인증코드 입력" style="width:200px;">
+										<input type="text" id="user_code" placeholder="인증코드 입력" style="width:calc(100% - 205px);">
 										<button type="submit" class="get_code">
 											<span>인증코드 받기</span>
 										</button>
 									</div>
+									<p class="alert" style="display:none;">잘못된 인증코드입니다.</p>
 								</dd>
 							</div>
 						</dl>

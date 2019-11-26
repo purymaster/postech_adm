@@ -1,0 +1,58 @@
+@@include('header.html')
+<div class="content">
+
+	<div class="container wide">
+		@@include('sub_visual.html', {
+		"type" : "type1",
+		"tit" : "비밀번호 변경"
+		})
+	</div>
+
+	<!-- 서브 페이지 컨텐츠 -->
+	<div class="change_pw" data-sub-content>
+		<div class="container">
+
+			<div data-sub-title>
+				<h2 class="tit">비밀번호 변경</h2>
+				<p class="txt">
+					새로운 비밀번호를 입력해주세요.
+				</p>
+			</div>
+
+			<!-- 비밀번호 변경 -->
+			<div data-content-box class="column full">
+				<div data-form>
+					<dl>
+						<div>
+							<dt>
+								<label for="user_pw">새 비밀번호</label>
+							</dt>
+							<dd>
+								<input type="password" id="user_pw" maxlength="12">
+								<p class="info">영문+숫자 조합으로 8~12자로 입력해주세요. 대소문자를 구분합니다.</p>
+							</dd>
+						</div>
+						<div>
+							<dt>
+								<label for="user_pwre">비밀번호 확인</label>
+							</dt>
+							<dd>
+								<input type="password" id="user_pwre" maxlength="12">
+								<p class="info">입력하신 비밀번호를 다시 한번 입력해주세요.</p>
+							</dd>
+						</div>
+					</dl>
+				</div>
+			</div>
+			<!-- //비밀번호 변경 -->
+
+			<div data-ctr-btn>
+				<button type="submit" data-btn class="wide">확인</button>
+			</div>
+
+		</div>
+	</div>
+	<!-- //서브 페이지 컨텐츠 -->
+
+</div>
+@@include('footer.html')

@@ -1,0 +1,121 @@
+@@include('header.html')
+<div class="content">
+
+	<div class="container wide">
+		@@include('sub_visual.html', {
+		"type" : "type1",
+		"tit" : "고교별 관리자 연동 신청"
+		})
+	</div>
+
+	<!-- 서브 페이지 컨텐츠 -->
+	<div class="convert" data-sub-content>
+		<div class="container">
+			<div data-sub-title>
+				<h2 class="tit">고교별 관리자 연동 신청</h2>
+			</div>
+
+			<div data-info-box>
+				<p class="sub_tit">고교별 관리자가 되시면</p>
+				<ul class="type1" data-list>
+					<li>고교별 관리자의 권한은 연동 신청일 기준 익년 2월 말일까지 유효하며, 이후 다시 신청해야 사용 가능합니다.</li>
+					<li><strong>개별적으로 관리자의 허락을 받을 경우에 한하여 계정 유효기간이 연장될 수 있습니다.</strong></li>
+				</ul>
+			</div>
+
+			<!-- 추가정보 입력 -->
+			<div data-content-box class="column no_border">
+				<h3 class="column_tit">추가 입력 정보</h3>
+				<div data-input-form data-input-join>
+					<table>
+						<colgroup>
+							<col style="width:210px;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">
+									<label for="input_01">
+										재직 중인 교고의 NEIS CODE
+									</label>
+								</th>
+								<td>
+									<input type="text" id="input_01" placeholder="학교 NEIS CODE 입력">
+									<p class="info_txt">알파벳 + 9자리 숫자 입력</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<label for="input_02">비밀번호 확인</label>
+								</th>
+								<td>
+									<div class="input_box">
+										<input type="password" id="input_02" placeholder="일반회원 비밀번호 입력" maxlength="12">
+									</div>
+									<p class="info_txt">일반회원 비밀번호를 입력해주세요. 영문+숫자 조합으로 8~12자로 입력해주세요. 대소문자를 구분합니다.</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<label for="input_03">직급</label>
+								</th>
+								<td>
+									<div class="input_box">
+										<input type="text" id="input_03" placeholder="직급을 입력해주세요. ex)진로상담부장"
+											style="width:280px;">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<label for="input_04">교내 전화번호</label>
+								</th>
+								<td>
+									<div class="input_box tel">
+										@@include('select.html', {
+										"context" : {
+										"use" : true,
+										"value" : ["02", "019"]
+										}
+										})
+										<input type="text" id="input_04" title="전화번호 중간 4자리" maxlength="4">
+										<span class="letter dash">-</span>
+										<input type="text" id="input_05" title="전화번호 마지막 4자리" maxlength="4">
+									</div>
+									<p class="info_txt">직접 연락 가능한 전화번호를 입력해주세요.</p>
+								</td>
+							</tr>
+							<th scope="row">
+								<label for="input_06">개인정보 수집 동의</label>
+							</th>
+							<td>
+								<div data-term>
+									@@include('term/term.html')
+								</div>
+								<div class="check_form">
+									<ul>
+										<li>
+											<input type="checkbox" id="term_01" name="term_check">
+											<label for="term_01">개인정보 수집에 동의합니다.</label>
+										</li>
+									</ul>
+								</div>
+							</td>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //추가정보 입력 -->
+
+			<div data-ctr-btn>
+				<button type="submit" data-btn class="wide">신청하기</button>
+			</div>
+
+			@@include('modal/school.html')
+
+		</div>
+	</div>
+	<!-- //서브 페이지 컨텐츠 -->
+
+</div>
+@@include('footer.html')

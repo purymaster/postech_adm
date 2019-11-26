@@ -603,6 +603,17 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 	[data-content-box] .column_tit {font-size:18px;}
 }
 
+/* 2단 분할 영역 */
+[data-grid-wrap] {margin:0 -30px;}
+[data-grid-wrap]:after {display:block; clear:both; content:"";}
+[data-grid-wrap] [data-grid] {float:left; width:50%; padding:0 30px;}
+
+@media (max-width:1024px) {
+	[data-grid-wrap] {margin:0;}
+	[data-grid-wrap] [data-grid] {float:none; width:100%; margin-bottom:30px; padding:0;}
+	[data-grid-wrap] [data-grid]:last-child {margin-bottom:0;}
+}
+
 /* 대시보드 박스 */
 [data-dashboard-box] {position:relative;}
 [data-dashboard-box] .more {position:absolute; top:25px; right:0;}
@@ -613,6 +624,7 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 [data-dashboard-box] [data-ctr-btn].side {position:absolute; top:5px; right:2px; margin:0;}
 [data-dashboard-box] [data-ctr-btn] [data-btn] {min-width:120px; margin:0 2px; padding:0 30px; font-size:12px; font-weight:500; line-height:30px;}
 [data-dashboard-box] [data-ctr-btn] [data-btn].select {background:#999;}
+[data-dashboard-box] [data-ctr-btn] [data-btn].export {background:#fff; border:1px solid #a88f62; color:#a88f62; line-height:28px;}
 
 @media (max-width:1024px) {
 	[data-dashboard-box] [data-ctr-btn] {margin-top:15px;}
@@ -721,10 +733,13 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 [data-board-list] table th {height:60px; color:#333;}
 [data-board-list] table td {height:80px;}
 [data-board-list] table td[data-type="num"] {font-weight:500;}
-[data-board-list] table td[data-type="title"] {text-align:left; font-weight:700;}
+[data-board-list] table td[data-type="title"],
+[data-board-list] table td[data-type="reply"] {text-align:left; font-weight:700;}
 [data-board-list] table td[data-type="title"] .cate {color:#a88f62;}
-[data-board-list] table td[data-type="title"] .tit {display:inline; color:#333; transition:all 0.3s;}
-[data-board-list] table td[data-type="title"] a:hover .tit {color:#ca0464;}
+[data-board-list] table td[data-type="title"] .tit,
+[data-board-list] table td[data-type="reply"] .tit {display:inline; color:#333; transition:all 0.3s;}
+[data-board-list] table td[data-type="title"] a:hover .tit,
+[data-board-list] table td[data-type="reply"] a:hover .tit {color:#ca0464;}
 [data-board-list] table td[data-type="title"] .secret {display:inline-block; width:20px; height:27px; background:red; text-indent:-9999px;}
 [data-board-list] table td[data-type="status"] span {display:inline-block; width:90px; border:1px solid #999; font-size:14px; font-weight:500; line-height:40px; color:#999; text-align:center;}
 [data-board-list] table td[data-type="status"] span.on {border-color:#ca0464; color:#ca0464;}
@@ -742,12 +757,23 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 	[data-board-list] table tr {padding:5px 0; border-bottom:1px solid #cdcdcd;}
 	[data-board-list] table td {font-size:14px; height:auto !important; padding:5px 0; border:0;}
 	[data-board-list] table td[data-type="num"] {font-weight:700;}
-	[data-board-list] table td[data-type="title"] {font-weight:500;}
+	[data-board-list] table td[data-type="title"],
+	[data-board-list] table td[data-type="reply"] {font-weight:500;}
 	[data-board-list] table td[data-type="title"] .secret {transform:scale(0.75); transform-origin:left top;}
 	[data-board-list] table td[data-type="date"] {font-size:12px !important;}
 	[data-board-list] table td[data-type="status"] span {width:auto; margin-top:5px; padding:0 10px; font-size:12px; line-height:2em;}
 
 	[data-board-list] table td[data-type="category"]:before {content:"분류 : "}
+	[data-board-list] table td[data-type="name"]:before {content:"이름 : "}
+	[data-board-list] table td[data-type="id"]:before {content:"ID : "}
+	[data-board-list] table td[data-type="user_type"]:before {content:"사용자 타입 : "}
+	[data-board-list] table td[data-type="school"]:before {content:"학교 : "}
+	[data-board-list] table td[data-type="grade"]:before {content:"학년 : "}
+	[data-board-list] table td[data-type="email"]:before {content:"이메일 : "}
+	[data-board-list] table td[data-type="tel"]:before {content:"연락처 : "}
+	[data-board-list] table td[data-type="title"]:before {content:"제목 : "}
+	[data-board-list] table td[data-type="reply"]:before {content:"답글 : "}
+	[data-board-list] table td[data-type="certificate"]:before {content:"증명서 출력 : "}
 }
 
 @media (max-width:599px) {
@@ -758,8 +784,10 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 /* 게시판(대시보드) 리스트 */
 [data-board-list].info table th {height:50px;}
 [data-board-list].info table td {height:40px; font-size:14px;}
-[data-board-list].info table td[data-type="title"] a {display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
-[data-board-list].info table td[data-type="title"] .tit {font-weight:400;}
+[data-board-list].info table td[data-type="title"] a,
+[data-board-list].info table td[data-type="reply"] a {display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+[data-board-list].info table td[data-type="title"] .tit,
+[data-board-list].info table td[data-type="reply"] .tit {font-weight:400;}
 
 /* 페이징 */
 [data-paging] {overflow:hidden; clear:both; padding-top:50px;}
@@ -907,11 +935,12 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 [data-input-form] .input_box .ctr:hover {border-color:#a88f62; background:#a88f62; color:#fff;}
 [data-input-form] .input_box .letter {display:inline-block; font-size:14px; line-height:40px;}
 [data-input-form] .mail input[type='text'] {width:160px;}
-[data-input-form] .tel .select_form {width:100px;}
+[data-input-form] .tel .select_form {width:100px !important;}
 [data-input-form] .tel .select_form button {min-width:0;}
-[data-input-form] .tel input[type='text'] {width:80px;}
+[data-input-form] .tel input[type='text'] {width:80px !important;}
 [data-input-form] textarea {height:450px;}
 [data-input-form] .info_txt {margin-top:5px; padding:0.15em 0; font-size:14px; line-height:1.5em;}
+[data-input-form] .info_txt:before {content:"*";}
 [data-input-form] .ui-datepicker-trigger {width:25px; margin-left:10px; vertical-align:middle; cursor:pointer;}
 
 @media (max-width:1024px) {
@@ -949,13 +978,16 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 [data-input-form][data-input-join] .option th,
 [data-input-form][data-input-join] .option td {border-style:dashed;}
 [data-input-form][data-input-join] th {background:none; font-size:16px; font-weight:500; vertical-align:top;}
-[data-input-form][data-input-join] th label {line-height:40px; white-space:nowrap;}
+[data-input-form][data-input-join] th label {display:inline-block; padding:8px 0; font-size:16px; line-height:1.5em; white-space:nowrap;}
 [data-input-form][data-input-join] td {vertical-align:middle;}
 [data-input-form][data-input-join] input[type='text'],
 [data-input-form][data-input-join] input[type='password'] {width:200px;}
+[data-input-form][data-input-join] td [data-term] + .check_form,
+[data-input-form][data-input-join] td [data-term] + .radio_form {margin-top:10px;}
 
 @media (max-width:1024px) {
-	[data-input-form][data-input-join] th label {line-height:1.5em; font-weight:700;}
+	[data-input-form][data-input-join] th label {padding:0; font-weight:700; line-height:1.5em;}
+	[data-input-form][data-input-join] th label br {display:none;}
 	[data-input-form][data-input-join] th {padding:5px 0;}
 	[data-input-form][data-input-join] td {padding:0; padding-bottom:5px;}
 }
@@ -975,8 +1007,12 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 [data-form] dd {float:left; width:calc(100% - 80px); margin-bottom:-5px;}
 [data-form] dd > div {font-size:0;}
 [data-form] dd > div > * {margin-right:5px; margin-bottom:5px; font-size:14px; vertical-align:middle;}
+[data-form] dd > div > *:last-child {margin-right:0;}
 [data-form] dd input[type="text"],
 [data-form] dd input[type="password"] {width:100%;}
+[data-form] .alert,
+[data-form] .info {margin-top:5px; font-size:12px; line-height:1.5em; text-align:left;}
+[data-form] .alert {color:#ca0464;}
 
 /* 서식 양식 */
 [data-document-list] {border-top:3px solid #333; border-bottom:1px solid #333;}
@@ -1039,6 +1075,53 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 	[data-address-list] .data_list li span {height:2em;}
 }
 
+/* 약관 삽입 영역 */
+[data-term] {overflow-y:auto; height:200px; padding:10px 15px; border:1px solid #e8e5e2; font-size:14px; line-height:1.5em;}
+
+/* 마이 캘린더 */
+[data-mycalendar] .ctr {margin-bottom:15px; font-size:0;}
+[data-mycalendar] .ctr button {margin-right:10px;}
+[data-mycalendar] .ctr button i {display:inline-block; position:relative; width:40px; height:40px; border:1px solid #f0f0f0;}
+[data-mycalendar] .ctr button.on i {border:3px solid #a88f62;}
+[data-mycalendar] .ctr button i:before {position:absolute; top:50%; left:50%; width:26px; height:26px; background:red; transform:translate(-50%,-50%); content:"";}
+[data-mycalendar] .ctr button span {display:block; font-size:12px; line-height:20px; text-align:center;}
+/* [data-mycalendar] [data-content="calendar"] {position:relative;}
+[data-mycalendar] [data-content="calendar"] .calendar_wrap {overflow-x:auto; height:320px;}
+[data-mycalendar] [data-content="calendar"] .side_header {position:absolute; top:0; left:0; width:180px; background:red;}
+[data-mycalendar] [data-content="calendar"] .table_wrap {padding-left:180px;}
+[data-mycalendar] [data-content="calendar"] table {border-top:3px solid #333; border-bottom:1px solid #333; line-height:1.5em;}
+[data-mycalendar] [data-content="calendar"] table th {border-bottom:1px solid #333; font-size:16px; font-weight:500; line-height:50px;}
+[data-mycalendar] [data-content="calendar"] table td {height:80px; border-bottom:1px solid #cdcdcd; text-align:center; vertical-align:middle;} */
+[data-mycalendar] [data-content="list"] dl {overflow:hidden;}
+[data-mycalendar] [data-content="list"] dl > div {float:left; width:33.33%; border-top:3px solid #333; border-right:1px solid #cdcdcd; border-bottom:1px solid #333;}
+[data-mycalendar] [data-content="list"] dl > div:last-child {border-right:0;}
+[data-mycalendar] [data-content="list"] dt {border-bottom:1px solid #333; font-size:16px; font-weight:700; line-height:50px; text-align:center;}
+[data-mycalendar] [data-content="list"] dd {overflow-y:auto; height:240px; padding:15px 20px;}
+[data-mycalendar] [data-content="list"] dd ul li {position:relative; padding:15px 0; padding-left:15px;}
+[data-mycalendar] [data-content="list"] dd ul li:before {position:absolute; top:1.6em; left:0; width:8px; height:3px; background:#ca0464; content:"";}
+[data-mycalendar] [data-content="list"] dd ul li .tit {font-size:16px; font-weight:500; line-height:1.5em;}
+[data-mycalendar] [data-content="list"] dd ul li .date {position:relative; margin-top:5px; padding-left:20px; font-size:14px; line-height:1.5em; color:#999;}
+[data-mycalendar] [data-content="list"] dd ul li .date:before,
+[data-mycalendar] [data-content="list"] dd ul li .date:after {position:absolute; content:"";}
+[data-mycalendar] [data-content="list"] dd ul li .date:before {top:2px; left:0; width:12px; height:12px; border:1px solid #999; border-radius:50%;}
+[data-mycalendar] [data-content="list"] dd ul li .date:after {top:5px; left:6px; width:4px; height:4px; border-bottom:1px solid #999; border-left:1px solid #999;}
+[data-mycalendar] [data-ctr-btn].side {top:80px;}
+
+@media (max-width:1024px) {
+	[data-mycalendar] [data-content="list"] dl > div {float:none; width:100%; margin-bottom:15px; border-right:0;}
+	[data-mycalendar] [data-content="list"] dl > div:last-child {margin-bottom:0;}
+	[data-mycalendar] [data-content="list"] dt {border-top:1px solid #333; line-height:40px;}
+	[data-mycalendar] [data-content="list"] dd {height:auto; max-height:200px; padding:15px 0;}
+	/* [data-mycalendar] [data-content="list"] dd ul li .date {margin-top:0;} */
+	[data-mycalendar] [data-content="list"] dd ul li {margin:10px 0; padding:0; padding-left:15px;}
+	[data-mycalendar] [data-content="list"] dd ul li:before {top:0.6em;}
+}
+
+@media (max-width:599px) {
+	[data-mycalendar] [data-content="list"] dd ul li .tit {font-size:14px;}
+	[data-mycalendar] [data-content="list"] dd ul li .date {font-size:12px;}
+}
+
 /* 로그인 */
 .login_page .login_wrap {overflow:hidden; margin-bottom:50px;}
 .login_page .login_cont {float:left; width:50%; padding:0 60px; text-align:center;}
@@ -1093,10 +1176,22 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 }
 
 /* 이메일 인증(1단계) */
-.certify {}
 .certify .certify_box {max-width:700px; margin:0 auto;}
 .certify .certify_box [data-form] {padding:0 60px;}
 .certify .certify_box [data-form] .get_code {width:200px; height:40px; background:#555; color:#fff; font-size:16px; font-weight:700;}
+.certify .certify_box [data-ctr-btn] {text-align:right;}
+.certify .certify_box [data-ctr-btn] [data-btn] {width:calc(100% - 80px);}
+
+@media (max-width:1024px) {
+	.certify .certify_box {max-width:100%;}
+	.certify .certify_box [data-form] {padding:0;}
+	.certify .certify_box [data-form] .get_code {width:auto; font-size:14px; padding:0 10px;}
+	.certify .certify_box [data-ctr-btn] [data-btn] {width:auto;}
+}
+
+@media (max-width:599px) {
+	.certify .certify_box [data-form] .input_box input {min-width:120px !important;}
+}
 
 /* 회원정보 입력(2단계) */
 .join .term_list {margin-top:-10px;}
@@ -1118,6 +1213,18 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 	.join .agreement .check_form ul li label {font-size:14px;}
 	.join .agreement {line-height:40px;}
 }
+
+/* 회원 전환 */
+.convert [data-info-box] {margin-bottom:50px;}
+
+@media (max-width:1024px) {
+	.convert [data-info-box] {margin-bottom:30px;}
+}
+
+/* 비밀번호 변경 */
+.change_pw [data-form] dt {width:100px;}
+.change_pw [data-form] dd {width:calc(100% - 100px);}
+.change_pw [data-content-box] {max-width:480px; margin:0 auto;}
 
 /*=========================================================
 10. animate
