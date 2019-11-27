@@ -1085,13 +1085,35 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 [data-mycalendar] .ctr button.on i {border:3px solid #a88f62;}
 [data-mycalendar] .ctr button i:before {position:absolute; top:50%; left:50%; width:26px; height:26px; background:red; transform:translate(-50%,-50%); content:"";}
 [data-mycalendar] .ctr button span {display:block; font-size:12px; line-height:20px; text-align:center;}
-/* [data-mycalendar] [data-content="calendar"] {position:relative;}
-[data-mycalendar] [data-content="calendar"] .calendar_wrap {overflow-x:auto; height:320px;}
-[data-mycalendar] [data-content="calendar"] .side_header {position:absolute; top:0; left:0; width:180px; background:red;}
-[data-mycalendar] [data-content="calendar"] .table_wrap {padding-left:180px;}
-[data-mycalendar] [data-content="calendar"] table {border-top:3px solid #333; border-bottom:1px solid #333; line-height:1.5em;}
-[data-mycalendar] [data-content="calendar"] table th {border-bottom:1px solid #333; font-size:16px; font-weight:500; line-height:50px;}
-[data-mycalendar] [data-content="calendar"] table td {height:80px; border-bottom:1px solid #cdcdcd; text-align:center; vertical-align:middle;} */
+[data-mycalendar] [data-content="calendar"] {position:relative;}
+[data-mycalendar] [data-content="calendar"] [data-board-list] td {position:relative; height:80px; color:#333; transition:all 0.3s; cursor:pointer;}
+[data-mycalendar] [data-content="calendar"] [data-board-list] td:hover {background:#f8f8f8;}
+[data-mycalendar] [data-content="calendar"] [data-board-list] td.on {background:#e8e5e2;}
+[data-mycalendar] [data-content="calendar"] [data-board-list] tr:last-child th, 
+[data-mycalendar] [data-content="calendar"] [data-board-list] tr:last-child td {border-color:#333;}
+[data-mycalendar] [data-content="calendar"] [data-board-list] td strong {font-weight:500; color:#ca0464;}
+[data-mycalendar] [data-content="calendar"] [data-board-list] td span {font-weight:500; color:#ccc;}
+[data-mycalendar] [data-content="calendar"] [data-calendar-popup] {visibility:hidden; position:absolute; top:50%; left:100%; z-index:1; width:400px; min-height:220px; margin-left:-20px; border:1px solid #999; background:#fff; text-align:left; transform:translateY(-50%); transition:all 0.3s; opacity:0; box-shadow:0 5px 10px 0 rgba(0,0,0,0.2);}
+[data-mycalendar] [data-content="calendar"] td.on [data-calendar-popup] {visibility:visible; opacity:1;}
+[data-mycalendar] [data-content="calendar"] tr td:nth-of-type(n+4) [data-calendar-popup] {left:auto; margin:0; margin-right:-20px; right:100%;}
+[data-mycalendar] [data-content="calendar"] [data-calendar-popup]:before {position:absolute; top:50%; left:-13px; z-index:-1; width:24px; height:24px; border-bottom:1px solid #999; border-left:1px solid #999; background:#fff; transform:translateY(-50%) rotate(45deg); box-shadow:-3px 3px 3px 0 rgba(0,0,0,0.1); content:"";}
+[data-mycalendar] [data-content="calendar"] tr td:nth-of-type(n+4) [data-calendar-popup]:before {right:-13px; left:auto; transform:translateY(-50%) rotate(225deg);}
+[data-mycalendar] [data-content="calendar"] [data-calendar-popup] .popup_wrap {overflow-y:auto; height:220px; padding:25px 30px;}
+[data-mycalendar] [data-content="calendar"] [data-calendar-popup] .popup_tit {font-size:20px; font-weight:500; line-height:1.5em;}
+[data-mycalendar] [data-content="calendar"] [data-calendar-popup] ul li {position:relative; padding:10px 0; padding-left:15px;}
+[data-mycalendar] [data-content="calendar"] [data-calendar-popup] ul li:before {position:absolute; top:1.6em; left:0; width:8px; height:3px; background:#ca0464; content:"";}
+[data-mycalendar] [data-content="calendar"] [data-calendar-popup] ul li .popup_tit {margin-bottom:20px; font-size:16px; font-weight:500; line-height:1.5em;}
+[data-mycalendar] [data-content="calendar"] [data-calendar-popup] ul li .date {position:relative; margin-top:5px; padding-left:20px; font-size:14px; line-height:1.5em; color:#999;}
+[data-mycalendar] [data-content="calendar"] [data-calendar-popup] ul li .date:before,
+[data-mycalendar] [data-content="calendar"] [data-calendar-popup] ul li .date:after {position:absolute; content:"";}
+[data-mycalendar] [data-content="calendar"] [data-calendar-popup] ul li .date:before {top:2px; left:0; width:12px; height:12px; border:1px solid #999; border-radius:50%;}
+[data-mycalendar] [data-content="calendar"] [data-calendar-popup] ul li .date:after {top:5px; left:6px; width:4px; height:4px; border-bottom:1px solid #999; border-left:1px solid #999;}
+[data-mycalendar] [data-content="calendar"] .table_ctr {position:absolute; top:12px; left:0; width:15%; font-size:0; text-align:center;}
+[data-mycalendar] [data-content="calendar"] .table_ctr button {position:relative; width:30px; height:30px; text-indent:-9999px;}
+[data-mycalendar] [data-content="calendar"] .table_ctr button:before {position:absolute; top:50%; width:18px; height:18px; border:2px solid #a88f62; transform:translateY(-50%) rotate(45deg); transition:all 0.3s; content:"";}
+[data-mycalendar] [data-content="calendar"] .table_ctr button:hover:before {border-color:#ca0464;}
+[data-mycalendar] [data-content="calendar"] .table_ctr [data-ctr="prev"]:before {right:0; border-top:0; border-right:0;}
+[data-mycalendar] [data-content="calendar"] .table_ctr [data-ctr="next"]:before {left:0; border-bottom:0; border-left:0;}
 [data-mycalendar] [data-content="list"] dl {overflow:hidden;}
 [data-mycalendar] [data-content="list"] dl > div {float:left; width:33.33%; border-top:3px solid #333; border-right:1px solid #cdcdcd; border-bottom:1px solid #333;}
 [data-mycalendar] [data-content="list"] dl > div:last-child {border-right:0;}
@@ -1108,6 +1130,8 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 [data-mycalendar] [data-ctr-btn].side {top:80px;}
 
 @media (max-width:1024px) {
+	[data-mycalendar] [data-content="calendar"] {display:none !important;}
+	[data-mycalendar] [data-content="list"] {display:block !important;}
 	[data-mycalendar] [data-content="list"] dl > div {float:none; width:100%; margin-bottom:15px; border-right:0;}
 	[data-mycalendar] [data-content="list"] dl > div:last-child {margin-bottom:0;}
 	[data-mycalendar] [data-content="list"] dt {border-top:1px solid #333; line-height:40px;}

@@ -193,6 +193,24 @@ $(function () {
 		close_modal();
 	})
 
+	/******************** 마이 캘린더 제어 ********************/
+
+	var my_calendar = $('[data-mycalendar]');
+	// my_calendar_btn = my_calendar.find('.ctr').children('button');
+
+	my_calendar.on('click', '[data-content="calendar"] td', function () {
+		$('[data-content="calendar"] td').removeClass('on');
+		$(this).addClass('on');
+	}).on('click', '.ctr button', function () {
+		$(this).addClass('on').siblings().removeClass('on');
+		my_calendar.find('[data-content]').hide();
+		my_calendar.find('[data-content=' + $(this).data('view') + ']').show();
+	})
+
+	$(document).on('mouseup touchend', function (e) {
+		$('[data-content="calendar"] td').removeClass('on');
+	});
+
 });
 
 /******************** 모달, 로딩 제어 ********************/

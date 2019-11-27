@@ -645,7 +645,7 @@
 			<div data-content-box>
 				<div data-dashboard-box data-mycalendar>
 					<h3 class="column_tit">마이 캘린더</h3>
-					<div class="ctr">
+					<div class="ctr pc">
 						<button type="button" data-view="calendar" class="on">
 							<i></i>
 							<span>캘린더</span>
@@ -657,72 +657,75 @@
 					</div>
 
 					<!-- 달력 -->
-					<!-- <div data-content="calendar">
-						<div class="calendar_wrap">
-							<div class="side_header">
-								<div class="table_header">스크랩 일정</div>
-								<div class="table_header">추천 일정</div>
-								<div class="table_header">내가 참여한 일정</div>
-							</div>
-							<div class="table_wrap">
-								<table>
-									<colgroup>
-										<col style="width:170px;">
-										<col style="width:170px;">
-										<col style="width:170px;">
-										<col style="width:170px;">
-										<col style="width:170px;">
-										<col style="width:170px;">
-										<col style="width:170px;">
-									</colgroup>
-									<thead>
-										<tr>
-											<th scope="col">2020/01</th>
-											<th scope="col">2020/02</th>
-											<th scope="col">2020/03</th>
-											<th scope="col">2020/04</th>
-											<th scope="col">2020/05</th>
-											<th scope="col">2020/06</th>
-											<th scope="col">2020/07</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>1</td>
-											<td>1</td>
-											<td>1</td>
-											<td>1</td>
-											<td>1</td>
-											<td>1</td>
-										</tr>
-										<tr>
-											<td>1</td>
-											<td>1</td>
-											<td>1</td>
-											<td>1</td>
-											<td>1</td>
-											<td>1</td>
-											<td>1</td>
-										</tr>
-										<tr>
-											<td>1</td>
-											<td>1</td>
-											<td>1</td>
-											<td>1</td>
-											<td>1</td>
-											<td>1</td>
-											<td>1</td>
-										</tr>
-									</tbody>
-								</table>
+					<div data-content="calendar">
+						<div data-board-list class="info">
+							<table>
+								<colgroup>
+									<col style="width:15%;">
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col"></th>
+										<th scope="col">2020/01</th>
+										<th scope="col">2020/02</th>
+										<th scope="col">2020/03</th>
+										<th scope="col">2020/04</th>
+										<th scope="col">2020/05</th>
+										<th scope="col">2020/06</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">스크랩 일정</th>
+										<td>
+											일정 <strong>1</strong>개
+											@@include('calendar_popup.html')
+										</td>
+										<td></td>
+										<td><span>등록 마감</span></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<th scope="row">추천 일정</th>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td>
+											일정 <strong>1</strong>개
+											@@include('calendar_popup.html')
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">내가 참여한 일정</th>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="table_ctr">
+								<button type="button" data-ctr="prev">이전달 일정 보기</button>
+								<button type="button" data-ctr="next">다음달 일정 보기</button>
 							</div>
 						</div>
-					</div> -->
+					</div>
 					<!-- //달력 -->
 
 					<!-- 목록 -->
-					<div data-content="list">
+					<div data-content="list" style="display:none;">
 						<dl>
 							<div>
 								<dt>스크랩 일정</dt>
