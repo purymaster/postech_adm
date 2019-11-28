@@ -395,8 +395,12 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 [data-modal] .search_box input {float:left; width:calc(100% - 180px);}
 [data-modal] .search_box button {float:left; width:170px; height:40px; margin-left:10px; background:#555; font-size:16px; font-weight:700; color:#fff;}
 
-/* 학교검색 */
+/* 검색창 너비 지정 */
 [data-modal]#school .modal {width:600px;} 
+[data-modal]#counsel .modal,
+[data-modal]#reply .modal,
+[data-modal]#participate .modal,
+[data-modal]#scrap .modal {width:1080px;} 
 
 @media (max-width:1024px) {
 	[data-modal] .modal_tit {margin-bottom:15px; font-size:24px;}
@@ -622,9 +626,12 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 [data-dashboard-box] .more a:hover:after {right:-5px;}
 [data-dashboard-box] [data-ctr-btn] {margin:0 -2px; margin-top:20px; margin-bottom:5px; text-align:left;}
 [data-dashboard-box] [data-ctr-btn].side {position:absolute; top:5px; right:2px; margin:0;}
-[data-dashboard-box] [data-ctr-btn] [data-btn] {min-width:120px; margin:0 2px; padding:0 30px; font-size:12px; font-weight:500; line-height:30px;}
+[data-dashboard-box] [data-ctr-btn] [data-btn] {min-width:120px; margin:0 2px; padding:0 20px; font-size:12px; font-weight:500; line-height:30px;}
 [data-dashboard-box] [data-ctr-btn] [data-btn].select {background:#999;}
-[data-dashboard-box] [data-ctr-btn] [data-btn].export {background:#fff; border:1px solid #a88f62; color:#a88f62; line-height:28px;}
+[data-dashboard-box] [data-ctr-btn] [data-btn].export,
+[data-dashboard-box] [data-ctr-btn] [data-btn].print {background:#fff; border:1px solid #a88f62; color:#a88f62; line-height:28px;}
+[data-dashboard-box] [data-ctr-btn] [data-btn].print span {position:relative; padding-left:23px;}
+[data-dashboard-box] [data-ctr-btn] [data-btn].print span:before {position:absolute; top:50%; left:0; width:18px; height:16px; background:red; transform:translateY(-50%); content:"";}
 
 @media (max-width:1024px) {
 	[data-dashboard-box] [data-ctr-btn] {margin-top:15px;}
@@ -633,6 +640,34 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 	[data-dashboard-box] .more {position:static; margin-top:15px; text-align:center;}
 	[data-dashboard-box] .more a {padding:0 10px; background:#ca0464; font-size:12px; font-weight:500; line-height:30px; color:#fff;}
 	[data-dashboard-box] .more a:after {display:none;}
+}
+
+/* 대시보드 2단 테이블 */
+[data-half-board] table {border-top:3px solid #333; border-bottom:1px solid #333;}
+[data-half-board] table thead {border-bottom:1px solid #333;}
+[data-half-board] table th {height:40px; padding:5px; font-size:16px; line-height:1.5em; vertical-align:middle;}
+[data-half-board] table th.border {border-right:1px solid #cdcdcd;}
+[data-half-board] table thead tr:nth-child(n+1) th {border-top:1px solid #cdcdcd;}
+[data-half-board] table td {height:40px; padding:8px 5px; border-bottom:1px solid #cdcdcd; font-size:14px; line-height:1.5em; text-align:center; vertical-align:middle;}
+[data-half-board] table tr:last-child td {border:0;}
+[data-half-board] table td.left {text-align:left;}
+[data-half-board] table td .pass {font-weight:500;}
+[data-half-board] table td .candidate {color:#0006ff;}
+[data-half-board] table td .fail {color:#fe0000;}
+[data-half-board] table td .wait {color:#999;}
+[data-half-board] table td .registration {font-weight:500; color:#a88f62;}
+[data-half-board] table td .registration:before {content:"[";}
+[data-half-board] table td .registration:after {content:"]";}
+[data-half-board] table td li {position:relative; padding-left:0.75em;}
+[data-half-board] table td li:before {position:absolute; top:8px; left:0; width:5px; height:1px; background:#333; content:"";}
+
+@media (max-width:1024px) {
+	[data-half-board] table th,
+	[data-half-board] table td {font-size:14px; height:30px;}
+}
+
+@media (max-width:599px) {
+	[data-half-board] table td {font-size:12px;}
 }
 
 /* 리스트, 강조문구 */
@@ -1109,16 +1144,17 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 [data-mycalendar] [data-content="calendar"] [data-calendar-popup] ul li .date:before {top:2px; left:0; width:12px; height:12px; border:1px solid #999; border-radius:50%;}
 [data-mycalendar] [data-content="calendar"] [data-calendar-popup] ul li .date:after {top:5px; left:6px; width:4px; height:4px; border-bottom:1px solid #999; border-left:1px solid #999;}
 [data-mycalendar] [data-content="calendar"] .table_ctr {position:absolute; top:12px; left:0; width:15%; font-size:0; text-align:center;}
-[data-mycalendar] [data-content="calendar"] .table_ctr button {position:relative; width:30px; height:30px; text-indent:-9999px;}
-[data-mycalendar] [data-content="calendar"] .table_ctr button:before {position:absolute; top:50%; width:18px; height:18px; border:2px solid #a88f62; transform:translateY(-50%) rotate(45deg); transition:all 0.3s; content:"";}
-[data-mycalendar] [data-content="calendar"] .table_ctr button:hover:before {border-color:#ca0464;}
-[data-mycalendar] [data-content="calendar"] .table_ctr [data-ctr="prev"]:before {right:0; border-top:0; border-right:0;}
-[data-mycalendar] [data-content="calendar"] .table_ctr [data-ctr="next"]:before {left:0; border-bottom:0; border-left:0;}
+[data-mycalendar] [data-content="calendar"] .table_ctr button {position:relative; width:30px; height:30px; margin:0 5px; border:1px solid #a88f62; text-indent:-9999px; transition:all 0.3s;}
+[data-mycalendar] [data-content="calendar"] .table_ctr button:hover {background:#a88f62;}
+[data-mycalendar] [data-content="calendar"] .table_ctr button:before {position:absolute; top:50%; width:12px; height:12px; border:2px solid #a88f62; transform:translateY(-50%) rotate(45deg); transition:all 0.3s; content:"";}
+[data-mycalendar] [data-content="calendar"] .table_ctr button:hover:before {border-color:#fff;}
+[data-mycalendar] [data-content="calendar"] .table_ctr [data-ctr="prev"]:before {right:4px; border-top:0; border-right:0;}
+[data-mycalendar] [data-content="calendar"] .table_ctr [data-ctr="next"]:before {left:4px; border-bottom:0; border-left:0;}
 [data-mycalendar] [data-content="list"] dl {overflow:hidden;}
 [data-mycalendar] [data-content="list"] dl > div {float:left; width:33.33%; border-top:3px solid #333; border-right:1px solid #cdcdcd; border-bottom:1px solid #333;}
 [data-mycalendar] [data-content="list"] dl > div:last-child {border-right:0;}
-[data-mycalendar] [data-content="list"] dt {border-bottom:1px solid #333; font-size:16px; font-weight:700; line-height:50px; text-align:center;}
-[data-mycalendar] [data-content="list"] dd {overflow-y:auto; height:240px; padding:15px 20px;}
+[data-mycalendar] [data-content="list"] dt {border-bottom:1px solid #333; font-size:16px; font-weight:700; line-height:48px; text-align:center;}
+[data-mycalendar] [data-content="list"] dd {overflow-y:auto; height:239px; padding:15px 20px;}
 [data-mycalendar] [data-content="list"] dd ul li {position:relative; padding:15px 0; padding-left:15px;}
 [data-mycalendar] [data-content="list"] dd ul li:before {position:absolute; top:1.6em; left:0; width:8px; height:3px; background:#ca0464; content:"";}
 [data-mycalendar] [data-content="list"] dd ul li .tit {font-size:16px; font-weight:500; line-height:1.5em;}

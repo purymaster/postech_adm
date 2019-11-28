@@ -129,6 +129,13 @@
 						</button>
 					</div>
 
+					<!-- 게시물 제어 우측 -->
+					<div data-ctr-btn class="right">
+						<button type="button" data-btn class="print">
+							<span>전체 리포트 출력</span>
+						</button>
+					</div>
+
 					<!-- 우측상단 버튼 -->
 					<!-- <div data-ctr-btn class="side">
 						<a href="#" data-btn>고교별 관리자 전환 신청</a>
@@ -142,6 +149,98 @@
 				</div>
 			</div>
 			<!-- //대시보드 박스-->
+
+			<!-- 대시보드 2단 테이블(모바일 형태변화 없음) -->
+			<p class="guide_tit">대시보드 2단 테이블</p>
+			<div data-grid-wrap>
+				<div data-grid>
+					<div data-content-box>
+						<div data-dashboard-box>
+							<h3 class="column_tit">게시판 제목</h3>
+							<div data-half-board>
+								<table>
+									<colgroup>
+										<col style="width:15%;">
+										<col style="width:25%;">
+										<col>
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col" rowspan="2">이름</th>
+											<th scope="col" rowspan="2" class="border">수험번호</th>
+											<th scope="colgroup" colspan="3">단계별 결과</th>
+										</tr>
+										<tr>
+											<th scope="col">1단계</th>
+											<th scope="col">2단계</th>
+											<th scope="col">3단계</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>김수석</td>
+											<td>99-99999999</td>
+											<td><span class="pass">최종합격</span></td>
+											<td><span class="candidate">후보</span></td>
+											<td><span class="fail">불합격</span></td>
+										</tr>
+										<tr>
+											<td>김수석</td>
+											<td>99-99999999</td>
+											<td><span class="wait">승인대기</span></td>
+											<td><a href="#" class="registration">등록하기</a></td>
+											<td>등록</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="more">
+								<a href="#">더보기</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-grid>
+					<div data-content-box>
+						<div data-dashboard-box>
+							<h3 class="column_tit">게시판 제목</h3>
+							<div data-half-board>
+								<table>
+									<colgroup>
+										<col style="width:15%;">
+										<col style="width:25%;">
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">학년도</th>
+											<th scope="col">항목</th>
+											<th scope="col">히스토리</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>2019</td>
+											<td>고교방문설명회</td>
+											<td class="left">
+												<ul>
+													<li>9999/99/99 99:99 승인</li>
+													<li>9999/99/99 99:99 승인 (홍길동 입학사정관)</li>
+												</ul>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="more">
+								<a href="#">더보기</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
 			<!-- 리스트, 강조문구 -->
 			<p class="guide_tit">리스트, 강조문구</p>
@@ -716,10 +815,13 @@
 									</tr>
 								</tbody>
 							</table>
+
+							<!-- [D] 이전 버튼, 다음 버튼 누를 시 6개월씩 이동 -->
 							<div class="table_ctr">
 								<button type="button" data-ctr="prev">이전달 일정 보기</button>
 								<button type="button" data-ctr="next">다음달 일정 보기</button>
 							</div>
+
 						</div>
 					</div>
 					<!-- //달력 -->

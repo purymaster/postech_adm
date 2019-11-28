@@ -66,7 +66,7 @@
 			<div data-content-box>
 				<div data-dashboard-box data-mycalendar>
 					<h3 class="column_tit">마이 캘린더</h3>
-					<div class="ctr">
+					<div class="ctr pc">
 						<button type="button" data-view="calendar" class="on">
 							<i></i>
 							<span>캘린더</span>
@@ -77,8 +77,79 @@
 						</button>
 					</div>
 
+					<!-- 달력 -->
+					<div data-content="calendar">
+						<div data-board-list class="info">
+							<table>
+								<colgroup>
+									<col style="width:15%;">
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col"></th>
+										<th scope="col">2020/01</th>
+										<th scope="col">2020/02</th>
+										<th scope="col">2020/03</th>
+										<th scope="col">2020/04</th>
+										<th scope="col">2020/05</th>
+										<th scope="col">2020/06</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">스크랩 일정</th>
+										<td>
+											일정 <strong>1</strong>개
+											@@include('calendar_popup.html')
+										</td>
+										<td></td>
+										<td><span>등록 마감</span></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<th scope="row">추천 일정</th>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td>
+											일정 <strong>1</strong>개
+											@@include('calendar_popup.html')
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">내가 참여한 일정</th>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+
+							<!-- [D] 이전 버튼, 다음 버튼 누를 시 6개월씩 이동 -->
+							<div class="table_ctr">
+								<button type="button" data-ctr="prev">이전달 일정 보기</button>
+								<button type="button" data-ctr="next">다음달 일정 보기</button>
+							</div>
+
+						</div>
+					</div>
+					<!-- //달력 -->
+
 					<!-- 목록 -->
-					<div data-content="list">
+					<div data-content="list" style="display:none;">
 						<dl>
 							<div>
 								<dt>스크랩 일정</dt>
@@ -210,7 +281,7 @@
 						</table>
 					</div>
 					<div class="more">
-						<a href="#">더보기</a>
+						<a href="#none" onclick="show_modal('#counsel');">더보기</a>
 					</div>
 				</div>
 			</div>
@@ -267,7 +338,7 @@
 						</table>
 					</div>
 					<div class="more">
-						<a href="#">더보기</a>
+						<a href="#none" onclick="show_modal('#reply');">더보기</a>
 					</div>
 				</div>
 			</div>
@@ -336,7 +407,7 @@
 
 					<!-- 더보기 -->
 					<div class="more">
-						<a href="#">더보기</a>
+						<a href="#none" onclick="show_modal('#scrap');">더보기</a>
 					</div>
 
 				</div>
@@ -378,9 +449,260 @@
 
 					<!-- 더보기 -->
 					<div class="more">
-						<a href="#">더보기</a>
+						<a href="#none" onclick="show_modal('#participate');">더보기</a>
 					</div>
 
+				</div>
+			</div>
+			<!-- //참여 이력 -->
+
+			<!-- 상담내역 팝업 -->
+			<div data-modal id="counsel" style="display:none;">
+				<div class="modal">
+					<div class="modal_tit">상담내역</div>
+					<div class="modal_cont">
+						<div data-dashboard-box>
+							<div data-board-list class="info">
+								<table>
+									<colgroup>
+										<col style="width:12%;">
+										<col style="width:10%;">
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">일자</th>
+											<th scope="col">분류</th>
+											<th scope="col">제목</th>
+											<th scope="col">답글</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td data-type="date">9999-99-99</td>
+											<td data-type="category">상담신청</td>
+											<td data-type="title">
+												<a href="#">
+													<p class="tit">
+														군사법원의 조직·권한 및 재판관의 자격은 법률로 정한다. 대법원장의 임기는 6년으로 하며, 중임할 수 없다. 모든
+														국민은
+														근로의
+														권리를
+														가진다. 국가는 사회적·경제적 방법으로 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며, 법률이 정하는
+														바에
+														의하여
+														최저임금제를
+														시행하여야 한다.
+													</p>
+												</a>
+											</td>
+											<td data-type="reply">
+												<a href="#">
+													<p class="tit">
+														군사법원의 조직·권한 및 재판관의 자격은 법률로 정한다. 대법원장의 임기는 6년으로 하며, 중임할 수 없다. 모든
+														국민은
+														근로의
+														권리를
+														가진다. 국가는 사회적·경제적 방법으로 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며, 법률이 정하는
+														바에
+														의하여
+														최저임금제를
+														시행하여야 한다.
+													</p>
+												</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							@@include('paging.html')
+						</div>
+					</div>
+					<button type="button" class="close">팝업창 닫기</button>
+				</div>
+			</div>
+			<!-- //상담내역 팝업 -->
+
+			<!-- 내가 쓴 댓글 팝업 -->
+			<div data-modal id="reply" style="display:none;">
+				<div class="modal">
+					<div class="modal_tit">내가 쓴 댓글</div>
+					<div class="modal_cont">
+						<div data-dashboard-box>
+							<div data-board-list class="info">
+								<table>
+									<colgroup>
+										<col style="width:12%;">
+										<col style="width:10%;">
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">일자</th>
+											<th scope="col">분류</th>
+											<th scope="col">제목</th>
+											<th scope="col">답글</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td data-type="date">9999-99-99</td>
+											<td data-type="category">상담신청</td>
+											<td data-type="title">
+												<a href="#">
+													<p class="tit">
+														군사법원의 조직·권한 및 재판관의 자격은 법률로 정한다. 대법원장의 임기는 6년으로 하며, 중임할 수 없다. 모든
+														국민은
+														근로의
+														권리를
+														가진다. 국가는 사회적·경제적 방법으로 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며, 법률이 정하는
+														바에
+														의하여
+														최저임금제를
+														시행하여야 한다.
+													</p>
+												</a>
+											</td>
+											<td data-type="reply">
+												<a href="#">
+													<p class="tit">
+														군사법원의 조직·권한 및 재판관의 자격은 법률로 정한다. 대법원장의 임기는 6년으로 하며, 중임할 수 없다. 모든
+														국민은
+														근로의
+														권리를
+														가진다. 국가는 사회적·경제적 방법으로 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며, 법률이 정하는
+														바에
+														의하여
+														최저임금제를
+														시행하여야 한다.
+													</p>
+												</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							@@include('paging.html')
+						</div>
+					</div>
+					<button type="button" class="close">팝업창 닫기</button>
+				</div>
+			</div>
+			<!-- //내가 쓴 댓글 팝업 -->
+
+			<!-- 스크랩한 게시물/POST/웹진 팝업 -->
+			<div data-modal id="scrap" style="display:none;">
+				<div class="modal">
+					<div class="modal_tit">스크랩한 게시물/POST/웹진</div>
+					<div class="modal_cont">
+						<div data-dashboard-box>
+							<div data-board-list class="info">
+								<table>
+									<colgroup>
+										<col style="width:6%;">
+										<col style="width:12%;">
+										<col style="width:10%;">
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">
+												<div class="check_form single">
+													<input type="checkbox" id="check_all" name="check">
+													<label for="check_all"></label>
+												</div>
+											</th>
+											<th scope="col">일자</th>
+											<th scope="col">분류</th>
+											<th scope="col">제목</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td data-type="check">
+												<div class="check_form single">
+													<input type="checkbox" id="check_001" name="list_check">
+													<label for="check_001"></label>
+												</div>
+											</td>
+											<td data-type="date">9999-99-99</td>
+											<td data-type="category">상담신청</td>
+											<td data-type="title">
+												<a href="#">
+													<p class="tit">
+														군사법원의 조직·권한 및 재판관의 자격은 법률로 정한다. 대법원장의 임기는 6년으로 하며, 중임할 수 없다. 모든
+														국민은
+														근로의
+														권리를
+														가진다. 국가는 사회적·경제적 방법으로 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며, 법률이 정하는
+														바에
+														의하여
+														최저임금제를
+														시행하여야 한다.
+													</p>
+												</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 게시물 제어 -->
+							<div data-ctr-btn>
+								<button type="button" data-btn class="select">
+									<span>선택삭제</span>
+								</button>
+								<button type="button" data-btn>
+									<span>전체삭제</span>
+								</button>
+							</div>
+							@@include('paging.html')
+						</div>
+					</div>
+					<button type="button" class="close">팝업창 닫기</button>
+				</div>
+			</div>
+			<!-- //스크랩한 게시물/POST/웹진 팝업 -->
+
+			<!-- 참여 이력 -->
+			<div data-modal id="participate" style="display:none;">
+				<div class="modal">
+					<div class="modal_tit">참여 이력</div>
+					<div class="modal_cont">
+						<div data-dashboard-box>
+							<div data-board-list class="info">
+								<table>
+									<colgroup>
+										<col>
+										<col>
+										<col>
+										<col style="width:30%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">일자</th>
+											<th scope="col">분류</th>
+											<th scope="col">분류</th>
+											<th scope="col">증명서 출력</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td data-type="date">9999-99-99</td>
+											<td data-type="category">고교방문 설명회</td>
+											<td data-type="category">이벤트 당첨</td>
+											<td data-type="certificate">
+												<button type="button">[출력]</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							@@include('paging.html')
+						</div>
+					</div>
+					<button type="button" class="close">팝업창 닫기</button>
 				</div>
 			</div>
 			<!-- //참여 이력 -->
