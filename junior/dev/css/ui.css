@@ -396,11 +396,9 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 [data-modal] .search_box button {float:left; width:170px; height:40px; margin-left:10px; background:#555; font-size:16px; font-weight:700; color:#fff;}
 
 /* 검색창 너비 지정 */
-[data-modal]#school .modal {width:600px;} 
-[data-modal]#counsel .modal,
-[data-modal]#reply .modal,
-[data-modal]#participate .modal,
-[data-modal]#scrap .modal {width:1080px;} 
+[data-modal]#school .modal,
+[data-modal].half_board .modal {width:600px;} 
+[data-modal].board .modal {width:1080px;} 
 
 @media (max-width:1024px) {
 	[data-modal] .modal_tit {margin-bottom:15px; font-size:24px;}
@@ -416,11 +414,15 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 	[data-modal] [data-paging] {padding-top:15px;}
 }
 
-
-
 /*=========================================================
 8. 메인 페이지 스타일
 =========================================================*/
+
+/* 메인 공통 */
+.main_page h2 {position:relative; margin-top:-5px; padding-bottom:20px; font-size:40px; font-weight:500; line-height:1.3em;}
+.main_page h2:after {content:""; position:absolute; left:0; bottom:0; width:20px; height:8px; background:#ca0464;}
+.main_page h2.hidden {margin:0; padding:0;}
+.main_page h2.hidden:after {display:none;}
 
 /* 메인 비주얼 영역 */
 .main_visual .slider {position:relative;}
@@ -494,6 +496,17 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 	.main_visual .notice .slick-prev {left:15px; -webkit-transform-origin:left; transform-origin:left;}
 	.main_visual .notice .slick-next {right:15px; -webkit-transform-origin:right; transform-origin:right;}
 }
+
+/* 메인 컨텐츠 영역 */
+.main_content {margin-top:120px;}
+.main_content:after {display:block; clear:both; content:"";}
+.main_content section {float:left; width:50%;}
+.main_content section.schedule {}
+.main_content section.consult {margin-top:30px;}
+
+/* 학교 현황판 */
+
+/* 자료실 */
 
 /*=========================================================
 9. 서브 페이지 스타일
@@ -645,7 +658,7 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 /* 대시보드 2단 테이블 */
 [data-half-board] table {border-top:3px solid #333; border-bottom:1px solid #333;}
 [data-half-board] table thead {border-bottom:1px solid #333;}
-[data-half-board] table th {height:40px; padding:5px; font-size:16px; line-height:1.5em; vertical-align:middle;}
+[data-half-board] table th {height:40px; padding:5px; font-size:16px; line-height:1.5em; text-align:center; vertical-align:middle;}
 [data-half-board] table th.border {border-right:1px solid #cdcdcd;}
 [data-half-board] table thead tr:nth-child(n+1) th {border-top:1px solid #cdcdcd;}
 [data-half-board] table td {height:40px; padding:8px 5px; border-bottom:1px solid #cdcdcd; font-size:14px; line-height:1.5em; text-align:center; vertical-align:middle;}
@@ -795,10 +808,11 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 	[data-board-list] table td[data-type="title"],
 	[data-board-list] table td[data-type="reply"] {font-weight:500;}
 	[data-board-list] table td[data-type="title"] .secret {-webkit-transform:scale(0.75);transform:scale(0.75); -webkit-transform-origin:left top; transform-origin:left top;}
-	[data-board-list] table td[data-type="date"] {font-size:12px !important;}
+	[data-board-list] table td[data-type="date"] {font-size:12px !important; text-align:right;}
 	[data-board-list] table td[data-type="status"] span {width:auto; margin-top:5px; padding:0 10px; font-size:12px; line-height:2em;}
 
 	[data-board-list] table td[data-type="category"]:before {content:"분류 : "}
+	[data-board-list] table td[data-type="status"]:before {content:"상태 : "}
 	[data-board-list] table td[data-type="name"]:before {content:"이름 : "}
 	[data-board-list] table td[data-type="id"]:before {content:"ID : "}
 	[data-board-list] table td[data-type="user_type"]:before {content:"사용자 타입 : "}
@@ -806,9 +820,7 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 	[data-board-list] table td[data-type="grade"]:before {content:"학년 : "}
 	[data-board-list] table td[data-type="email"]:before {content:"이메일 : "}
 	[data-board-list] table td[data-type="tel"]:before {content:"연락처 : "}
-	[data-board-list] table td[data-type="title"]:before {content:"제목 : "}
-	[data-board-list] table td[data-type="reply"]:before {content:"답글 : "}
-	[data-board-list] table td[data-type="certificate"]:before {content:"증명서 출력 : "}
+	[data-board-list] table td[data-type="reply"]:before {content:""}
 }
 
 @media (max-width:599px) {
@@ -823,6 +835,14 @@ footer .footer_wrap .info .copyright {color:#ccc;}
 [data-board-list].info table td[data-type="reply"] a {display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 [data-board-list].info table td[data-type="title"] .tit,
 [data-board-list].info table td[data-type="reply"] .tit {font-weight:400;}
+
+@media (max-width:1024px) {
+	[data-board-list].info table td[data-type="reply"] a {position:relative; padding-left:20px;}
+	[data-board-list].info table td[data-type="reply"] a:before,
+	[data-board-list].info table td[data-type="reply"] a:after {position:absolute; content:"";}
+	[data-board-list].info table td[data-type="reply"] a:before {top:50%; left:10px; margin-top:-6px; border-width:5px; border-style:solid; border-color:transparent transparent transparent #333;}
+	[data-board-list].info table td[data-type="reply"] a:after {top:-1px; left:0; width:10px; height:10px; border-bottom:2px solid #333; border-left:2px solid #333;}
+}
 
 /* 페이징 */
 [data-paging] {overflow:hidden; clear:both; padding-top:50px;}
